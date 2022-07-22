@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import React from 'react';
 import Home from 'views/Home';
 import Produtos from 'views/Produtos';
@@ -7,7 +8,15 @@ import Contato from 'views/Contato';
 
 function App() {
   return (
-    <Contato />
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/produtos' element={<Produtos />} />
+        <Route path='/fornecedores' element={<Fornecedores />} />
+        <Route path='/pedidos' element={<Pedidos />} />
+        <Route path='/contato' element={<Contato />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
