@@ -1,4 +1,5 @@
 import Header from "components/Header";
+import Footer from "components/Footer";
 
 function Contato() {
   return (
@@ -29,14 +30,7 @@ function Contato() {
 
       <h3>AQUI VAI UM BOTÃO</h3>
 
-      <h1>FOOTER</h1>
-      <p>
-        Copyright &copy; 2016 Companhia do Saldo. Todos os direitos reservados.
-        Facebook
-        Instagram
-        Home
-        Contato
-      </p>
+      <Footer />
     </>
   );
 };

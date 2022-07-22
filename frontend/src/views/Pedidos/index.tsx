@@ -1,4 +1,5 @@
 import Header from "components/Header";
+import Footer from "components/Footer";
 
 function Pedidos() {
   return (
@@ -57,14 +58,7 @@ function Pedidos() {
 
       <h3>AQUI VAI UM BOTÃO</h3>
 
-      <h1>FOOTER</h1>
-      <p>
-        Copyright &copy; 2016 Companhia do Saldo. Todos os direitos reservados.
-        Facebook
-        Instagram
-        Home
-        Contato
-      </p>
+      <Footer />
     </>
   );
 };
