@@ -7,7 +7,7 @@ import Contato from 'views/Contato';
 
 function App() {
   return (
-    <Produtos />
+    <Fornecedores />
   );
 }
 
