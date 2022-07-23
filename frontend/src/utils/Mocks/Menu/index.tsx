@@ -1,29 +1,31 @@
-export const MenuButtonHomeId = 1;
+import { IMenu } from 'utils/Types/Menu';
 
-export const MenuButtonHomeTo = '/';
-
-export const MenuButtonHomeText = 'Home';
-
-export const MenuButtonProdutosId = 2;
-
-export const MenuButtonProdutosTo = '/produtos';
-
-export const MenuButtonProdutosText = 'Produtos';
-
-export const MenuButtonFornecedoresId = 3;
-
-export const MenuButtonFornecedoresTo = '/fornecedores';
-
-export const MenuButtonFornecedoresText = 'Fornecedores';
-
-export const MenuButtonPedidosId = 4;
-
-export const MenuButtonPedidosTo = '/pedidos';
-
-export const MenuButtonPedidosText = 'Pedidos';
-
-export const MenuButtonContatoId = 5;
-
-export const MenuButtonContatoTo = '/contato';
-
-export const MenuButtonContatoText = 'Contato';
+export const MenuData: IMenu = {
+  Buttons: [
+    {
+      Id: 1,
+      To: '/',
+      Text: 'Home'
+    },
+    {
+      Id: 2,
+      To: '/produtos',
+      Text: 'Produtos'
+    },
+    {
+      Id: 3,
+      To: '/fornecedores',
+      Text: 'Fornecedores'
+    },
+    {
+      Id: 4,
+      To: '/pedidos',
+      Text: 'Pedidos'
+    },
+    {
+      Id: 5,
+      To: '/contato',
+      Text: 'Contato'
+    }
+  ]
+};
