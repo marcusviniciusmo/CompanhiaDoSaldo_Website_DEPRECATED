@@ -1,0 +1,17 @@
+li.menuItemContainer {
+  background: var(--first-color);
+  color: var(--third-color);
+  font-weight: bold;
+  margin: 0.2rem;
+  padding: 1rem;
+  display: inline-block;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  list-style: none;
+  transition: background 0.4s;
+}
+
+li.menuItemContainer:hover {
+  background: var(--second-color);
+  text-decoration: underline;
+}
