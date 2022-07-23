@@ -1,3 +1,4 @@
+import Logo from 'assets/images/header/logo.png';
 import Menu from "components/Menu";
 
 function Header() {
@@ -5,7 +6,8 @@ function Header() {
     <>
       <h1>HEADER Component</h1>
       <h1>A melhor malha está aqui</h1>
-      <h3>AQUI VAI UMA IMAGEM</h3>
+
+      <img src={Logo} alt="Logo Companhia do Saldo" />
 
       <Menu />
     </>
