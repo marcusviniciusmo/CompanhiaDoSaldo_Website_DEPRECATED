@@ -1,0 +1,15 @@
+nav#menuContainer {
+  display: block;
+}
+
+nav#menuContainer h1 {
+  display: none;
+}
+
+nav#menuContainer ul#menuList {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: -2rem;
+  left: 63rem;
+}
