@@ -5,16 +5,11 @@ function Menu() {
     <>
       <h1>MENU Component</h1>
       <h1>Menu Principal</h1>
-      <h3>AQUI VAI UM BOTÃO</h3>
-      <h4><MenuItem buttonText='Home' /></h4>
-      <h3>AQUI VAI UM BOTÃO</h3>
-      <h4><MenuItem buttonText='Produtos' /></h4>
-      <h3>AQUI VAI UM BOTÃO</h3>
-      <h4><MenuItem buttonText='Fornecedores' /></h4>
-      <h3>AQUI VAI UM BOTÃO</h3>
-      <h4><MenuItem buttonText='Pedidos' /></h4>
-      <h3>AQUI VAI UM BOTÃO</h3>
-      <h4><MenuItem buttonText='Contato' /></h4>
+      <h4><MenuItem to='/' buttonText='Home' /></h4>
+      <h4><MenuItem to='/produtos' buttonText='Produtos' /></h4>
+      <h4><MenuItem to='/fornecedores' buttonText='Fornecedores' /></h4>
+      <h4><MenuItem to='/pedidos' buttonText='Pedidos' /></h4>
+      <h4><MenuItem to='/contato' buttonText='Contato' /></h4>
     </>
   );
 };
