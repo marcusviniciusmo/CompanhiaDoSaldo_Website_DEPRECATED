@@ -1,14 +1,10 @@
+import { IMenuItem } from 'utils/Types/MenuItem';
 import { Link } from 'react-router-dom';
 
-type Props = {
-  to: string;
-  buttonText: string;
-};
-
-function MenuItem({ to, buttonText }: Props) {
+function MenuItem({ To, Text }: IMenuItem) {
   return (
-    <Link to={to}>
-      Item de Menu - {buttonText}
+    <Link to={To}>
+      Item de Menu - {Text}
     </Link>
   );
 };
