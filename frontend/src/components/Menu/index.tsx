@@ -1,3 +1,20 @@
+import {
+  MenuButtonHomeId,
+  MenuButtonHomeTo,
+  MenuButtonHomeText,
+  MenuButtonProdutosId,
+  MenuButtonProdutosTo,
+  MenuButtonProdutosText,
+  MenuButtonFornecedoresId,
+  MenuButtonFornecedoresTo,
+  MenuButtonFornecedoresText,
+  MenuButtonPedidosId,
+  MenuButtonPedidosTo,
+  MenuButtonPedidosText,
+  MenuButtonContatoId,
+  MenuButtonContatoTo,
+  MenuButtonContatoText
+} from 'utils/Mocks/Menu';
 import MenuItem from "components/MenuItem";
 
 function Menu() {
@@ -7,33 +24,38 @@ function Menu() {
       <h1>Menu Principal</h1>
       <h4>
         <MenuItem
-          Id={1}
-          To='/'
-          Text='Home' />
+          Id={MenuButtonHomeId}
+          To={MenuButtonHomeTo}
+          Text={MenuButtonHomeText}
+        />
       </h4>
       <h4>
         <MenuItem
-          Id={2}
-          To='/produtos'
-          Text='Produtos' />
+          Id={MenuButtonProdutosId}
+          To={MenuButtonProdutosTo}
+          Text={MenuButtonProdutosText}
+        />
       </h4>
       <h4>
         <MenuItem
-          Id={3}
-          To='/fornecedores'
-          Text='Fornecedores' />
+          Id={MenuButtonFornecedoresId}
+          To={MenuButtonFornecedoresTo}
+          Text={MenuButtonFornecedoresText}
+        />
       </h4>
       <h4>
         <MenuItem
-          Id={4}
-          To='/pedidos'
-          Text='Pedidos' />
+          Id={MenuButtonPedidosId}
+          To={MenuButtonPedidosTo}
+          Text={MenuButtonPedidosText}
+        />
       </h4>
       <h4>
         <MenuItem
-          Id={5}
-          To='/contato'
-          Text='Contato' />
+          Id={MenuButtonContatoId}
+          To={MenuButtonContatoTo}
+          Text={MenuButtonContatoText}
+        />
       </h4>
     </>
   );
