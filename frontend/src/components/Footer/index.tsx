@@ -1,12 +1,14 @@
 import { FooterData } from 'utils/Mocks/Footer';
+import './styles.css';
 
 function Footer() {
   return (
-    <>
-      <h1>FOOTER Component</h1>
-      <p>
+    <footer id='footerContainer'>
+      <span>
         {FooterData.Text}
+      </span>
 
+      <div id="footerIcons">
         {
           FooterData.Icons.map((icon) => {
             return (
@@ -25,8 +27,8 @@ function Footer() {
             )
           })
         }
-      </p>
-    </>
+      </div>
+    </footer>
   );
 };
 

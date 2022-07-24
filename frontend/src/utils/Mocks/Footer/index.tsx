@@ -20,7 +20,7 @@ export const FooterData: IFooter = {
       Title: 'Facebook',
       Target: '_blank',
       Rel: 'noreferrer',
-      Color: '',
+      Color: 'var(--auxiliar-color-icon-facebook)',
       FontSize: 'large'
     },
     {
@@ -30,7 +30,7 @@ export const FooterData: IFooter = {
       Title: 'Instagram',
       Target: '_blank',
       Rel: 'noreferrer',
-      Color: '',
+      Color: 'var(--auxiliar-color-icon-instagram)',
       FontSize: 'large'
     },
     {
@@ -38,7 +38,7 @@ export const FooterData: IFooter = {
       Icon: Home,
       Url: '/',
       Title: 'Home',
-      Color: '',
+      Color: 'var(--first-color)',
       FontSize: 'large'
     },
     {
@@ -46,7 +46,7 @@ export const FooterData: IFooter = {
       Icon: ContactSupport,
       Url: '/contato',
       Title: 'Contato',
-      Color: '',
+      Color: 'var(--auxiliar-color-icon-contact)',
       FontSize: 'large'
     },
   ]
