@@ -1,4 +1,8 @@
 import { GetCurrentYear } from 'utils/Functions';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import HomeIcon from '@mui/icons-material/Home';
+import ContactIcon from '@mui/icons-material/ContactSupport';
 
 function Footer() {
   return (
@@ -7,10 +11,14 @@ function Footer() {
       <p>
         Copyright &copy; {GetCurrentYear()} Companhia do Saldo. Todos os
         direitos reservados.
-        Facebook
-        Instagram
-        Home
-        Contato
+
+        <FacebookIcon />
+
+        <InstagramIcon />
+
+        <HomeIcon />
+
+        <ContactIcon />
       </p>
     </>
   );
