@@ -1,0 +1,22 @@
+header#headerContainer {
+  background: linear-gradient(90deg,
+    var(--second-color) 1%,
+    var(--first-color) 13%,
+    var(--second-color) 100%);
+  border: 0.1rem solid var(--first-color);
+  height: 25rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: left;
+}
+
+header#headerContainer h1{
+  color: var(--third-color);
+  text-shadow: 0.5rem 0.5rem 0.5rem var(--shadow-color);
+  font-size: 3rem;
+}
+
+header#headerContainer img {
+  width: 31.5rem;
+}
