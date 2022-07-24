@@ -1,3 +1,7 @@
+import {
+  PathBreadcrumbProdutosView,
+  TitleBreadcrumbProdutosView
+} from 'utils/Mocks/Breadcrumb';
 import Header from "components/Header";
 import Breadcrumb from "components/Breadcrumb";
 import Footer from "components/Footer";
@@ -13,8 +17,8 @@ function Produtos() {
       <h1>BODY</h1>
 
       <Breadcrumb
-        path='Imagem > Galeria'
-        title='Galeria'
+        path={PathBreadcrumbProdutosView}
+        title={TitleBreadcrumbProdutosView}
       />
 
       <p>

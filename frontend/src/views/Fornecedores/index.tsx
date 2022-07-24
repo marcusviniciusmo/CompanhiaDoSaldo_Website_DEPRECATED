@@ -1,3 +1,7 @@
+import {
+  PathBreadcrumbFornecedoresView,
+  TitleBreadcrumbFornecedoresView
+} from 'utils/Mocks/Breadcrumb';
 import Header from "components/Header";
 import Breadcrumb from "components/Breadcrumb";
 import Footer from "components/Footer";
@@ -13,8 +17,8 @@ function Fornecedores() {
       <h1>BODY</h1>
 
       <Breadcrumb
-        path='Equipe > Fornecedores'
-        title='Fornecedores'
+        path={PathBreadcrumbFornecedoresView}
+        title={TitleBreadcrumbFornecedoresView}
       />
 
       <p>

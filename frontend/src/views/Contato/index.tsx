@@ -1,3 +1,7 @@
+import {
+  PathBreadcrumbContatoView,
+  TitleBreadcrumbContatoView
+} from 'utils/Mocks/Breadcrumb';
 import Header from "components/Header";
 import Breadcrumb from "components/Breadcrumb";
 import Footer from "components/Footer";
@@ -13,8 +17,8 @@ function Contato() {
       <h1>BODY</h1>
 
       <Breadcrumb
-        path='Fale Conosco > Contato'
-        title='Sugestōes e Reclamaçōes'
+        path={PathBreadcrumbContatoView}
+        title={TitleBreadcrumbContatoView}
       />
 
       <p>

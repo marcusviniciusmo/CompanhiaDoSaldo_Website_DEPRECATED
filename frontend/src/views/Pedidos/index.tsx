@@ -1,3 +1,7 @@
+import {
+  PathBreadcrumbPedidosView,
+  TitleBreadcrumbPedidosView
+} from 'utils/Mocks/Breadcrumb';
 import Header from "components/Header";
 import Breadcrumb from "components/Breadcrumb";
 import Footer from "components/Footer";
@@ -13,8 +17,8 @@ function Pedidos() {
       <h1>BODY</h1>
 
       <Breadcrumb
-        path='Cadastro > Pedido'
-        title='Formulário de Cadastro'
+        path={PathBreadcrumbPedidosView}
+        title={TitleBreadcrumbPedidosView}
       />
 
       <p>

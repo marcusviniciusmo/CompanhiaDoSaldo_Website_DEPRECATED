@@ -1,3 +1,4 @@
+import { PathBreadcrumbHomeView } from 'utils/Mocks/Breadcrumb';
 import Header from "components/Header";
 import Breadcrumb from "components/Breadcrumb";
 import Footer from "components/Footer";
@@ -13,7 +14,7 @@ function Home() {
       <h1>BODY</h1>
 
       <Breadcrumb
-        path='Início > Home'
+        path={PathBreadcrumbHomeView}
       />
 
       <h2>A Empresa</h2>
