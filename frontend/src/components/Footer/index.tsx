@@ -1,24 +1,77 @@
-import { GetCurrentYear } from 'utils/Functions';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import HomeIcon from '@mui/icons-material/Home';
-import ContactIcon from '@mui/icons-material/ContactSupport';
+import {
+  FooterText,
+  FacebookIcon,
+  FacebookUrl,
+  FacebookTitle,
+  FacebookTarget,
+  FacebookRel,
+  FacebookColor,
+  FacebookFontSize,
+  InstagramIcon,
+  InstagramUrl,
+  InstagramTitle,
+  InstagramTarget,
+  InstagramRel,
+  InstagramColor,
+  InstagramFontSize,
+  HomeIcon,
+  HomeUrl,
+  HomeTitle,
+  HomeColor,
+  HomeFontSize,
+  ContactIcon,
+  ContactUrl,
+  ContactTitle,
+  ContactColor,
+  ContactFontSize
+} from 'utils/Mocks/Footer';
 
 function Footer() {
   return (
     <>
       <h1>FOOTER Component</h1>
       <p>
-        Copyright &copy; {GetCurrentYear()} Companhia do Saldo. Todos os
-        direitos reservados.
-
-        <FacebookIcon />
-
-        <InstagramIcon />
-
-        <HomeIcon />
-
-        <ContactIcon />
+        {FooterText}
+        <a
+          href={FacebookUrl}
+          title={FacebookTitle}
+          target={FacebookTarget}
+          rel={FacebookRel}
+        >
+          <FacebookIcon
+            style={{ color: FacebookColor }}
+            fontSize={FacebookFontSize}
+          />
+        </a>
+        <a
+          href={InstagramUrl}
+          title={InstagramTitle}
+          target={InstagramTarget}
+          rel={InstagramRel}
+        >
+          <InstagramIcon
+            style={{ color: InstagramColor }}
+            fontSize={InstagramFontSize}
+          />
+        </a>
+        <a
+          href={HomeUrl}
+          title={HomeTitle}
+        >
+          <HomeIcon
+            style={{ color: HomeColor }}
+            fontSize={HomeFontSize}
+          />
+        </a>
+        <a
+          href={ContactUrl}
+          title={ContactTitle}
+        >
+          <ContactIcon
+            style={{ color: ContactColor }}
+            fontSize={ContactFontSize}
+          />
+        </a>
       </p>
     </>
   );
