@@ -4,6 +4,7 @@
   --auxiliar-color-icon-facebook: #0E8EF2;
   --auxiliar-color-icon-instagram: #FD5949;
   --auxiliar-color-icon-contact: #EED202;
+  --background-color-light: #EEEEEE;
   --first-color: #0033FF;
   --second-color: #000066;
   --third-color: #66FF00;
@@ -12,6 +13,7 @@
 }
 
 body {
+  background: var(--background-color-light);
   font-family: 'Montserrat', sans-serif;
   font-size: 1.6rem;
 }
