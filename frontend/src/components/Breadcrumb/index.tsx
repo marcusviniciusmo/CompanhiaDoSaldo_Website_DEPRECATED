@@ -1,12 +1,14 @@
 import { IBreadcrumb } from 'utils/Types/Breadcrumb';
+import './styles.css';
 
 function Breadcrumb({ Path, Title }: IBreadcrumb) {
   return (
-    <>
-      BREADCRUMB Component
-      <h3>{Path}</h3>
-      <h1>{Title}</h1>
-    </>
+    <header id='breadcrumbContainer'>
+      <hgroup>
+        <h3>{Path}</h3>
+        <h1>{Title}</h1>
+      </hgroup>
+    </header>
   );
 };
 

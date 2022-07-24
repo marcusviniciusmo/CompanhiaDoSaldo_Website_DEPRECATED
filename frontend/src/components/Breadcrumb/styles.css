@@ -1,0 +1,10 @@
+header#breadcrumbContainer h3 {
+  color: var(--second-color);
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+}
+
+header#breadcrumbContainer h1 {
+  color: var(--first-color);
+  margin: 0rem;
+}
