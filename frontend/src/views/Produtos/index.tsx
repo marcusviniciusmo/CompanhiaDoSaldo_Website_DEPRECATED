@@ -1,7 +1,4 @@
-import {
-  PathBreadcrumbProdutosView,
-  TitleBreadcrumbProdutosView
-} from 'utils/Mocks/Breadcrumb';
+import { BreadcrumbProdutos } from 'utils/Mocks/Breadcrumb';
 import Header from "components/Header";
 import Breadcrumb from "components/Breadcrumb";
 import Footer from "components/Footer";
@@ -17,8 +14,8 @@ function Produtos() {
       <h1>BODY</h1>
 
       <Breadcrumb
-        path={PathBreadcrumbProdutosView}
-        title={TitleBreadcrumbProdutosView}
+        Path={BreadcrumbProdutos.Path}
+        Title={BreadcrumbProdutos.Title}
       />
 
       <p>

@@ -1,17 +1,25 @@
-export const PathBreadcrumbHomeView = 'Início > Home';
+import { IBreadcrumb } from 'utils/Types/Breadcrumb';
 
-export const PathBreadcrumbProdutosView = 'Imagem > Galeria';
+export const BreadcrumbHome: IBreadcrumb = {
+  Path: 'Início > Home'
+};
 
-export const TitleBreadcrumbProdutosView = 'Galeria';
+export const BreadcrumbProdutos: IBreadcrumb = {
+  Path: 'Imagem > Galeria',
+  Title: 'Galeria'
+};
 
-export const PathBreadcrumbFornecedoresView = 'Equipe > Fornecedores';
+export const BreadcrumbFornecedores: IBreadcrumb = {
+  Path: 'Equipe > Fornecedores',
+  Title: 'Fornecedores'
+};
 
-export const TitleBreadcrumbFornecedoresView = 'Fornecedores';
+export const BreadcrumbPedidos: IBreadcrumb = {
+  Path: 'Cadastro > Pedido',
+  Title: 'Formulário de Cadastro'
+};
 
-export const PathBreadcrumbPedidosView = 'Cadastro > Pedido';
-
-export const TitleBreadcrumbPedidosView = 'Formulário de Cadastro';
-
-export const PathBreadcrumbContatoView = 'Fale Conosco > Contato';
-
-export const TitleBreadcrumbContatoView = 'Sugestōes e Reclamaçōes';
+export const BreadcrumbContato: IBreadcrumb = {
+  Path: 'Fale Conosco > Contato',
+  Title: 'Sugestōes e Reclamaçōes'
+};

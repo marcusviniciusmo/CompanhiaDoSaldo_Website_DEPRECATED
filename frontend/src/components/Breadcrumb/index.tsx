@@ -1,14 +1,11 @@
-type Props = {
-  path: string;
-  title?: string;
-};
+import { IBreadcrumb } from 'utils/Types/Breadcrumb';
 
-function Breadcrumb({ path, title }: Props) {
+function Breadcrumb({ Path, Title }: IBreadcrumb) {
   return (
     <>
       BREADCRUMB Component
-      <h3>{path}</h3>
-      <h1>{title}</h1>
+      <h3>{Path}</h3>
+      <h1>{Title}</h1>
     </>
   );
 };
