@@ -1,4 +1,5 @@
 import Header from "components/Header";
+import Breadcrumb from "components/Breadcrumb";
 import Footer from "components/Footer";
 
 function Contato() {
@@ -10,8 +11,11 @@ function Contato() {
       <Header />
 
       <h1>BODY</h1>
-      <h3>Fale Conosco &gt; Contato</h3>
-      <h1>Sugestōes e Reclamaçōes</h1>
+
+      <Breadcrumb
+        path='Fale Conosco > Contato'
+        title='Sugestōes e Reclamaçōes'
+      />
 
       <p>
         Ajude-nos a melhorar o nosso atendimento. Reclamaçōes, dúvidas, sugestōes,

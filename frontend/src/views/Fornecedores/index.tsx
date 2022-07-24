@@ -1,4 +1,5 @@
 import Header from "components/Header";
+import Breadcrumb from "components/Breadcrumb";
 import Footer from "components/Footer";
 
 function Fornecedores() {
@@ -10,8 +11,11 @@ function Fornecedores() {
       <Header />
 
       <h1>BODY</h1>
-      <h3>Equipe &gt; Fornecedores</h3>
-      <h1>Fornecedores</h1>
+
+      <Breadcrumb
+        path='Equipe > Fornecedores'
+        title='Fornecedores'
+      />
 
       <p>
         Nós crescemos junto com nossos clientes. Conheça nossos parceiros e veja

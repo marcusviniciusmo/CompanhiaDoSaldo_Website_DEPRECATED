@@ -1,4 +1,5 @@
 import Header from "components/Header";
+import Breadcrumb from "components/Breadcrumb";
 import Footer from "components/Footer";
 
 function Produtos() {
@@ -10,8 +11,11 @@ function Produtos() {
       <Header />
 
       <h1>BODY</h1>
-      <h3>Imagem &gt; Galeria</h3>
-      <h1>Galeria</h1>
+
+      <Breadcrumb
+        path='Imagem > Galeria'
+        title='Galeria'
+      />
 
       <p>
         Veja nossa galeria de fotos, com várias imagens de estampas do que temos

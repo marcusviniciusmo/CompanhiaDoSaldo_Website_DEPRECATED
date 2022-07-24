@@ -1,4 +1,5 @@
 import Header from "components/Header";
+import Breadcrumb from "components/Breadcrumb";
 import Footer from "components/Footer";
 
 function Pedidos() {
@@ -10,8 +11,11 @@ function Pedidos() {
       <Header />
 
       <h1>BODY</h1>
-      <h3>Cadastro &gt; Pedido</h3>
-      <h1>Formulário de Cadastro</h1>
+
+      <Breadcrumb
+        path='Cadastro > Pedido'
+        title='Formulário de Cadastro'
+      />
 
       <p>
         Gostaria de facilitar suas compras? Se cadastre, e com isso, você poderá

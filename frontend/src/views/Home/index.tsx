@@ -1,4 +1,5 @@
 import Header from "components/Header";
+import Breadcrumb from "components/Breadcrumb";
 import Footer from "components/Footer";
 
 function Home() {
@@ -10,7 +11,10 @@ function Home() {
       <Header />
 
       <h1>BODY</h1>
-      <h3>Início &gt; Home</h3>
+
+      <Breadcrumb
+        path='Início > Home'
+      />
 
       <h2>A Empresa</h2>
       <p>
