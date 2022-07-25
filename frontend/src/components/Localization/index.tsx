@@ -1,3 +1,5 @@
+import Map from "components/Map";
+
 function Localization() {
   return (
     <>
@@ -10,7 +12,8 @@ function Localization() {
         Centro, Fortaleza-CE
         Localizada entre a Rua Pedro Pereira e a Rua Pedro I.
       </p>
-      <h3>AQUI VAI UM MAPA</h3>
+
+      <Map />
     </>
   );
 };
