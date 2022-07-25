@@ -1,18 +1,16 @@
 import { MapData } from 'utils/Mocks/Map';
+import './styles.css';
 
 function Map() {
   return (
-    <>
-      <h1>MAP Component</h1>
-
-      <iframe
-        title={MapData.Title}
-        src={MapData.Url}
-        allowFullScreen={MapData.FullScreen}
-        loading={MapData.Loading}
-        referrerPolicy={MapData.ReferrerPolicy}
-      />
-    </>
+    <iframe
+      id='mapCompanhiaDoSaldo'
+      title={MapData.Title}
+      src={MapData.Url}
+      allowFullScreen={MapData.FullScreen}
+      loading={MapData.Loading}
+      referrerPolicy={MapData.ReferrerPolicy}
+    />
   );
 };
 
