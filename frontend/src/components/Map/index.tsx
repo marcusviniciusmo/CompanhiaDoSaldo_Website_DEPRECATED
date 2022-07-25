@@ -1,12 +1,4 @@
-import {
-  MapTitle,
-  MapUrl,
-  MapWidth,
-  MapHeight,
-  MapAllowFullScreen,
-  MapLoading,
-  MapReferrerPolicy
-} from 'utils/Mocks/Map';
+import { MapData } from 'utils/Mocks/Map';
 
 function Map() {
   return (
@@ -14,13 +6,11 @@ function Map() {
       <h1>MAP Component</h1>
 
       <iframe
-        title={MapTitle}
-        src={MapUrl}
-        width={MapWidth}
-        height={MapHeight}
-        allowFullScreen={MapAllowFullScreen}
-        loading={MapLoading}
-        referrerPolicy={MapReferrerPolicy}
+        title={MapData.Title}
+        src={MapData.Url}
+        allowFullScreen={MapData.FullScreen}
+        loading={MapData.Loading}
+        referrerPolicy={MapData.ReferrerPolicy}
       />
     </>
   );
