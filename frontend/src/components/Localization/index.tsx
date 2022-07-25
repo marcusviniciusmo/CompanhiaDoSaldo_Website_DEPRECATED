@@ -1,3 +1,10 @@
+import {
+  LocalizationTitle,
+  LocalizationAddressLine1,
+  LocalizationAddressLine2,
+  LocalizationAddressLine3,
+  LocalizationReference
+} from 'utils/Mocks/Localization';
 import Map from "components/Map";
 
 function Localization() {
@@ -5,12 +12,12 @@ function Localization() {
     <>
       <h1>LOCALIZATION Component</h1>
 
-      <h2>Localização</h2>
+      <h2>{LocalizationTitle}</h2>
       <p>
-        Rua 24 de Maio,
-        Número: 872
-        Centro, Fortaleza-CE
-        Localizada entre a Rua Pedro Pereira e a Rua Pedro I.
+        {LocalizationAddressLine1}
+        {LocalizationAddressLine2}
+        {LocalizationAddressLine3}
+        {LocalizationReference}
       </p>
 
       <Map />
