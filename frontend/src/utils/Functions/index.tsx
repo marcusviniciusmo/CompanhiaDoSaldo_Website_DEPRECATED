@@ -3,3 +3,9 @@ export function GetCurrentYear() {
 
   return now.getFullYear();
 };
+
+export function GetAgeOfStore() {
+  const storeOpened = 2008;
+
+  return GetCurrentYear() - storeOpened;
+};
