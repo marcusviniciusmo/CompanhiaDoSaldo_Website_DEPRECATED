@@ -1,4 +1,5 @@
 import { GetAgeOfStore } from 'utils/Functions';
+import Store from 'assets/images/about/store.jpg';
 
 function About() {
   return (
@@ -12,7 +13,8 @@ function About() {
         credibilidade.`}
       </p>
 
-      <h3>AQUI VAI UMA IMAGEM</h3>
+      <img src={Store} alt="Loja Companhia do Saldo" />
+
       <h3>Companhia do Saldo</h3>
       <p>Venha conhecer.</p>
     </>
