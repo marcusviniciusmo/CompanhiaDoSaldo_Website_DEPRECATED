@@ -1,8 +1,6 @@
-type Props = {
-  children: React.ReactNode;
-};
+import { IArticleAside } from 'utils/Types/ArticleAside';
 
-function ArticleAside({ children }: Props) {
+function ArticleAside({ children }: IArticleAside) {
   return (
     <>
       <h1>ARITCLE_ASIDE Component</h1>
