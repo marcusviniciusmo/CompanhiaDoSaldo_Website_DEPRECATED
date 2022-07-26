@@ -5,6 +5,7 @@ import Breadcrumb from "components/Breadcrumb";
 import About from 'components/About';
 import Localization from 'components/Localization';
 import ArticleAside from 'components/ArticleAside';
+import News from 'components/News';
 import Footer from "components/Footer";
 
 function Home() {
@@ -28,11 +29,7 @@ function Home() {
       </ArticleSection>
 
       <ArticleAside>
-        <h3>Novidades!</h3>
-        <h1>Não perca essas novidades!!</h1>
-        <h2>por Marcus Vinícius</h2>
-        <h3>Atualizado em 21/Maio/2022</h3>
-        <h3>AQUI VAI UMA IMAGEM</h3>
+        <News />
       </ArticleAside>
 
       <Footer />
