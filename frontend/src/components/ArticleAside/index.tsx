@@ -1,11 +1,11 @@
 import { IArticleAside } from 'utils/Types/ArticleAside';
+import './styles.css';
 
 function ArticleAside({ children }: IArticleAside) {
   return (
-    <>
-      <h1>ARITCLE_ASIDE Component</h1>
+    <aside id='articleAsideContainer'>
       {children}
-    </>
+    </aside>
   );
 };
 
