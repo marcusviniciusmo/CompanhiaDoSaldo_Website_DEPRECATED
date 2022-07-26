@@ -1,0 +1,20 @@
+article#newsContainer hgroup h1 {
+  background: var(--second-color);
+  color: var(--auxiliar-color-default);
+  font-size: 3.5rem;
+  text-align: center;
+  margin-block: 0rem;
+}
+
+article#newsContainer hgroup h2 {
+  background: var(--auxiliar-color-default);
+  color: var(--second-color);
+  font-size: 1.5rem;
+  margin-top: 0rem;
+}
+
+article#newsContainer hgroup h3 {
+  color: var(--first-color);
+  font-size: 1.2rem;
+  margin-top: 0rem;
+}
