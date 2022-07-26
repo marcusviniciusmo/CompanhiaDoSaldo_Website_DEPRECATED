@@ -1,0 +1,7 @@
+section#articleSectionContainer {
+  border-right: 0.1rem solid var(--first-color);
+  display: block;
+  width: 58rem;
+  padding-right: 1rem;
+  float: left;
+}

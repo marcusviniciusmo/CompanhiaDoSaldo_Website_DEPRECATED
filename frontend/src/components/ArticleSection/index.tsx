@@ -1,11 +1,11 @@
 import { IArticleSection } from 'utils/Types/ArticleSection';
+import './styles.css';
 
 function ArticleSection({ children }: IArticleSection) {
   return (
-    <>
-      <h1>ARTICLE_SECTION Component</h1>
+    <section id='articleSectionContainer'>
       {children}
-    </>
+    </section>
   );
 };
 
