@@ -17,3 +17,11 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.6rem;
 }
+
+.titleArticle {
+  background: var(--second-color);
+  color: var(--third-color);
+  font-size: 2rem;
+  margin: 1rem 0rem;
+  padding: 0.5rem 0rem 0.5rem 1rem;
+}

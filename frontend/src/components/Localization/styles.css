@@ -1,0 +1,6 @@
+article#localizationContainer p {
+  font-size: 1.5rem;
+  margin-block: 2rem;
+  padding-left: 6rem;
+  text-align: left;
+}

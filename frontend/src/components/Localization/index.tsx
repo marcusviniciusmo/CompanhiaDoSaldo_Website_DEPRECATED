@@ -1,21 +1,21 @@
 import { LocalizationData } from 'utils/Mocks/Localization';
 import Map from "components/Map";
+import './styles.css';
 
 function Localization() {
   return (
-    <>
-      <h1>LOCALIZATION Component</h1>
+    <article id='localizationContainer'>
+      <h2 className='titleArticle'>{LocalizationData.Title}</h2>
 
-      <h2>{LocalizationData.Title}</h2>
       <p>
-        {LocalizationData.AddressLine1}
-        {LocalizationData.AddressLine2}
-        {LocalizationData.AddressLine3}
-        {LocalizationData.Reference}
+        {LocalizationData.AddressLine1}<br />
+        {LocalizationData.AddressLine2}<br />
+        {LocalizationData.AddressLine3}<br />
+        <em>{LocalizationData.Reference}</em>
       </p>
 
       <Map />
-    </>
+    </article>
   );
 };
 
