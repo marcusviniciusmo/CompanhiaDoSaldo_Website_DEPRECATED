@@ -4,10 +4,17 @@
   --auxiliar-color-icon-facebook: #0E8EF2;
   --auxiliar-color-icon-instagram: #FD5949;
   --auxiliar-color-icon-contact: #EED202;
+
   --background-color-light: #EEEEEE;
+  --background-shadow-color: #00000099;
+  
+  --border-color-default: #FFFFFF;
+  
   --first-color: #0033FF;
   --second-color: #000066;
   --third-color: #66FF00;
+  --auxiliar-color-default: #FFFFFF;
+  
   --shadow-color: #00000099;
   font-size: 62.5%; /* 1rem = 10px */
 }

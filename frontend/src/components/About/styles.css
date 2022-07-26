@@ -1,0 +1,27 @@
+article#aboutContainer figure#photoAbout {
+  border: 0.8rem solid var(--border-color-default);
+  box-shadow: 0.1rem 0.1rem 0.4rem var(--second-color);
+  position: relative;
+}
+
+article#aboutContainer figure#photoAbout img {
+  width: 100%;
+  height: 100%;
+}
+
+article#aboutContainer figure#photoAbout figcaption {
+  background: var(--shadow-color);
+  color: var(--auxiliar-color-default);
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 1s;;
+}
+
+article#aboutContainer figure#photoAbout:hover figcaption {
+  opacity: 1;
+}
