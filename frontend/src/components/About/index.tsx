@@ -1,23 +1,16 @@
-import {
-  AboutTitle,
-  AboutText,
-  AboutImageUrl,
-  AboutImageDescription,
-  AboutFigcaptionTitle,
-  AboutFigcaptionText
-} from 'utils/Mocks/About';
+import { AboutData } from 'utils/Mocks/About';
 
 function About() {
   return (
     <>
       <h1>ABOUT Component</h1>
-      <h2>{AboutTitle}</h2>
-      <p>{AboutText}</p>
+      <h2>{AboutData.Title}</h2>
+      <p>{AboutData.Text}</p>
 
-      <img src={AboutImageUrl} alt={AboutImageDescription} />
+      <img src={AboutData.Image.Url} alt={AboutData.Image.Description} />
 
-      <h3>{AboutFigcaptionTitle}</h3>
-      <p>{AboutFigcaptionText}</p>
+      <h3>{AboutData.FigcaptionTitle}</h3>
+      <p>{AboutData.FigcaptionText}</p>
     </>
   );
 };
