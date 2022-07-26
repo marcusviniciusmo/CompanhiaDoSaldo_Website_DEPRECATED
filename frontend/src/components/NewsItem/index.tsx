@@ -1,17 +1,17 @@
 import { INewsItem } from 'utils/Types/NewsItem';
+import './styles.css';
 
 function NewsItem({ Image, Date, Title }: INewsItem) {
   return (
-    <>
-      NEWS_ITEM Component
+    <div id='newsItemContainer'>
 
       <img src={Image.Url} alt={Image.Description} />
 
       <p>
-        <span>{Date}</span>
-        <span>{Title}</span>
+        <span id='dateNewsItem'>{Date}</span>
+        <span id='titleNewsItem'>{Title}</span>
       </p>
-    </>
+    </div>
   );
 };
 
