@@ -25,6 +25,14 @@ body {
   font-size: 1.6rem;
 }
 
+.viewInterface {
+  background: var(--auxiliar-color-default);
+  box-shadow: 0rem 0rem 1rem var(--second-color);
+  width: 100rem;
+  margin: -2rem auto 0rem auto;
+  padding: 1rem;
+}
+
 .titleArticle {
   background: var(--second-color);
   color: var(--third-color);

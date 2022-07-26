@@ -10,7 +10,7 @@ import Footer from "components/Footer";
 
 function Home() {
   return (
-    <>
+    <section className='viewInterface'>
       <h1>VIEW HOME</h1>
       <h1>Companhia do Saldo - Página Home</h1>
 
@@ -33,7 +33,7 @@ function Home() {
       </ArticleAside>
 
       <Footer />
-    </>
+    </section>
   );
 };
 
