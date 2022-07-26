@@ -1,10 +1,9 @@
-export const LocalizationTitle = 'Localização';
+import { ILocalization } from 'utils/Types/Localization';
 
-export const LocalizationAddressLine1 = 'Rua 24 de Maio,';
-
-export const LocalizationAddressLine2 = 'Número: 872';
-
-export const LocalizationAddressLine3 = 'Centro, Fortaleza-CE';
-
-export const LocalizationReference = `Localizada entre a Rua Pedro Pereira e a
-  Rua Pedro I.`;
+export const LocalizationData: ILocalization = {
+  Title: 'Localização',
+  AddressLine1: 'Rua 24 de Maio,',
+  AddressLine2: 'Número: 872',
+  AddressLine3: 'Centro, Fortaleza-CE',
+  Reference: `Localizada entre a Rua Pedro Pereira e a Rua Pedro I.`
+};
