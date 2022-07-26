@@ -1,20 +1,15 @@
-type Props = {
-  imageUrl: string;
-  imageDescription: string;
-  date: string;
-  title: string;
-};
+import { INewsItem } from 'utils/Types/NewsItem';
 
-function NewsItem({ imageUrl, imageDescription, date, title }: Props) {
+function NewsItem({ Image, Date, Title }: INewsItem) {
   return (
     <>
       NEWS_ITEM Component
 
-      <img src={imageUrl} alt={imageDescription} />
+      <img src={Image.Url} alt={Image.Description} />
 
       <p>
-        <span>{date}</span>
-        <span>{title}</span>
+        <span>{Date}</span>
+        <span>{Title}</span>
       </p>
     </>
   );
