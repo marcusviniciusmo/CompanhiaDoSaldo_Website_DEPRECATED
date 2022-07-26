@@ -1,22 +1,23 @@
-import { GetAgeOfStore } from 'utils/Functions';
-import Store from 'assets/images/about/store.jpg';
+import {
+  AboutTitle,
+  AboutText,
+  AboutImageUrl,
+  AboutImageDescription,
+  AboutFigcaptionTitle,
+  AboutFigcaptionText
+} from 'utils/Mocks/About';
 
 function About() {
   return (
     <>
       <h1>ABOUT Component</h1>
-      <h2>A Empresa</h2>
-      <p>
-        {`A Companhia do Saldo, mais conhecida como Saldão, está há quase
-        ${GetAgeOfStore()} anos no mercado. Uma loja de tecidos,
-        especificamente de malhas, oferecendo serviços de qualidade, confiança e
-        credibilidade.`}
-      </p>
+      <h2>{AboutTitle}</h2>
+      <p>{AboutText}</p>
 
-      <img src={Store} alt="Loja Companhia do Saldo" />
+      <img src={AboutImageUrl} alt={AboutImageDescription} />
 
-      <h3>Companhia do Saldo</h3>
-      <p>Venha conhecer.</p>
+      <h3>{AboutFigcaptionTitle}</h3>
+      <p>{AboutFigcaptionText}</p>
     </>
   );
 };
