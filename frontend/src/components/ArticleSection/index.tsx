@@ -1,8 +1,6 @@
-type Props = {
-  children: React.ReactNode;
-};
+import { IArticleSection } from 'utils/Types/ArticleSection';
 
-function ArticleSection({ children }: Props) {
+function ArticleSection({ children }: IArticleSection) {
   return (
     <>
       <h1>ARTICLE_SECTION Component</h1>
