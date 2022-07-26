@@ -1,3 +1,5 @@
+import NewsItem from 'components/NewsItem';
+import NewsItemImage from 'assets/images/newsItem/newsItem.jpg';
 import './styles.css';
 
 function News() {
@@ -12,6 +14,13 @@ function News() {
           <h3>AQUI VAI UMA IMAGEM</h3>
         </hgroup>
       </header>
+
+      <NewsItem
+        imageUrl={NewsItemImage}
+        imageDescription='News Item'
+        date='01/Mai/2022'
+        title='PP Lisa Quatro K com cores para fardamentos.'
+      />
     </article>
   );
 };
