@@ -11,12 +11,7 @@ import Footer from "components/Footer";
 function Home() {
   return (
     <section className='viewInterface'>
-      <h1>VIEW HOME</h1>
-      <h1>Companhia do Saldo - Página Home</h1>
-
       <Header />
-
-      <h1>BODY</h1>
 
       <ArticleSection>
         <Breadcrumb
