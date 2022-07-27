@@ -1,21 +1,52 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import {
+  GalleryText,
+  GallerySpan01,
+  GallerySpan02,
+  GallerySpan03,
+  GallerySpan04,
+  GallerySpan05,
+  GallerySpan06
+} from 'utils/Mocks/Gallery';
 function Gallery() {
   return (
     <>
       <h1>GALLERY Component</h1>
 
-      <p>
-        Veja nossa galeria de fotos, com várias imagens de estampas do que temos
-        em estoque e até mesmo das novidades, tabela de cores de cada linha de
-        produto, e conheça também, a nossa equipe. Tudo isto, basta apenas
-        clicar na categoria abaixo desejada.
-      </p>
+      <p>{GalleryText}</p>
 
-      <h3>AQUI VAI UMA IMAGEM</h3>
-      <h3>AQUI VAI UMA IMAGEM</h3>
-      <h3>AQUI VAI UMA IMAGEM</h3>
-      <h3>AQUI VAI UMA IMAGEM</h3>
-      <h3>AQUI VAI UMA IMAGEM</h3>
-      <h3>AQUI VAI UMA IMAGEM</h3>
+      <ul>
+        <a href="#">
+          <li>
+            <span>{GallerySpan01}</span>
+          </li>
+          </a>
+        <a href="#">
+          <li>
+            <span>{GallerySpan02}</span>
+          </li>
+          </a>
+        <a href="#">
+          <li>
+            <span>{GallerySpan03}</span>
+          </li>
+          </a>
+        <a href="#">
+          <li>
+            <span>{GallerySpan04}</span>
+          </li>
+          </a>
+        <a href="#">
+          <li>
+            <span>{GallerySpan05}</span>
+          </li>
+          </a>
+        <a href="#">
+          <li>
+            <span>{GallerySpan06}</span>
+          </li>
+          </a>
+      </ul>
     </>
   );
 };
