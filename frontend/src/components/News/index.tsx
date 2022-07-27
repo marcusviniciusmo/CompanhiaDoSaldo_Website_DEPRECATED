@@ -1,4 +1,10 @@
-import { NewsItemData } from 'utils/Mocks/NewsItem';
+import {
+  NewsHeader01,
+  NewsHeader02,
+  NewsAuthor,
+  NewsUpdated,
+  NewsItemData
+} from 'utils/Mocks/News';
 import NewsItem from 'components/NewsItem';
 import './styles.css';
 
@@ -7,11 +13,10 @@ function News() {
     <article id='newsContainer'>
       <header>
         <hgroup>
-          <h3>Novidades!</h3>
-          <h1>Não perca essas novidades!!</h1>
-          <h2>por Marcus Vinícius</h2>
-          <h3 className='alignRight'>Atualizado em 26/Julho/2022</h3>
-          <h3>AQUI VAI UMA IMAGEM</h3>
+          <h3>{NewsHeader01}</h3>
+          <h1>{NewsHeader02}</h1>
+          <h2>{NewsAuthor}</h2>
+          <h3 className='alignRight'>{NewsUpdated}</h3>
         </hgroup>
       </header>
 
