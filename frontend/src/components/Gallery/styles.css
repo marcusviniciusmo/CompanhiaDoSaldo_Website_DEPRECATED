@@ -1,0 +1,82 @@
+div#galleryContainer ul#galleryList {
+  width: 70rem;
+  margin: 0 auto;
+  padding: 5rem;
+  list-style: none;
+  overflow: hidden;
+}
+
+div#galleryContainer ul#galleryList li {
+  background: var(--auxiliar-color-default);
+  border: 0.5rem solid var(--auxiliar-color-default);
+  box-shadow: 0.1rem 0.1rem 0.3rem var(--background-shadow-color);
+  width: 20rem;
+  height: 20rem;
+  margin: 1rem;
+  float: left;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+div#galleryContainer ul#galleryList li:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+div#galleryContainer ul#galleryList li span {
+  background: var(--background-shadow-color);
+  color: var(--auxiliar-color-default);
+  text-shadow: var(--background-shadow-color);
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  line-height: 37rem;
+  opacity: 0;
+}
+
+div#galleryContainer ul#galleryList li:hover span {
+  opacity: 1;
+}
+
+div#galleryContainer ul#galleryList li#photo01 {
+  background: url('../../assets/images/gallery/aviamentos.jpg') no-repeat;
+}
+
+div#galleryContainer ul#galleryList li#photo02 {
+  background: url('../../assets/images/gallery/ppLisa.jpg') no-repeat;
+}
+
+div#galleryContainer ul#galleryList li#photo03 {
+  background: url('../../assets/images/gallery/ppEstampada.jpg') no-repeat;
+}
+
+div#galleryContainer ul#galleryList li#photo04 {
+  background: url('../../assets/images/gallery/intima.jpg') no-repeat;
+}
+
+div#galleryContainer ul#galleryList li#photo05 {
+  background: url('../../assets/images/gallery/jacquard.jpg') no-repeat;
+}
+
+div#galleryContainer ul#galleryList li#photo06 {
+  background: url('../../assets/images/gallery/cottonModa.jpg') no-repeat;
+}
+
+div#galleryContainer ul#galleryList li#photo01,
+div#galleryContainer ul#galleryList li#photo02,
+div#galleryContainer ul#galleryList li#photo03,
+div#galleryContainer ul#galleryList li#photo04,
+div#galleryContainer ul#galleryList li#photo05,
+div#galleryContainer ul#galleryList li#photo06 {
+  background-position: 50% 50%;
+  background-size: 40rem 40rem;
+}
+
+div#galleryContainer ul#galleryList li#photo01:hover,
+div#galleryContainer ul#galleryList li#photo02:hover,
+div#galleryContainer ul#galleryList li#photo03:hover,
+div#galleryContainer ul#galleryList li#photo04:hover,
+div#galleryContainer ul#galleryList li#photo05:hover,
+div#galleryContainer ul#galleryList li#photo06:hover {
+  background-position: 0rem 0rem;
+  background-size: 20rem 20rem;
+}

@@ -1,13 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { GalleryData } from 'utils/Mocks/Gallery';
+import './styles.css';
+
 function Gallery() {
   return (
-    <>
-      <h1>GALLERY Component</h1>
+    <div id='galleryContainer'>
+      <p className='viewHeaderText'>{GalleryData.Text}</p>
 
-      <p>{GalleryData.Text}</p>
-
-      <ul>
+      <ul id='galleryList'>
         {
           GalleryData.Image.map((image) => {
             return (
@@ -19,9 +19,8 @@ function Gallery() {
             )
           })
         }
-
       </ul>
-    </>
+    </div>
   );
 };
 
