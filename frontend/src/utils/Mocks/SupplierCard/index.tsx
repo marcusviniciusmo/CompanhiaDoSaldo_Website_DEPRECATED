@@ -1,4 +1,17 @@
-export const SupplierImageUrl01 = '';
+import AdarImage from 'assets/images/supplierCard/adar.jpg';
+import IndaialImage from 'assets/images/supplierCard/indaial.jpg';
+import JangadeiroImage from 'assets/images/supplierCard/jangadeiro.jpg';
+import LatinaImage from 'assets/images/supplierCard/latina.jpg';
+import LuliImage from 'assets/images/supplierCard/luli.jpg';
+import QuatroKImage from 'assets/images/supplierCard/quatroK.jpg';
+import ReiDoCottonImage from 'assets/images/supplierCard/reiDoCotton.jpg';
+import StampLiteImage from 'assets/images/supplierCard/stampLite.jpg';
+import StikImage from 'assets/images/supplierCard/stik.jpg';
+import TricheImage from 'assets/images/supplierCard/triche.jpg';
+import WilsonImage from 'assets/images/supplierCard/wilson.jpg';
+import ZanottiImage from 'assets/images/supplierCard/zanotti.jpg';
+
+export const SupplierImageUrl01 = AdarImage;
 
 export const SupplierImageDescription01 = 'Imagem Adar';
 
@@ -12,7 +25,7 @@ export const SupplierText01 = `"A moda é a maior paixão da Adar Tecidos. Imers
 
 export const SupplierButtonText01 = '';
 
-export const SupplierImageUrl02 = '';
+export const SupplierImageUrl02 = IndaialImage;
 
 export const SupplierImageDescription02 = 'Imagem Indaial';
 
@@ -28,7 +41,7 @@ export const SupplierText02 = `"Há mais de 20 anos oferecendo soluçōes em
 
 export const SupplierButtonText02 = '';
 
-export const SupplierImageUrl03 = '';
+export const SupplierImageUrl03 = JangadeiroImage;
 
 export const SupplierImageDescription03 = 'Imagem Jangadeiro';
 
@@ -45,7 +58,7 @@ export const SupplierText03 = `"A Jangadeiro Têxtil ao longo dos anos se
 
 export const SupplierButtonText03 = '';
 
-export const SupplierImageUrl04 = '';
+export const SupplierImageUrl04 = LatinaImage;
 
 export const SupplierImageDescription04 = 'Imagem Latina';
 
@@ -61,7 +74,7 @@ export const SupplierText04 = `"Tradição e credibilidade marcam a trajetória 
 
 export const SupplierButtonText04 = '';
 
-export const SupplierImageUrl05 = '';
+export const SupplierImageUrl05 = LuliImage;
 
 export const SupplierImageDescription05 = 'Imagem Luli';
 
@@ -75,7 +88,7 @@ export const SupplierText05 = `"Desde que começou, em janeiro de 1985 como uma
 
 export const SupplierButtonText05 = '';
 
-export const SupplierImageUrl06 = '';
+export const SupplierImageUrl06 = QuatroKImage;
 
 export const SupplierImageDescription06 = 'Imagem Quatro K';
 
@@ -92,7 +105,7 @@ export const SupplierText06 = `"No mercado têxtil hà mais de 30 anos, a
 
 export const SupplierButtonText06 = '';
 
-export const SupplierImageUrl07 = '';
+export const SupplierImageUrl07 = ReiDoCottonImage;
 
 export const SupplierImageDescription07 = 'Imagem Rei do Cotton';
 
@@ -104,7 +117,7 @@ export const SupplierText07 = `"Confiança e qualidade, nós crescemos com você
 
 export const SupplierButtonText07 = '';
 
-export const SupplierImageUrl08 = '';
+export const SupplierImageUrl08 = StampLiteImage;
 
 export const SupplierImageDescription08 = 'Imagem Stamp Lite';
 
@@ -122,7 +135,7 @@ export const SupplierText08 = `"Nascida em 1995 num canto de um galpão de um
 
 export const SupplierButtonText08 = '';
 
-export const SupplierImageUrl09 = '';
+export const SupplierImageUrl09 = StikImage;
 
 export const SupplierImageDescription09 = 'Imagem Stik';
 
@@ -136,7 +149,7 @@ export const SupplierText09 = `"Beleza que encanta consumidores. Pensando em
 
 export const SupplierButtonText09 = '';
 
-export const SupplierImageUrl10 = '';
+export const SupplierImageUrl10 = TricheImage;
 
 export const SupplierImageDescription10 = 'Imagem Trichê';
 
@@ -149,7 +162,7 @@ export const SupplierText10 = `"Em todos os produtos Trichê, sempre houve
 
 export const SupplierButtonText10 = '';
 
-export const SupplierImageUrl11 = '';
+export const SupplierImageUrl11 = WilsonImage;
 
 export const SupplierImageDescription11 = 'Imagem Wilson';
 
@@ -165,7 +178,7 @@ export const SupplierText11 = `"Em 10 de janeiro de 1974, dá início a empresa
 
 export const SupplierButtonText11 = '';
 
-export const SupplierImageUrl12 = '';
+export const SupplierImageUrl12 = ZanottiImage;
 
 export const SupplierImageDescription12 = 'Imagem Zanotti';
 
