@@ -1,28 +1,16 @@
-type Props = {
-  imageUrl: string;
-  imageDescription: string;
-  title: string;
-  text: string;
-  buttonText: string;
-};
+import { ISupplierCard } from 'utils/Types/SupplierCard';
 
-function SupplierCard({
-  imageUrl,
-  imageDescription,
-  title,
-  text,
-  buttonText
-}: Props) {
+function SupplierCard({ Image, Title, Text, ButtonText }: ISupplierCard) {
   return (
     <>
       SUPPLIER_CARD Component
 
-      <img src={imageUrl} alt={imageDescription} />
+      <img src={Image.Url} alt={Image.Description} />
 
-      <span>{title}</span>
-      <span>{text}</span>
+      <span>{Title}</span>
+      <span>{Text}</span>
 
-      <button>{buttonText}</button>
+      <button>{ButtonText}</button>
     </>
   );
 };
