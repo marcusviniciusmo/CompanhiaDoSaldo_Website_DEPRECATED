@@ -1,3 +1,65 @@
+import {
+  SupplierImageUrl01,
+  SupplierImageUrl02,
+  SupplierImageUrl03,
+  SupplierImageUrl04,
+  SupplierImageUrl05,
+  SupplierImageUrl06,
+  SupplierImageUrl07,
+  SupplierImageUrl08,
+  SupplierImageUrl09,
+  SupplierImageUrl10,
+  SupplierImageUrl11,
+  SupplierImageUrl12,
+  SupplierImageDescription01,
+  SupplierImageDescription02,
+  SupplierImageDescription03,
+  SupplierImageDescription04,
+  SupplierImageDescription05,
+  SupplierImageDescription06,
+  SupplierImageDescription07,
+  SupplierImageDescription08,
+  SupplierImageDescription09,
+  SupplierImageDescription10,
+  SupplierImageDescription11,
+  SupplierImageDescription12,
+  SupplierTitle01,
+  SupplierTitle02,
+  SupplierTitle03,
+  SupplierTitle04,
+  SupplierTitle05,
+  SupplierTitle06,
+  SupplierTitle07,
+  SupplierTitle08,
+  SupplierTitle09,
+  SupplierTitle10,
+  SupplierTitle11,
+  SupplierTitle12,
+  SupplierText01,
+  SupplierText02,
+  SupplierText03,
+  SupplierText04,
+  SupplierText05,
+  SupplierText06,
+  SupplierText07,
+  SupplierText08,
+  SupplierText09,
+  SupplierText10,
+  SupplierText11,
+  SupplierText12,
+  SupplierButtonText01,
+  SupplierButtonText02,
+  SupplierButtonText03,
+  SupplierButtonText04,
+  SupplierButtonText05,
+  SupplierButtonText06,
+  SupplierButtonText07,
+  SupplierButtonText08,
+  SupplierButtonText09,
+  SupplierButtonText10,
+  SupplierButtonText11,
+  SupplierButtonText12,
+} from 'utils/Mocks/SupplierCard';
 import SupplierCard from "components/SupplierCard";
 
 function Suppliers() {
@@ -11,158 +73,99 @@ function Suppliers() {
       </p>
 
       <SupplierCard
-        imageUrl=''
-        imageDescription=''
-        title='Adar'
-        text={`"A moda é a maior paixão da Adar Tecidos. Imersos neste universo,
-          estamos na busca constante pelo inusitado, criando produtos que
-          transpiram inovação, para um público cheio de desejos. Cliente em
-          primeiro lugar. O foco do nosso trabalho é o sucesso dos nossos
-          clientes, e, para isso, procuramos oferecer produtos e serviços que
-          superem suas expectativas."`}
-        buttonText=''
+        imageUrl={SupplierImageUrl01}
+        imageDescription={SupplierImageDescription01}
+        title={SupplierTitle01}
+        text={SupplierText01}
+        buttonText={SupplierButtonText01}
       />
 
       <SupplierCard
-        imageUrl=''
-        imageDescription=''
-        title='Indaial'
-        text={`"Há mais de 20 anos oferecendo soluçōes em tecidos de malhas para
-          os clientes, com consciência de preservação ambiental e ambiente de
-          trabalho digno e honrado, a Malharia Indaial tem como objetivo
-          principal atender às necessidades do mercado com agilidade e
-          competitividade.
-          A equipe profissional da malharia é composta por 120 colaboradores
-          capacitados e dedicados a atender o país de Norte a Sul, comprometidos
-          com a empresa e com os clientes."`}
-        buttonText=''
+        imageUrl={SupplierImageUrl02}
+        imageDescription={SupplierImageDescription02}
+        title={SupplierTitle02}
+        text={SupplierText02}
+        buttonText={SupplierButtonText02}
       />
 
       <SupplierCard
-        imageUrl=''
-        imageDescription=''
-        title='Jangadeiro'
-        text={`"A Jangadeiro Têxtil ao longo dos anos se especializou na arte de
-          transformar fios em malhas, desenvolvendo produtos e fabricando artigos
-          com matérias primas diferenciadas. Aposta em pesquisa de tendências de
-          moda, sempre buscando os comportamentos nacionais e internacionais.
-          Isso à motiva para a realização de grandes e constantes investimentos
-          em inovação e tecnologia, o que vem consolidá-la como uma marca de
-          referência nacional."`}
-        buttonText=''
+        imageUrl={SupplierImageUrl03}
+        imageDescription={SupplierImageDescription03}
+        title={SupplierTitle03}
+        text={SupplierText03}
+        buttonText={SupplierButtonText03}
       />
 
       <SupplierCard
-        imageUrl=''
-        imageDescription=''
-        title='Latina'
-        text={`"Tradição e credibilidade marcam a trajetória da Latina em seus
-          mais de 20 anos de atuação no mercado têxtil. A partir de insumos
-          altamente selecionados, produzimos tecidos para Moda e Moda Íntima,
-          desenvolvendo produtos que se destacam em qualidade, conforto e
-          estilo...Um cliente Latina tem sempre à sua disposição as melhores
-          tendências de moda e inovação; agregados à um atendimento
-          personalizado de pessoas que têm paixão pelo que fazem!"`}
-        buttonText=''
+        imageUrl={SupplierImageUrl04}
+        imageDescription={SupplierImageDescription04}
+        title={SupplierTitle04}
+        text={SupplierText04}
+        buttonText={SupplierButtonText04}
       />
 
       <SupplierCard
-        imageUrl=''
-        imageDescription=''
-        title='Luli'
-        text={`"Desde que começou, em janeiro de 1985 como uma modesta confecção,
-          até os dias atuais a Luli vem surpreendendo e conquistando clientes
-          com suas malhas, confecçōes e serviços com criatividade e qualidade
-          superior. A Luli é hoje uma empresa verticalizada, morderna, com
-          equipamentos de última geração e cerca de 1.000 colaboradores."`}
-        buttonText=''
+        imageUrl={SupplierImageUrl05}
+        imageDescription={SupplierImageDescription05}
+        title={SupplierTitle05}
+        text={SupplierText05}
+        buttonText={SupplierButtonText05}
       />
 
       <SupplierCard
-        imageUrl=''
-        imageDescription=''
-        title='Quatro K'
-        text={`"No mercado têxtil hà mais de 30 anos, a história da Quatro K
-          começou em 1987 na cidade de Santos, onde iniciou suas atividades como
-          confecção, e posteriormente partiu para a venda de malhas e de toda a
-          matéria prima do processo produtivo.
-          A Quatro K Têxtil destaca-se como uma grande empresa empreendedora e
-          única no Brasil através de um formato de gestão inédito, onde
-          gerenciamos a produção de malhas de maneira vertical e terceirizada,
-          atuando em todas as etapas do processo produtivo."`}
-        buttonText=''
+        imageUrl={SupplierImageUrl06}
+        imageDescription={SupplierImageDescription06}
+        title={SupplierTitle06}
+        text={SupplierText06}
+        buttonText={SupplierButtonText06}
       />
 
       <SupplierCard
-        imageUrl=''
-        imageDescription=''
-        title='Rei do Cotton'
-        text={`"Confiança e qualidade, nós crescemos com você. A loja de fábrica
-          em Fortaleza que produz tecidos em alta qualidade e preço baixo."`}
-        buttonText=''
+        imageUrl={SupplierImageUrl07}
+        imageDescription={SupplierImageDescription07}
+        title={SupplierTitle07}
+        text={SupplierText07}
+        buttonText={SupplierButtonText07}
       />
 
       <SupplierCard
-        imageUrl=''
-        imageDescription=''
-        title='Stamp Lite'
-        text={`"Nascida em 1995 num canto de um galpão de um amigo, a Stamp Lite
-          teve um grande aumento nos negócios, que levou-a em apenas quatro
-          meses, à um galpão de 400m². Isto se deve ao alto nível de automação
-          com gerenciamento eletrônico constantemente avaliado por nosso
-          laboratório de análises voltado a identificar os menores desvios dos
-          padrōes estabelecidos, oferecendo relatórios a curtíssimos prazos,
-          minimizando distorçōes.
-          Possuindo mais de uma máquina para cada fase da produção, pode manter
-          seu estoque de pronta entrega em níveis adequados ou refazê-los em um
-          curto prazo."`}
-        buttonText=''
+        imageUrl={SupplierImageUrl08}
+        imageDescription={SupplierImageDescription08}
+        title={SupplierTitle08}
+        text={SupplierText08}
+        buttonText={SupplierButtonText08}
       />
 
       <SupplierCard
-        imageUrl=''
-        imageDescription=''
-        title='Stik'
-        text={`"Beleza que encanta consumidores. Pensando em suas necessidades e
-          em sua satisfação, buscamos a excelência em cada produto que
-          fabricamos, aliando talento e competência ao enorme potencial criativo
-          de nossos colaboradores. O novo e o antigo convivem harmonicamente,
-          numa releitura constante do clássico."`}
-        buttonText=''
+        imageUrl={SupplierImageUrl09}
+        imageDescription={SupplierImageDescription09}
+        title={SupplierTitle09}
+        text={SupplierText09}
+        buttonText={SupplierButtonText09}
       />
 
       <SupplierCard
-        imageUrl=''
-        imageDescription=''
-        title='Trichê'
-        text={`"Em todos os produtos Trichê, sempre houve preocupação quanto à
-          qualidade e, extrema dedicação quanto aos suprimentos das necessidades,
-          satisfação e respeito ao cliente, o que com certeza em muito tem
-          contribuído para o constante desenvolvimento da Trichê."`}
-        buttonText=''
+        imageUrl={SupplierImageUrl10}
+        imageDescription={SupplierImageDescription10}
+        title={SupplierTitle10}
+        text={SupplierText10}
+        buttonText={SupplierButtonText10}
       />
 
       <SupplierCard
-        imageUrl=''
-        imageDescription=''
-        title='Wilson'
-        text={`"Em 10 de janeiro de 1974, dá início a empresa têxtil denominada
-          Malhas Wilson LTDA. Com nova gestão e acompanhando as necessidades do
-          mercado, a empresa avançou em sua estrutura física, tecnológica,
-          maquinários e treinamentos com o objetivo de atender a crescente
-          demanda por seus produtos. Conta hoje com mais de 250 colaboradores
-          que garantem o sucesso da empresa e prezam a qualidade no atendimento
-          de seus clientes."`}
-        buttonText=''
+        imageUrl={SupplierImageUrl11}
+        imageDescription={SupplierImageDescription11}
+        title={SupplierTitle11}
+        text={SupplierText11}
+        buttonText={SupplierButtonText11}
       />
 
       <SupplierCard
-        imageUrl=''
-        imageDescription=''
-        title='Zanotti'
-        text={`"Zanotti, referência na fabricação de fitas elásticas em toda a
-          América. 11 milhōes de metros produzidos por dia."`}
-        buttonText=''
+        imageUrl={SupplierImageUrl12}
+        imageDescription={SupplierImageDescription12}
+        title={SupplierTitle12}
+        text={SupplierText12}
+        buttonText={SupplierButtonText12}
       />
     </>
   );
