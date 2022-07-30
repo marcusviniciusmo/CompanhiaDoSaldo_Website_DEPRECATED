@@ -1,17 +1,24 @@
 import { ISupplierCard } from 'utils/Types/SupplierCard';
+import './styles.css';
 
 function SupplierCard({ Image, Title, Text, ButtonText }: ISupplierCard) {
   return (
-    <>
-      SUPPLIER_CARD Component
+    <div id='supplierCardContainer'>
+      <div className="supplierCardTop">
+        <img
+          className='supplierCardImage'
+          src={Image.Url}
+          alt={Image.Description}
+        />
+      </div>
 
-      <img src={Image.Url} alt={Image.Description} />
+      <div className="supplierCardBottom">
+        <span className='supplierCardTitle'>{Title}</span>
+        <span className='supplierCardText'>{Text}</span>
 
-      <span>{Title}</span>
-      <span>{Text}</span>
-
-      <button>{ButtonText}</button>
-    </>
+        <button className='supplierCardButton'>{ButtonText}</button>
+      </div>
+    </div>
   );
 };
 
