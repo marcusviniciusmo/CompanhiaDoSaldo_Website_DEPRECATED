@@ -1,4 +1,4 @@
-import { SuppliersText, SupplierCards } from 'utils/Mocks/Suppliers';
+import { SuppliersData } from 'utils/Mocks/Suppliers';
 import SupplierCard from "components/SupplierCard";
 
 function Suppliers() {
@@ -6,10 +6,10 @@ function Suppliers() {
     <>
       <h1>SUPPLIERS Component</h1>
 
-      <p>{SuppliersText}</p>
+      <p>{SuppliersData.Text}</p>
 
       {
-        SupplierCards.map((supplier) => {
+        SuppliersData.SupplierCards.map((supplier) => {
           return (
             <SupplierCard
               key={supplier.Id}
