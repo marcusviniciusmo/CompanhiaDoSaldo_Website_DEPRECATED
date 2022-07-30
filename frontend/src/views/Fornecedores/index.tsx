@@ -6,13 +6,8 @@ import Footer from "components/Footer";
 
 function Fornecedores() {
   return (
-    <>
-      <h1>VIEW FORNECEDORES</h1>
-      <h1>Companhia do Saldo - Página Fornecedores</h1>
-
+    <section className='viewInterface'>
       <Header />
-
-      <h1>BODY</h1>
 
       <Breadcrumb
         Path={BreadcrumbFornecedores.Path}
@@ -22,7 +17,7 @@ function Fornecedores() {
       <Suppliers />      
 
       <Footer />
-    </>
+    </section>
   );
 };
 
