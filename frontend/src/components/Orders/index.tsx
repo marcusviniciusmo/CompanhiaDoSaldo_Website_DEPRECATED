@@ -1,6 +1,7 @@
 import Identification from "components/Identification";
 import Address from "components/Address";
 import Message from "components/Message";
+import Product from "components/Product";
 
 function Orders() {
   return (
@@ -20,13 +21,7 @@ function Orders() {
 
       <Message />
 
-      <h3>Quero comprar</h3>
-      <h4>Produto:</h4>
-      <h4>AQUI VAI UM CAMPO</h4>
-      <h4>Cor:</h4>
-      <h4>AQUI VAI UM CAMPO</h4>
-      <h4>Quantidade:</h4>
-      <h4>AQUI VAI UM CAMPO</h4>
+      <Product />
 
       <h3>AQUI VAI UM BOTÃO</h3>
     </>
