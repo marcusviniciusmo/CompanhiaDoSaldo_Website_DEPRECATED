@@ -1,0 +1,5 @@
+div#suppliersContainer div#supplierCardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
