@@ -1,5 +1,6 @@
 import Identification from "components/Identification";
 import Address from "components/Address";
+import Message from "components/Message";
 
 function Orders() {
   return (
@@ -17,11 +18,7 @@ function Orders() {
 
       <Address />
 
-      <h3>Mensagem do Cliente</h3>
-      <h4>Grau de Urgência:</h4>
-      <h4>AQUI VAI UM CAMPO</h4>
-      <h4>Mensagem:</h4>
-      <h4>AQUI VAI UM CAMPO</h4>
+      <Message />
 
       <h3>Quero comprar</h3>
       <h4>Produto:</h4>
