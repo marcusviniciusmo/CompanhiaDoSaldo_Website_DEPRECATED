@@ -1,4 +1,4 @@
-import { SupplierCardData } from 'utils/Mocks/SupplierCard';
+import { SuppliersText, SupplierCards } from 'utils/Mocks/Suppliers';
 import SupplierCard from "components/SupplierCard";
 
 function Suppliers() {
@@ -6,13 +6,10 @@ function Suppliers() {
     <>
       <h1>SUPPLIERS Component</h1>
 
-      <p>
-        Nós crescemos junto com nossos clientes. Conheça nossos parceiros e veja
-        a equipe de peso por trás do seu sucesso.
-      </p>
+      <p>{SuppliersText}</p>
 
       {
-        SupplierCardData.map((supplier) => {
+        SupplierCards.map((supplier) => {
           return (
             <SupplierCard
               key={supplier.Id}
