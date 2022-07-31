@@ -1,11 +1,11 @@
 import Form from 'components/Form';
-import Identification from "components/Identification";
-import Address from "components/Address";
-import Message from "components/Message";
-import Product from "components/Product";
 
 function Orders() {
-  const content = [Identification, Address, Message, Product];
+  const contentUrls = 
+    `/pedidos/identification,
+    /pedidos/address,
+    /pedidos/message,
+    /pedidos/product`;
 
   return (
     <>
@@ -17,7 +17,8 @@ function Orders() {
       </p>
 
       <h3>FORMULÁRIO</h3>
-      <Form content={content} />
+
+      <Form content={contentUrls} />
 
       <h3>AQUI VAI UM BOTÃO</h3>
     </>
