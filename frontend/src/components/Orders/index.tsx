@@ -1,9 +1,12 @@
+import Form from 'components/Form';
 import Identification from "components/Identification";
 import Address from "components/Address";
 import Message from "components/Message";
 import Product from "components/Product";
 
 function Orders() {
+  const content = [Identification, Address, Message, Product];
+
   return (
     <>
       <h1>ORDERS Component</h1>
@@ -14,14 +17,7 @@ function Orders() {
       </p>
 
       <h3>FORMULÁRIO</h3>
-      
-      <Identification />
-
-      <Address />
-
-      <Message />
-
-      <Product />
+      <Form content={content} />
 
       <h3>AQUI VAI UM BOTÃO</h3>
     </>
