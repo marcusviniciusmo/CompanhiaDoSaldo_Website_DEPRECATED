@@ -1,4 +1,5 @@
 import Input from "components/Input";
+import Select from "components/Select";
 
 function Address() {
   return (
@@ -42,10 +43,19 @@ function Address() {
         id='fieldDistrict'
       />
 
-      <h4>Estado:</h4>
-      <h4>AQUI VAI UM CAMPO</h4>
-      <h4>Cidade:</h4>
-      <h4>AQUI VAI UM CAMPO</h4>
+      <h4>Estado</h4>
+      <Select
+        name='fieldState'
+        id='fieldState'
+        content={[]}
+      />
+
+      <h4>Cidade</h4>
+      <Select
+        name='fieldCity'
+        id='fieldCity'
+        content={[]}
+      />
     </>
   );
 };
