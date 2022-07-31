@@ -1,4 +1,5 @@
 import Input from "components/Input";
+import TextArea from "components/TextArea";
 
 function Message() {
   return (
@@ -14,8 +15,13 @@ function Message() {
         id='fieldUrgency'
       />
 
-      <h4>Mensagem:</h4>
-      <h4>AQUI VAI UM CAMPO</h4>
+      <h4>Mensagem</h4>
+      <TextArea
+        name='fieldMessage'
+        id='fieldMessage'
+        cols={30}
+        rows={5}
+      />
     </>
   );
 };
