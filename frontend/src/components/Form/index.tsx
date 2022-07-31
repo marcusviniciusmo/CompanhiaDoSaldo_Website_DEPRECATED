@@ -1,16 +1,20 @@
+import './styles.css';
+
 type Props = {
   content: any[];
 };
 
 function Form({ content }: Props) {
   return (
-    <>
-      FORM Component
+    <div id='formContainer'>
+      <iframe
+        title='iframeForm'
+        id='iframeFormContainer'
+        src=''
+      />
 
-      <iframe>
-        {content}
-      </iframe>
-    </>
+      <button className='formButton'>Próximo</button>
+    </div>
   );
 };
 
