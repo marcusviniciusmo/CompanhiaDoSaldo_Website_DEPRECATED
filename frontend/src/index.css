@@ -9,11 +9,13 @@
   --background-shadow-color: #00000099;
   
   --border-color-default: #FFFFFF;
+  --border-color: #CECECE;
   
   --first-color: #0033FF;
   --second-color: #000066;
   --third-color: #66FF00;
   --auxiliar-color-default: #FFFFFF;
+  --auxiliar-color-neutral: #BBBBBB;
   
   --shadow-color: #00000099;
   --first-color-opacity: #0033FF4D;

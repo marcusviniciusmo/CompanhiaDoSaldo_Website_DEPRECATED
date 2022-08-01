@@ -1,3 +1,5 @@
+import './styles.css';
+
 type Props = {
   type: string;
   name: string;
@@ -25,9 +27,8 @@ function Input({
 }: Props) {
   return (
     <>
-      INPUT Component
-
       <input
+        className={`${type}InputForm`}
         type={type}
         name={name}
         id={id}

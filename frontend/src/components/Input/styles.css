@@ -1,0 +1,42 @@
+input.textInputForm,
+input.emailInputForm,
+input.dateInputForm {
+  border: 0.1rem solid var(--border-color);
+  border-radius: 0.5rem;
+  min-height: 2rem;
+  margin-block: 1.5rem;
+  padding: 1rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+input.textInputForm,
+input.emailInputForm,
+input.dateInputForm {
+  width: 30rem;
+}
+
+input.textInputForm:hover,
+input.emailInputForm:hover,
+input.dateInputForm:hover {
+  background: var(--background-color-light);
+  box-shadow: 0.1rem 0.1rem 0.5rem var(--first-color);
+}
+
+input.textInputForm::placeholder,
+input.emailInputForm::placeholder {
+  color: var(--auxiliar-color-neutral);
+  font-size: 1.5rem;
+}
+
+input.radioInputForm {
+  zoom: 1.5;
+}
+
+input.rangeInputForm {
+  width: 30rem;
+  cursor: pointer;
+}
+
+input.rangeInputForm:hover {
+  box-shadow: 0.1rem 0.1rem 4rem var(--first-color-opacity);
+}
