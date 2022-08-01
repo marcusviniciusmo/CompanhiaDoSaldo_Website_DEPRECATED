@@ -8,8 +8,8 @@ function Message() {
 
       <h3>Mensagem do Cliente</h3>
 
-      <h4>Grau de Urgência</h4>
       <Input
+        label='Grau de Urgência'
         type='range'
         name='fieldUrgency'
         id='fieldUrgency'

@@ -7,29 +7,29 @@ function Identification() {
 
       <h3>Identificação do Cliente</h3>
 
-      <h4>CPF</h4>
       <Input
+        label='CPF'
         type='text'
         name='fieldCpf'
         id='fieldCpf'
       />
 
-      <h4>Celular</h4>
       <Input
+        label='Celular'
         type='text'
         name='fieldPhone'
         id='fieldPhone'
       />
 
-      <h4>Nome</h4>
       <Input
+        label='Nome'
         type='text'
         name='fieldName'
         id='fieldName'
       />
 
-      <h4>E-mail</h4>
       <Input
+        label='E-mail'
         type='email'
         name='fieldEmail'
         id='fieldEmail'
@@ -37,28 +37,28 @@ function Identification() {
 
       <h4>Sexo</h4>
       <Input
+        label='Masculino'
         type='radio'
         name='fieldGender'
         id='fieldGenderMale'
       />
-      <h4>Masculino</h4>
 
       <Input
+        label='Feminino'
         type='radio'
         name='fieldGender'
         id='fieldGenderFemale'
       />
-      <h4>Feminino</h4>
 
       <Input
+        label='Outros'
         type='radio'
         name='fieldGender'
         id='fieldGenderOthers'
       />
-      <h4>Outros</h4>
 
-      <h4>Data de Nascimento</h4>
       <Input
+        label='Data de Nascimento'
         type='date'
         name='fieldBirthday'
         id='fieldBirthday'

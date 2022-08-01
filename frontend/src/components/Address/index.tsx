@@ -8,36 +8,36 @@ function Address() {
 
       <h3>Endereço do Cliente</h3>
 
-      <h4>CEP</h4>
       <Input
+        label='CEP'
         type='text'
         name='fieldCep'
         id='fieldCep'
       />
 
-      <h4>Endereço</h4>
       <Input
+        label='Endereço'
         type='text'
         name='fieldAddress'
         id='fieldAddress'
       />
 
-      <h4>Número</h4>
       <Input
+        label='Número'
         type='text'
         name='fieldNumber'
         id='fieldNumber'
       />
 
-      <h4>Complemento</h4>
       <Input
+        label='Complemento'
         type='text'
         name='fieldComplement'
         id='fieldComplement'
       />
 
-      <h4>Bairro</h4>
       <Input
+        label='Bairro'
         type='text'
         name='fieldDistrict'
         id='fieldDistrict'

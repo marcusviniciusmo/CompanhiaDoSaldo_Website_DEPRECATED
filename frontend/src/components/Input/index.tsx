@@ -1,6 +1,7 @@
 import './styles.css';
 
 type Props = {
+  label: string;
   type: string;
   name: string;
   id: string;
@@ -14,6 +15,7 @@ type Props = {
 };
 
 function Input({
+  label,
   type,
   name,
   id,
@@ -40,7 +42,7 @@ function Input({
         defaultValue={defaultValue}
         placeholder={placeholder}
       />
-      <label htmlFor={id}>Label</label>
+      <label htmlFor={id}>{label}</label>
     </div>
   );
 };
