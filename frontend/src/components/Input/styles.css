@@ -40,3 +40,43 @@ input.rangeInputForm {
 input.rangeInputForm:hover {
   box-shadow: 0.1rem 0.1rem 4rem var(--first-color-opacity);
 }
+
+div.textInputContainer,
+div.emailInputContainer,
+div.dateInputContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+div.textInputContainer:focus-within label,
+div.emailInputContainer:focus-within label,
+div.dateInputContainer:focus-within label {
+  background: var(--background-color-light);
+  color: var(--first-color);
+  padding-inline: 0.5rem;
+  transform: translate(0rem, 1rem) scale(0.8);
+  transition: all 0.3s ease-in-out;
+}
+
+div.textInputContainer label,
+div.emailInputContainer label,
+div.dateInputContainer label {
+  color: var(--auxiliar-color-neutral);
+  font-size: 1.6rem;
+  line-height: 1;
+  position: absolute;
+  left: 1.4rem;
+  pointer-events: none;
+  transform: translate(0rem, 2.9rem) scale(1);
+  transform-origin: top left;
+  transition: 0.2s cubic-bezier(0, 0, 0.2, 1) 0s;
+}
+
+div.dateInputContainer:focus-within label {
+  display: block;
+}
+
+div.dateInputContainer label {
+  display: none;
+}

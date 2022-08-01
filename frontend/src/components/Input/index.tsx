@@ -26,7 +26,7 @@ function Input({
   placeholder,
 }: Props) {
   return (
-    <>
+    <div className={`${type}InputContainer`}>
       <input
         className={`${type}InputForm`}
         type={type}
@@ -40,7 +40,8 @@ function Input({
         defaultValue={defaultValue}
         placeholder={placeholder}
       />
-    </>
+      <label htmlFor={id}>Label</label>
+    </div>
   );
 };
 
