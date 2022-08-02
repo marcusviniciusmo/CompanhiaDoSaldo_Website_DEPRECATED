@@ -1,3 +1,4 @@
+import ClearIcon from '@mui/icons-material/Clear';
 import './styles.css';
 
 type Props = {
@@ -55,6 +56,10 @@ function Input({
       >
         {label}
       </label>
+
+      <div>
+        <ClearIcon fontSize='large' />
+      </div>
     </div>
   );
 };
