@@ -51,7 +51,9 @@ div.dateInputContainer {
 
 div.textInputContainer:focus-within label,
 div.emailInputContainer:focus-within label,
-div.dateInputContainer:focus-within label {
+div.dateInputContainer:focus-within label,
+div.textInputContainer .filled,
+div.emailInputContainer .filled {
   background: var(--background-color-light);
   color: var(--first-color);
   padding-inline: 0.5rem;

@@ -49,7 +49,12 @@ function Input({
         onChange={onChange()}
       />
 
-      <label htmlFor={id}>{label}</label>
+      <label
+        className={value && 'filled'}
+        htmlFor={id}
+      >
+        {label}
+      </label>
     </div>
   );
 };
