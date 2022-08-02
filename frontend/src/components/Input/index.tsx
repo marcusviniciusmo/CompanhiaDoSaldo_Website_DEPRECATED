@@ -57,7 +57,10 @@ function Input({
         {label}
       </label>
 
-      <div>
+      <div
+        title='Limpar'
+        className={value ? `${type}ClearIcon` : 'hideClearIcon'}
+      >
         <ClearIcon fontSize='large' />
       </div>
     </div>

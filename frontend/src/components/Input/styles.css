@@ -82,3 +82,36 @@ div.dateInputContainer:focus-within label {
 div.dateInputContainer label {
   display: none;
 }
+
+div.hideClearIcon {
+  display: none;
+}
+
+div.textInputContainer:focus-within div.textClearIcon,
+div.emailInputContainer:focus-within div.emailClearIcon {
+  opacity: 1;
+}
+
+div.textClearIcon,
+div.emailClearIcon {
+  box-sizing: border-box;
+  position: absolute;
+  top: 35%;
+  left: 30rem;
+  opacity: 0;
+  transform: translate(-50%);
+  transition: all 0.4s ease-in-out;
+}
+
+div.textInputContainer:focus-within div.textClearIcon:hover,
+div.emailInputContainer:focus-within div.emailClearIcon:hover {
+  color: var(--first-color);
+  cursor: pointer;
+}
+
+div.radioClearIcon,
+div.dateClearIcon,
+div.rangeClearIcon,
+div.colorClearIcon {
+  display: none;
+}
