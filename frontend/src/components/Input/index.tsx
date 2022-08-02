@@ -12,6 +12,8 @@ type Props = {
   step?: number;
   defaultValue?: number;
   placeholder?: string;
+  value: string | undefined;
+  onChange: Function;
 };
 
 function Input({
@@ -26,6 +28,8 @@ function Input({
   step,
   defaultValue,
   placeholder,
+  value,
+  onChange
 }: Props) {
   return (
     <div className={`${type}InputContainer`}>
@@ -41,7 +45,10 @@ function Input({
         step={step}
         defaultValue={defaultValue}
         placeholder={placeholder}
+        value={value}
+        onChange={onChange()}
       />
+
       <label htmlFor={id}>{label}</label>
     </div>
   );
