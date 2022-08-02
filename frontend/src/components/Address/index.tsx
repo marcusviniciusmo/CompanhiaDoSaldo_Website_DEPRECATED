@@ -25,6 +25,16 @@ function Address() {
       setInputDistrict(value);
   };
 
+  const clearInputCep = () => setInputCep('');
+
+  const clearInputAddress = () => setInputAddress('');
+
+  const clearInputNumber = () => setInputNumber('');
+
+  const clearInputComplement = () => setInputComplement('');
+
+  const clearInputDistrict = () => setInputDistrict('');
+
   return (
     <>
       ADDRESS Component
@@ -38,6 +48,7 @@ function Address() {
         id='fieldCep'
         value={inputCep}
         onChange={() => handleInput}
+        clear={() => clearInputCep}
       />
 
       <Input
@@ -47,6 +58,7 @@ function Address() {
         id='fieldAddress'
         value={inputAddress}
         onChange={() => handleInput}
+        clear={() => clearInputAddress}
       />
 
       <Input
@@ -56,6 +68,7 @@ function Address() {
         id='fieldNumber'
         value={inputNumber}
         onChange={() => handleInput}
+        clear={() => clearInputNumber}
       />
 
       <Input
@@ -65,6 +78,7 @@ function Address() {
         id='fieldComplement'
         value={inputComplement}
         onChange={() => handleInput}
+        clear={() => clearInputComplement}
       />
 
       <Input
@@ -74,6 +88,7 @@ function Address() {
         id='fieldDistrict'
         value={inputDistrict}
         onChange={() => handleInput}
+        clear={() => clearInputDistrict}
       />
 
       <h4>Estado</h4>

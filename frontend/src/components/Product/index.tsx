@@ -18,6 +18,10 @@ function Product() {
       setInputColor(value);
   };
 
+  const clearInputProduct = () => setInputProduct('');
+
+  const clearInputQuantity = () => setInputQuantity('');
+
   return (
     <>
       PRODUCT Component
@@ -31,6 +35,7 @@ function Product() {
         id='fieldProduct'
         value={inputProduct}
         onChange={() => handleInput}
+        clear={() => clearInputProduct}
       />
 
       <Input
@@ -40,6 +45,7 @@ function Product() {
         id='fieldQuantity'
         value={inputQuantity}
         onChange={() => handleInput}
+        clear={() => clearInputQuantity}
       />
 
       <Input

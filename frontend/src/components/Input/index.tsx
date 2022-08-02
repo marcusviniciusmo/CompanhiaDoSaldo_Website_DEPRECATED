@@ -15,6 +15,7 @@ type Props = {
   placeholder?: string;
   value: string | undefined;
   onChange: Function;
+  clear?:Function;
 };
 
 function Input({
@@ -30,8 +31,11 @@ function Input({
   defaultValue,
   placeholder,
   value,
-  onChange
+  onChange,
+  clear
 }: Props) {
+  const clearGenericInput = () => '';
+
   return (
     <div className={`${type}InputContainer`}>
       <input
@@ -60,6 +64,7 @@ function Input({
       <div
         title='Limpar'
         className={value ? `${type}ClearIcon` : 'hideClearIcon'}
+        onClick={clear ? clear() : clearGenericInput()}
       >
         <ClearIcon fontSize='large' />
       </div>

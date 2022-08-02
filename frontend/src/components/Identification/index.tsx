@@ -31,6 +31,14 @@ function Identification() {
       setInputBirthday(value);
   };
 
+  const clearInputCpf = () => setInputCpf('');
+
+  const clearInputPhone = () => setInputPhone('');
+
+  const clearInputName = () => setInputName('');
+
+  const clearInputEmail = () => setInputEmail('');
+
   return (
     <>
       IDENTIFICATION Component
@@ -44,6 +52,7 @@ function Identification() {
         id='fieldCpf'
         value={inputCpf}
         onChange={() => handleInput}
+        clear={() => clearInputCpf}
       />
 
       <Input
@@ -53,6 +62,7 @@ function Identification() {
         id='fieldPhone'
         value={inputPhone}
         onChange={() => handleInput}
+        clear={() => clearInputPhone}
       />
 
       <Input
@@ -62,6 +72,7 @@ function Identification() {
         id='fieldName'
         value={inputName}
         onChange={() => handleInput}
+        clear={() => clearInputName}
       />
 
       <Input
@@ -71,6 +82,7 @@ function Identification() {
         id='fieldEmail'
         value={inputEmail}
         onChange={() => handleInput}
+        clear={() => clearInputEmail}
       />
 
       <h4>Sexo</h4>
