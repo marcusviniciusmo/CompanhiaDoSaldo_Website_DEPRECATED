@@ -29,12 +29,20 @@ function Form({ content }: Props) {
         src={getUrlActive()}
       />
 
-      <button
-        className={'formButton'}
-        onClick={forwardPage}
-      >
-        Próximo
-      </button>
+      <div id="formButtonsContainer">
+        <button
+          className='formButton rewindButton'
+        >
+          Voltar
+        </button>
+
+        <button
+          className='formButton forwardButton'
+          onClick={forwardPage}
+        >
+          Próximo
+        </button>
+      </div>
     </div>
   );
 };

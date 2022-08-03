@@ -16,16 +16,33 @@ div#formContainer iframe#iframeFormContainer {
   border-top-right-radius: 1rem;
 }
 
+div#formContainer div#formButtonsContainer {
+  margin: 2rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  gap: 2rem;
+}
+
 div#formContainer button.formButton {
-  background: var(--first-color);
-  color: var(--auxiliar-color-default);
   font-size: 1.5rem;
-  margin: 2rem 0rem 1rem auto;
+  justify-content: center;
+  width: 10rem;
   padding: 0.5rem 2rem;
   border: none;
   border-radius: 1rem;
-  display: flex;
   cursor: pointer;
+}
+
+div#formContainer button.rewindButton {
+  background: var(--auxiliar-color-default);
+  color: var(--first-color);
+  border: 0.1rem solid var(--first-color);
+}
+
+div#formContainer button.forwardButton {
+  background: var(--first-color);
+  color: var(--auxiliar-color-default);
 }
 
 div#formContainer button.formButton:hover {
