@@ -21,6 +21,13 @@ function Form({ content }: Props) {
     }
   };
 
+  const rewindPage = () => {
+    if (indexActive > 0) {
+      setUrlActive(urls[getIndexActive() - 1]);
+      setIndexActive(getIndexActive() - 1);
+    }
+  };
+
   return (
     <div id='formContainer'>
       <iframe
@@ -32,6 +39,7 @@ function Form({ content }: Props) {
       <div id="formButtonsContainer">
         <button
           className='formButton rewindButton'
+          onClick={rewindPage}
         >
           Voltar
         </button>
