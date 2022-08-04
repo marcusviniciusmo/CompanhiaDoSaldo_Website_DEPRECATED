@@ -1,9 +1,9 @@
-import Clear from '@mui/icons-material/Clear';
+import { IInputComponent } from 'utils/Types/Input';
+import ClearIcon from '@mui/icons-material/Clear';
 
-export const ClearIconTitle = 'Limpar';
-
-export const ClearGenercInputFunction = () => '';
-
-export const ClearIcon = Clear;
-
-export const ClearIconFontSize = 'large';
+export const InputData: IInputComponent = {
+  IconTitle: 'Limpar',
+  ClearGenericInput: () => '',
+  Icon: ClearIcon,
+  IconFontSize: 'large'
+};

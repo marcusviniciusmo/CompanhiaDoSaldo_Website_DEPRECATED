@@ -1,9 +1,4 @@
-import {
-  ClearIconTitle,
-  ClearGenercInputFunction,
-  ClearIcon,
-  ClearIconFontSize
-} from 'utils/Mocks/Input';
+import { InputData } from 'utils/Mocks/Input';
 import './styles.css';
 
 type Props = {
@@ -65,11 +60,11 @@ function Input({
       </label>
 
       <div
-        title={ClearIconTitle}
+        title={InputData.IconTitle}
         className={value ? `${type}ClearIcon` : 'hideClearIcon'}
-        onClick={clear ? clear() : ClearGenercInputFunction}
+        onClick={clear ? clear() : InputData.ClearGenericInput}
       >
-        <ClearIcon fontSize={ClearIconFontSize} />
+        <InputData.Icon fontSize={InputData.IconFontSize} />
       </div>
     </div>
   );
