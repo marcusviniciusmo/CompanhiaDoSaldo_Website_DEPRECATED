@@ -1,4 +1,9 @@
-import ClearIcon from '@mui/icons-material/Clear';
+import {
+  ClearIconTitle,
+  ClearGenercInputFunction,
+  ClearIcon,
+  ClearIconFontSize
+} from 'utils/Mocks/Input';
 import './styles.css';
 
 type Props = {
@@ -34,8 +39,6 @@ function Input({
   onChange,
   clear
 }: Props) {
-  const clearGenericInput = () => '';
-
   return (
     <div className={`${type}InputContainer`}>
       <input
@@ -62,11 +65,11 @@ function Input({
       </label>
 
       <div
-        title='Limpar'
+        title={ClearIconTitle}
         className={value ? `${type}ClearIcon` : 'hideClearIcon'}
-        onClick={clear ? clear() : clearGenericInput()}
+        onClick={clear ? clear() : ClearGenercInputFunction}
       >
-        <ClearIcon fontSize='large' />
+        <ClearIcon fontSize={ClearIconFontSize} />
       </div>
     </div>
   );
