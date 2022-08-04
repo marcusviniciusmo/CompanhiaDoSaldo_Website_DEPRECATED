@@ -15,17 +15,13 @@ function Form({ content }: Props) {
   const getUrlActive = () => urlActive;
 
   const forwardPage = () => {
-    if (indexActive + 1 < urls.length) {
-      setUrlActive(urls[getIndexActive() + 1]);
-      setIndexActive(getIndexActive() + 1);
-    }
+    setUrlActive(urls[getIndexActive() + 1]);
+    setIndexActive(getIndexActive() + 1);
   };
 
   const rewindPage = () => {
-    if (indexActive > 0) {
-      setUrlActive(urls[getIndexActive() - 1]);
-      setIndexActive(getIndexActive() - 1);
-    }
+    setUrlActive(urls[getIndexActive() - 1]);
+    setIndexActive(getIndexActive() - 1);
   };
 
   return (
@@ -37,19 +33,25 @@ function Form({ content }: Props) {
       />
 
       <div id="formButtonsContainer">
-        <button
-          className='formButton rewindButton'
-          onClick={rewindPage}
-        >
-          Voltar
-        </button>
+        {
+          indexActive > 0 &&
+          <button
+            className='formButton rewindButton'
+            onClick={rewindPage}
+          >
+            Voltar
+          </button>
+        }
 
-        <button
-          className='formButton forwardButton'
-          onClick={forwardPage}
-        >
-          Próximo
-        </button>
+        {
+          indexActive + 1 < urls.length &&
+          <button
+            className='formButton forwardButton'
+            onClick={forwardPage}
+          >
+            Próximo
+          </button>
+        }
       </div>
     </div>
   );
