@@ -1,3 +1,42 @@
+import {
+  IdentificationLegend01,
+  InputCpfLabel,
+  InputCpfType,
+  InputCpfName,
+  InputCpfId,
+  InputPhoneLabel,
+  InputPhoneType,
+  InputPhoneName,
+  InputPhoneId,
+  InputNameLabel,
+  InputNameType,
+  InputNameName,
+  InputNameId,
+  InputEmailLabel,
+  InputEmailType,
+  InputEmailName,
+  InputEmailId,
+  IdentificationLegend02,
+  InputGenderMaleLabel,
+  InputGenderMaleType,
+  InputGenderMaleName,
+  InputGenderMaleId,
+  InputGenderMaleValue,
+  InputGenderFemaleLabel,
+  InputGenderFemaleType,
+  InputGenderFemaleName,
+  InputGenderFemaleId,
+  InputGenderFemaleValue,
+  InputGenderOthersLabel,
+  InputGenderOthersType,
+  InputGenderOthersName,
+  InputGenderOthersId,
+  InputGenderOthersValue,
+  InputBirthdayLabel,
+  InputBirthdayType,
+  InputBirthdayName,
+  InputBirthdayId
+} from 'utils/Mocks/Identification';
 import { useState } from "react";
 import Input from "components/Input";
 
@@ -13,21 +52,21 @@ function Identification() {
     const id = event.target.id;
     const value = event.target.value;
 
-    if (id === 'fieldCpf')
+    if (id === InputCpfId)
       setInputCpf(value);
-    else if (id === 'fieldPhone')
+    else if (id === InputPhoneId)
       setInputPhone(value);
-    else if (id === 'fieldName')
+    else if (id === InputNameId)
       setInputName(value);
-    else if (id === 'fieldEmail')
+    else if (id === InputEmailId)
       setInputEmail(value);
-    else if (id === 'fieldGenderMale')
+    else if (id === InputGenderMaleId)
       setInputGender(value);
-    else if (id === 'fieldGenderFemale')
+    else if (id === InputGenderFemaleId)
       setInputGender(value);
-    else if (id === 'fieldGenderOthers')
+    else if (id === InputGenderOthersId)
       setInputGender(value);
-    else if (id === 'fieldBirthday')
+    else if (id === InputBirthdayId)
       setInputBirthday(value);
   };
 
@@ -43,81 +82,81 @@ function Identification() {
     <>
       IDENTIFICATION Component
 
-      <h3>Identificação do Cliente</h3>
+      <h3>{IdentificationLegend01}</h3>
 
       <Input
-        label='CPF'
-        type='text'
-        name='fieldCpf'
-        id='fieldCpf'
+        label={InputCpfLabel}
+        type={InputCpfType}
+        name={InputCpfName}
+        id={InputCpfId}
         value={inputCpf}
         onChange={() => handleInput}
         clear={() => clearInputCpf}
       />
 
       <Input
-        label='Celular'
-        type='text'
-        name='fieldPhone'
-        id='fieldPhone'
+        label={InputPhoneLabel}
+        type={InputPhoneType}
+        name={InputPhoneName}
+        id={InputPhoneId}
         value={inputPhone}
         onChange={() => handleInput}
         clear={() => clearInputPhone}
       />
 
       <Input
-        label='Nome'
-        type='text'
-        name='fieldName'
-        id='fieldName'
+        label={InputNameLabel}
+        type={InputNameType}
+        name={InputNameName}
+        id={InputNameId}
         value={inputName}
         onChange={() => handleInput}
         clear={() => clearInputName}
       />
 
       <Input
-        label='E-mail'
-        type='email'
-        name='fieldEmail'
-        id='fieldEmail'
+        label={InputEmailLabel}
+        type={InputEmailType}
+        name={InputEmailName}
+        id={InputEmailId}
         value={inputEmail}
         onChange={() => handleInput}
         clear={() => clearInputEmail}
       />
 
-      <h4>Sexo</h4>
+      <h4>{IdentificationLegend02}</h4>
       <Input
-        label='Masculino'
-        type='radio'
-        name='fieldGender'
-        id='fieldGenderMale'
-        value='Masculino'
+        label={InputGenderMaleLabel}
+        type={InputGenderMaleType}
+        name={InputGenderMaleName}
+        id={InputGenderMaleId}
+        value={InputGenderMaleValue}
         onChange={() => handleInput}
       />
 
       <Input
-        label='Feminino'
-        type='radio'
-        name='fieldGender'
-        id='fieldGenderFemale'
-        value='Feminino'
+        label={InputGenderFemaleLabel}
+        type={InputGenderFemaleType}
+        name={InputGenderFemaleName}
+        id={InputGenderFemaleId}
+        value={InputGenderFemaleValue}
         onChange={() => handleInput}
       />
 
       <Input
-        label='Outros'
-        type='radio'
-        name='fieldGender'
-        id='fieldGenderOthers'
-        value='Outros'
+        label={InputGenderOthersLabel}
+        type={InputGenderOthersType}
+        name={InputGenderOthersName}
+        id={InputGenderOthersId}
+        value={InputGenderOthersValue}
         onChange={() => handleInput}
       />
 
       <Input
-        label='Data de Nascimento'
-        type='date'
-        name='fieldBirthday'
-        id='fieldBirthday'
+        label={InputBirthdayLabel}
+        type={InputBirthdayType}
+        name={InputBirthdayName}
+        id={InputBirthdayId}
         value={inputBirthday}
         onChange={() => handleInput}
       />
