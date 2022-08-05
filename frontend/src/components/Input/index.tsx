@@ -1,68 +1,53 @@
+import { IInput } from 'utils/Types/Input';
 import { InputData } from 'utils/Mocks/Input';
 import './styles.css';
 
-type Props = {
-  label: string;
-  type: string;
-  name: string;
-  id: string;
-  size?: number;
-  maxLength?: number;
-  min?: number;
-  max?: number;
-  step?: number;
-  defaultValue?: number;
-  placeholder?: string;
-  value: string | undefined;
-  onChange: Function;
-  clear?:Function;
-};
-
-function Input({
-  label,
-  type,
-  name,
-  id,
-  size,
-  maxLength,
-  min,
-  max,
-  step,
-  defaultValue,
-  placeholder,
-  value,
-  onChange,
-  clear
-}: Props) {
+export function Input({
+  Label,
+  Type,
+  Name,
+  Id,
+  Size,
+  MaxLength,
+  Min,
+  Max,
+  Step,
+  DefaultValue,
+  Placeholder,
+  Value,
+  OnChange,
+  OnChangeGeneric,
+  Clear
+}: IInput) {
   return (
-    <div className={`${type}InputContainer`}>
+    <div className={`${Type}InputContainer`}>
       <input
-        className={`${type}InputForm`}
-        type={type}
-        name={name}
-        id={id}
-        size={size}
-        maxLength={maxLength}
-        min={min}
-        max={max}
-        step={step}
-        defaultValue={defaultValue}
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange()}
+        className={`${Type}InputForm`}
+        type={Type}
+        name={Name}
+        id={Id}
+        size={Size}
+        maxLength={MaxLength}
+        min={Min}
+        max={Max}
+        step={Step}
+        defaultValue={DefaultValue}
+        placeholder={Placeholder}
+        value={Value}
+        onChange={OnChange ? OnChange() : OnChangeGeneric}
       />
 
       <label
-        className={value && 'filled'}
-        htmlFor={id}
+        className={Value && 'filled'}
+        htmlFor={Id}
       >
-        {label}
+        {Label}
       </label>
 
       <div
         title={InputData.IconTitle}
-        className={value ? `${type}ClearIcon` : 'hideClearIcon'}
-        onClick={clear ? clear() : InputData.ClearGenericInput}
+        className={Value ? `${Type}ClearIcon` : 'hideClearIcon'}
+        onClick={Clear ? Clear() : InputData.ClearGenericInput}
       >
         <InputData.Icon fontSize={InputData.IconFontSize} />
       </div>

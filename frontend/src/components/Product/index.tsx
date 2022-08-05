@@ -29,32 +29,32 @@ function Product() {
       <h3>Quero comprar</h3>
 
       <Input
-        label='Produto'
-        type='text'
-        name='fieldProduct'
-        id='fieldProduct'
-        value={inputProduct}
-        onChange={() => handleInput}
-        clear={() => clearInputProduct}
+        Label='Produto'
+        Type='text'
+        Name='fieldProduct'
+        Id='fieldProduct'
+        Value={inputProduct}
+        OnChange={() => handleInput}
+        Clear={() => clearInputProduct}
       />
 
       <Input
-        label='Quantidade'
-        type='text'
-        name='fieldQuantity'
-        id='fieldQuantity'
-        value={inputQuantity}
-        onChange={() => handleInput}
-        clear={() => clearInputQuantity}
+        Label='Quantidade'
+        Type='text'
+        Name='fieldQuantity'
+        Id='fieldQuantity'
+        Value={inputQuantity}
+        OnChange={() => handleInput}
+        Clear={() => clearInputQuantity}
       />
 
       <Input
-        label='Cor'
-        type='color'
-        name='fieldColor'
-        id='fieldColor'
-        value={inputColor}
-        onChange={() => handleInput}
+        Label='Cor'
+        Type='color'
+        Name='fieldColor'
+        Id='fieldColor'
+        Value={inputColor}
+        OnChange={() => handleInput}
       />
     </>
   );

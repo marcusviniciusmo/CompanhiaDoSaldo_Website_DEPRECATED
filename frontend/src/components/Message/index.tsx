@@ -20,12 +20,12 @@ function Message() {
       <h3>Mensagem do Cliente</h3>
 
       <Input
-        label='Grau de Urgência'
-        type='range'
-        name='fieldUrgency'
-        id='fieldUrgency'
-        value={inputUrgency}
-        onChange={() => handleInput}
+        Label='Grau de Urgência'
+        Type='range'
+        Name='fieldUrgency'
+        Id='fieldUrgency'
+        Value={inputUrgency}
+        OnChange={() => handleInput}
       />
 
       <h4>Mensagem</h4>

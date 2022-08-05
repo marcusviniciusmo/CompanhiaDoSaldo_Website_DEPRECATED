@@ -42,53 +42,53 @@ function Address() {
       <h3>Endereço do Cliente</h3>
 
       <Input
-        label='CEP'
-        type='text'
-        name='fieldCep'
-        id='fieldCep'
-        value={inputCep}
-        onChange={() => handleInput}
-        clear={() => clearInputCep}
+        Label='CEP'
+        Type='text'
+        Name='fieldCep'
+        Id='fieldCep'
+        Value={inputCep}
+        OnChange={() => handleInput}
+        Clear={() => clearInputCep}
       />
 
       <Input
-        label='Endereço'
-        type='text'
-        name='fieldAddress'
-        id='fieldAddress'
-        value={inputAddress}
-        onChange={() => handleInput}
-        clear={() => clearInputAddress}
+        Label='Endereço'
+        Type='text'
+        Name='fieldAddress'
+        Id='fieldAddress'
+        Value={inputAddress}
+        OnChange={() => handleInput}
+        Clear={() => clearInputAddress}
       />
 
       <Input
-        label='Número'
-        type='text'
-        name='fieldNumber'
-        id='fieldNumber'
-        value={inputNumber}
-        onChange={() => handleInput}
-        clear={() => clearInputNumber}
+        Label='Número'
+        Type='text'
+        Name='fieldNumber'
+        Id='fieldNumber'
+        Value={inputNumber}
+        OnChange={() => handleInput}
+        Clear={() => clearInputNumber}
       />
 
       <Input
-        label='Complemento'
-        type='text'
-        name='fieldComplement'
-        id='fieldComplement'
-        value={inputComplement}
-        onChange={() => handleInput}
-        clear={() => clearInputComplement}
+        Label='Complemento'
+        Type='text'
+        Name='fieldComplement'
+        Id='fieldComplement'
+        Value={inputComplement}
+        OnChange={() => handleInput}
+        Clear={() => clearInputComplement}
       />
 
       <Input
-        label='Bairro'
-        type='text'
-        name='fieldDistrict'
-        id='fieldDistrict'
-        value={inputDistrict}
-        onChange={() => handleInput}
-        clear={() => clearInputDistrict}
+        Label='Bairro'
+        Type='text'
+        Name='fieldDistrict'
+        Id='fieldDistrict'
+        Value={inputDistrict}
+        OnChange={() => handleInput}
+        Clear={() => clearInputDistrict}
       />
 
       <h4>Estado</h4>

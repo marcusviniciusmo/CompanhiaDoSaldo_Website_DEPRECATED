@@ -1,73 +1,59 @@
-export const IdentificationLegend01 = 'Identificação do Cliente';
+import { IIdentification } from 'utils/Types/Identification';
 
-export const InputCpfLabel = 'CPF';
-
-export const InputCpfType = 'text';
-
-export const InputCpfName = 'fieldCpf';
-
-export const InputCpfId = 'fieldCpf';
-
-export const InputPhoneLabel = 'Celular';
-
-export const InputPhoneType = 'text';
-
-export const InputPhoneName = 'fieldPhone';
-
-export const InputPhoneId = 'fieldPhone';
-
-export const InputNameLabel = 'Nome';
-
-export const InputNameType = 'text';
-
-export const InputNameName = 'fieldName';
-
-export const InputNameId = 'fieldName';
-
-export const InputEmailLabel = 'E-mail';
-
-export const InputEmailType = 'email';
-
-export const InputEmailName = 'fieldEmail';
-
-export const InputEmailId = 'fieldEmail';
-
-export const IdentificationLegend02 = 'Sexo';
-
-export const InputGenderMaleLabel = 'Masculino';
-
-export const InputGenderMaleType = 'radio';
-
-export const InputGenderMaleName = 'fieldGender';
-
-export const InputGenderMaleId = 'fieldGenderMale';
-
-export const InputGenderMaleValue = 'Masculino';
-
-export const InputGenderFemaleLabel = 'Feminino';
-
-export const InputGenderFemaleType = 'radio';
-
-export const InputGenderFemaleName = 'fieldGender';
-
-export const InputGenderFemaleId = 'fieldGenderFemale';
-
-export const InputGenderFemaleValue = 'Feminino';
-
-export const InputGenderOthersLabel = 'Outros';
-
-export const InputGenderOthersType = 'radio';
-
-export const InputGenderOthersName = 'fieldGender';
-
-export const InputGenderOthersId = 'fieldGenderOthers';
-
-export const InputGenderOthersValue = 'Outros';
-
-export const InputBirthdayLabel = 'Data de Nascimento';
-
-export const InputBirthdayType = 'date';
-
-export const InputBirthdayName = 'fieldBirthday';
-
-export const InputBirthdayId = 'fieldBirthday';
+export const IdentificationData: IIdentification = {
+  Legend: 'Identificação do Cliente',
+  SubLegend: 'Sexo',
+  Inputs: [
+    {
+      Label: 'CPF',
+      Type: 'text',
+      Name: 'fieldCpf',
+      Id: 'fieldCpf'
+    },
+    {
+      Label: 'Celular',
+      Type: 'text',
+      Name: 'fieldPhone',
+      Id: 'fieldPhone'
+    },
+    {
+      Label: 'Nome',
+      Type: 'text',
+      Name: 'fieldName',
+      Id: 'fieldName'
+    },
+    {
+      Label: 'E-mail',
+      Type: 'email',
+      Name: 'fieldEmail',
+      Id: 'fieldEmail'
+    },
+    {
+      Label: 'Masculino',
+      Type: 'radio',
+      Name: 'fieldGender',
+      Id: 'fieldGenderMale',
+      Value: 'Masculino'
+    },
+    {
+      Label: 'Feminino',
+      Type: 'radio',
+      Name: 'fieldGender',
+      Id: 'fieldGenderFemale',
+      Value: 'Feminino'
+    },
+    {
+      Label: 'Outros',
+      Type: 'radio',
+      Name: 'fieldGender',
+      Id: 'fieldGenderOthers',
+      Value: 'Outros'
+    },
+    {
+      Label: 'Data de Nascimento',
+      Type: 'date',
+      Name: 'fieldBirthday',
+      Id: 'fieldBirthday'
+    },
+  ]
+};

@@ -1,42 +1,4 @@
-import {
-  IdentificationLegend01,
-  InputCpfLabel,
-  InputCpfType,
-  InputCpfName,
-  InputCpfId,
-  InputPhoneLabel,
-  InputPhoneType,
-  InputPhoneName,
-  InputPhoneId,
-  InputNameLabel,
-  InputNameType,
-  InputNameName,
-  InputNameId,
-  InputEmailLabel,
-  InputEmailType,
-  InputEmailName,
-  InputEmailId,
-  IdentificationLegend02,
-  InputGenderMaleLabel,
-  InputGenderMaleType,
-  InputGenderMaleName,
-  InputGenderMaleId,
-  InputGenderMaleValue,
-  InputGenderFemaleLabel,
-  InputGenderFemaleType,
-  InputGenderFemaleName,
-  InputGenderFemaleId,
-  InputGenderFemaleValue,
-  InputGenderOthersLabel,
-  InputGenderOthersType,
-  InputGenderOthersName,
-  InputGenderOthersId,
-  InputGenderOthersValue,
-  InputBirthdayLabel,
-  InputBirthdayType,
-  InputBirthdayName,
-  InputBirthdayId
-} from 'utils/Mocks/Identification';
+import { IdentificationData } from 'utils/Mocks/Identification';
 import { useState } from "react";
 import Input from "components/Input";
 
@@ -52,21 +14,21 @@ function Identification() {
     const id = event.target.id;
     const value = event.target.value;
 
-    if (id === InputCpfId)
+    if (id === IdentificationData.Inputs[0].Id)
       setInputCpf(value);
-    else if (id === InputPhoneId)
+    else if (id === IdentificationData.Inputs[1].Id)
       setInputPhone(value);
-    else if (id === InputNameId)
+    else if (id === IdentificationData.Inputs[2].Id)
       setInputName(value);
-    else if (id === InputEmailId)
+    else if (id === IdentificationData.Inputs[3].Id)
       setInputEmail(value);
-    else if (id === InputGenderMaleId)
+    else if (id === IdentificationData.Inputs[4].Id)
       setInputGender(value);
-    else if (id === InputGenderFemaleId)
+    else if (id === IdentificationData.Inputs[5].Id)
       setInputGender(value);
-    else if (id === InputGenderOthersId)
+    else if (id === IdentificationData.Inputs[6].Id)
       setInputGender(value);
-    else if (id === InputBirthdayId)
+    else if (id === IdentificationData.Inputs[7].Id)
       setInputBirthday(value);
   };
 
@@ -82,83 +44,83 @@ function Identification() {
     <>
       IDENTIFICATION Component
 
-      <h3>{IdentificationLegend01}</h3>
+      <h3>{IdentificationData.Legend}</h3>
 
       <Input
-        label={InputCpfLabel}
-        type={InputCpfType}
-        name={InputCpfName}
-        id={InputCpfId}
-        value={inputCpf}
-        onChange={() => handleInput}
-        clear={() => clearInputCpf}
+        Label={IdentificationData.Inputs[0].Label}
+        Type={IdentificationData.Inputs[0].Type}
+        Name={IdentificationData.Inputs[0].Name}
+        Id={IdentificationData.Inputs[0].Id}
+        Value={inputCpf}
+        OnChange={() => handleInput}
+        Clear={() => clearInputCpf}
       />
 
       <Input
-        label={InputPhoneLabel}
-        type={InputPhoneType}
-        name={InputPhoneName}
-        id={InputPhoneId}
-        value={inputPhone}
-        onChange={() => handleInput}
-        clear={() => clearInputPhone}
+        Label={IdentificationData.Inputs[1].Label}
+        Type={IdentificationData.Inputs[1].Type}
+        Name={IdentificationData.Inputs[1].Name}
+        Id={IdentificationData.Inputs[1].Id}
+        Value={inputPhone}
+        OnChange={() => handleInput}
+        Clear={() => clearInputPhone}
       />
 
       <Input
-        label={InputNameLabel}
-        type={InputNameType}
-        name={InputNameName}
-        id={InputNameId}
-        value={inputName}
-        onChange={() => handleInput}
-        clear={() => clearInputName}
+        Label={IdentificationData.Inputs[2].Label}
+        Type={IdentificationData.Inputs[2].Type}
+        Name={IdentificationData.Inputs[2].Name}
+        Id={IdentificationData.Inputs[2].Id}
+        Value={inputName}
+        OnChange={() => handleInput}
+        Clear={() => clearInputName}
       />
 
       <Input
-        label={InputEmailLabel}
-        type={InputEmailType}
-        name={InputEmailName}
-        id={InputEmailId}
-        value={inputEmail}
-        onChange={() => handleInput}
-        clear={() => clearInputEmail}
+        Label={IdentificationData.Inputs[3].Label}
+        Type={IdentificationData.Inputs[3].Type}
+        Name={IdentificationData.Inputs[3].Name}
+        Id={IdentificationData.Inputs[3].Id}
+        Value={inputEmail}
+        OnChange={() => handleInput}
+        Clear={() => clearInputEmail}
       />
 
-      <h4>{IdentificationLegend02}</h4>
+      <h4>{IdentificationData.SubLegend}</h4>
       <Input
-        label={InputGenderMaleLabel}
-        type={InputGenderMaleType}
-        name={InputGenderMaleName}
-        id={InputGenderMaleId}
-        value={InputGenderMaleValue}
-        onChange={() => handleInput}
-      />
-
-      <Input
-        label={InputGenderFemaleLabel}
-        type={InputGenderFemaleType}
-        name={InputGenderFemaleName}
-        id={InputGenderFemaleId}
-        value={InputGenderFemaleValue}
-        onChange={() => handleInput}
+        Label={IdentificationData.Inputs[4].Label}
+        Type={IdentificationData.Inputs[4].Type}
+        Name={IdentificationData.Inputs[4].Name}
+        Id={IdentificationData.Inputs[4].Id}
+        Value={IdentificationData.Inputs[4].Value}
+        OnChange={() => handleInput}
       />
 
       <Input
-        label={InputGenderOthersLabel}
-        type={InputGenderOthersType}
-        name={InputGenderOthersName}
-        id={InputGenderOthersId}
-        value={InputGenderOthersValue}
-        onChange={() => handleInput}
+        Label={IdentificationData.Inputs[5].Label}
+        Type={IdentificationData.Inputs[5].Type}
+        Name={IdentificationData.Inputs[5].Name}
+        Id={IdentificationData.Inputs[5].Id}
+        Value={IdentificationData.Inputs[5].Value}
+        OnChange={() => handleInput}
       />
 
       <Input
-        label={InputBirthdayLabel}
-        type={InputBirthdayType}
-        name={InputBirthdayName}
-        id={InputBirthdayId}
-        value={inputBirthday}
-        onChange={() => handleInput}
+        Label={IdentificationData.Inputs[6].Label}
+        Type={IdentificationData.Inputs[6].Type}
+        Name={IdentificationData.Inputs[6].Name}
+        Id={IdentificationData.Inputs[6].Id}
+        Value={IdentificationData.Inputs[6].Value}
+        OnChange={() => handleInput}
+      />
+
+      <Input
+        Label={IdentificationData.Inputs[7].Label}
+        Type={IdentificationData.Inputs[7].Type}
+        Name={IdentificationData.Inputs[7].Name}
+        Id={IdentificationData.Inputs[7].Id}
+        Value={inputBirthday}
+        OnChange={() => handleInput}
       />
     </>
   );
