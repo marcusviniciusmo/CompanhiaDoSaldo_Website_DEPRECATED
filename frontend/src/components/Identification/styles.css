@@ -1,0 +1,12 @@
+form.ordersFormContainer fieldset#identification {
+  background: url(
+    '../../assets/images/identification/iconeContato.png') no-repeat 95% 95%;
+}
+
+form.ordersFormContainer fieldset#gender {
+  width: 30.4rem;
+}
+
+form.ordersFormContainer fieldset div.inputRadioIdentification input {
+  margin-bottom: 0.5rem;
+}

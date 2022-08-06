@@ -1,46 +1,3 @@
-input.textInputForm,
-input.emailInputForm,
-input.dateInputForm {
-  border: 0.1rem solid var(--border-color);
-  border-radius: 0.5rem;
-  min-height: 2rem;
-  margin-block: 1.5rem;
-  padding: 1rem 1.5rem;
-  transition: all 0.3s ease;
-}
-
-input.textInputForm,
-input.emailInputForm,
-input.dateInputForm {
-  width: 30rem;
-}
-
-input.textInputForm:hover,
-input.emailInputForm:hover,
-input.dateInputForm:hover {
-  background: var(--background-color-light);
-  box-shadow: 0.1rem 0.1rem 0.5rem var(--first-color);
-}
-
-input.textInputForm::placeholder,
-input.emailInputForm::placeholder {
-  color: var(--auxiliar-color-neutral);
-  font-size: 1.5rem;
-}
-
-input.radioInputForm {
-  zoom: 1.5;
-}
-
-input.rangeInputForm {
-  width: 30rem;
-  cursor: pointer;
-}
-
-input.rangeInputForm:hover {
-  box-shadow: 0.1rem 0.1rem 4rem var(--first-color-opacity);
-}
-
 div.textInputContainer,
 div.emailInputContainer,
 div.dateInputContainer {
@@ -49,16 +6,23 @@ div.dateInputContainer {
   flex-direction: column;
 }
 
-div.textInputContainer:focus-within label,
-div.emailInputContainer:focus-within label,
-div.dateInputContainer:focus-within label,
-div.textInputContainer .filled,
-div.emailInputContainer .filled {
-  background: var(--background-color-light);
+div.radioInputContainer {
+  margin-block: 0rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+div.textInputContainer:focus-within div.textClearIcon,
+div.emailInputContainer:focus-within div.emailClearIcon {
+  opacity: 1;
+}
+
+div.textInputContainer:focus-within div.textClearIcon:hover,
+div.emailInputContainer:focus-within div.emailClearIcon:hover {
   color: var(--first-color);
-  padding-inline: 0.5rem;
-  transform: translate(0rem, 1rem) scale(0.8);
-  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 div.textInputContainer label,
@@ -75,21 +39,64 @@ div.dateInputContainer label {
   transition: 0.2s cubic-bezier(0, 0, 0.2, 1) 0s;
 }
 
-div.dateInputContainer:focus-within label {
-  display: block;
-}
-
 div.dateInputContainer label {
   display: none;
 }
 
-div.hideClearIcon {
-  display: none;
+div.textInputContainer:focus-within label,
+div.emailInputContainer:focus-within label,
+div.dateInputContainer:focus-within label,
+div.textInputContainer .filled,
+div.emailInputContainer .filled {
+  background: var(--background-color-light);
+  color: var(--first-color);
+  padding-inline: 0.5rem;
+  transform: translate(0rem, 1rem) scale(0.8);
+  transition: all 0.3s ease-in-out;
 }
 
-div.textInputContainer:focus-within div.textClearIcon,
-div.emailInputContainer:focus-within div.emailClearIcon {
-  opacity: 1;
+div.dateInputContainer:focus-within label {
+  display: block;
+}
+
+input.textInputForm,
+input.emailInputForm,
+input.dateInputForm {
+  border: 0.1rem solid var(--border-color);
+  width: 30rem;
+  border-radius: 0.5rem;
+  min-height: 2rem;
+  margin-block: 1.5rem;
+  padding: 1rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+input.radioInputForm {
+  accent-color: var(--first-color);
+  opacity: 1 !important;
+  zoom: 1.5;
+}
+
+input.rangeInputForm {
+  width: 30rem;
+  cursor: pointer;
+}
+
+input.textInputForm:hover,
+input.emailInputForm:hover,
+input.dateInputForm:hover {
+  background: var(--background-color-light);
+  box-shadow: 0.1rem 0.1rem 0.5rem var(--first-color);
+}
+
+input.rangeInputForm:hover {
+  box-shadow: 0.1rem 0.1rem 4rem var(--first-color-opacity);
+}
+
+input.textInputForm::placeholder,
+input.emailInputForm::placeholder {
+  color: var(--auxiliar-color-neutral);
+  font-size: 1.5rem;
 }
 
 div.textClearIcon,
@@ -103,15 +110,13 @@ div.emailClearIcon {
   transition: all 0.4s ease-in-out;
 }
 
-div.textInputContainer:focus-within div.textClearIcon:hover,
-div.emailInputContainer:focus-within div.emailClearIcon:hover {
-  color: var(--first-color);
-  cursor: pointer;
-}
-
 div.radioClearIcon,
 div.dateClearIcon,
 div.rangeClearIcon,
 div.colorClearIcon {
+  display: none;
+}
+
+div.hideClearIcon {
   display: none;
 }

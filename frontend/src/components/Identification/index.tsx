@@ -1,6 +1,7 @@
 import { IdentificationData } from 'utils/Mocks/Identification';
 import { useState } from "react";
 import Input from "components/Input";
+import './styles.css';
 
 function Identification() {
   const [inputCpf, setInputCpf] = useState<string | undefined>('');
@@ -41,88 +42,100 @@ function Identification() {
   const clearInputEmail = () => setInputEmail('');
 
   return (
-    <>
-      IDENTIFICATION Component
+    <form
+      method='post'
+      className='ordersFormContainer'
+      action='mailto:marcus.viniciusmo@hotmail.com'
+    >
+      <fieldset id='identification'>
+        <legend>{IdentificationData.Legend}</legend>
 
-      <h3>{IdentificationData.Legend}</h3>
+        <Input
+          Label={IdentificationData.Inputs[0].Label}
+          Type={IdentificationData.Inputs[0].Type}
+          Name={IdentificationData.Inputs[0].Name}
+          Id={IdentificationData.Inputs[0].Id}
+          Value={inputCpf}
+          OnChange={() => handleInput}
+          Clear={() => clearInputCpf}
+        />
 
-      <Input
-        Label={IdentificationData.Inputs[0].Label}
-        Type={IdentificationData.Inputs[0].Type}
-        Name={IdentificationData.Inputs[0].Name}
-        Id={IdentificationData.Inputs[0].Id}
-        Value={inputCpf}
-        OnChange={() => handleInput}
-        Clear={() => clearInputCpf}
-      />
+        <Input
+          Label={IdentificationData.Inputs[1].Label}
+          Type={IdentificationData.Inputs[1].Type}
+          Name={IdentificationData.Inputs[1].Name}
+          Id={IdentificationData.Inputs[1].Id}
+          Value={inputPhone}
+          OnChange={() => handleInput}
+          Clear={() => clearInputPhone}
+        />
 
-      <Input
-        Label={IdentificationData.Inputs[1].Label}
-        Type={IdentificationData.Inputs[1].Type}
-        Name={IdentificationData.Inputs[1].Name}
-        Id={IdentificationData.Inputs[1].Id}
-        Value={inputPhone}
-        OnChange={() => handleInput}
-        Clear={() => clearInputPhone}
-      />
+        <Input
+          Label={IdentificationData.Inputs[2].Label}
+          Type={IdentificationData.Inputs[2].Type}
+          Name={IdentificationData.Inputs[2].Name}
+          Id={IdentificationData.Inputs[2].Id}
+          Value={inputName}
+          OnChange={() => handleInput}
+          Clear={() => clearInputName}
+        />
 
-      <Input
-        Label={IdentificationData.Inputs[2].Label}
-        Type={IdentificationData.Inputs[2].Type}
-        Name={IdentificationData.Inputs[2].Name}
-        Id={IdentificationData.Inputs[2].Id}
-        Value={inputName}
-        OnChange={() => handleInput}
-        Clear={() => clearInputName}
-      />
+        <Input
+          Label={IdentificationData.Inputs[3].Label}
+          Type={IdentificationData.Inputs[3].Type}
+          Name={IdentificationData.Inputs[3].Name}
+          Id={IdentificationData.Inputs[3].Id}
+          Value={inputEmail}
+          OnChange={() => handleInput}
+          Clear={() => clearInputEmail}
+        />
 
-      <Input
-        Label={IdentificationData.Inputs[3].Label}
-        Type={IdentificationData.Inputs[3].Type}
-        Name={IdentificationData.Inputs[3].Name}
-        Id={IdentificationData.Inputs[3].Id}
-        Value={inputEmail}
-        OnChange={() => handleInput}
-        Clear={() => clearInputEmail}
-      />
+        <fieldset id='gender'>
+          <legend>{IdentificationData.SubLegend}</legend>
+          <div className='inputRadioIdentification'>
+            <Input
+              Label={IdentificationData.Inputs[4].Label}
+              Type={IdentificationData.Inputs[4].Type}
+              Name={IdentificationData.Inputs[4].Name}
+              Id={IdentificationData.Inputs[4].Id}
+              Value={IdentificationData.Inputs[4].Value}
+              OnChange={() => handleInput}
+            />
+          </div>
 
-      <h4>{IdentificationData.SubLegend}</h4>
-      <Input
-        Label={IdentificationData.Inputs[4].Label}
-        Type={IdentificationData.Inputs[4].Type}
-        Name={IdentificationData.Inputs[4].Name}
-        Id={IdentificationData.Inputs[4].Id}
-        Value={IdentificationData.Inputs[4].Value}
-        OnChange={() => handleInput}
-      />
+          <div className="inputRadioIdentification">
+            <Input
+              Label={IdentificationData.Inputs[5].Label}
+              Type={IdentificationData.Inputs[5].Type}
+              Name={IdentificationData.Inputs[5].Name}
+              Id={IdentificationData.Inputs[5].Id}
+              Value={IdentificationData.Inputs[5].Value}
+              OnChange={() => handleInput}
+            />
+          </div>
 
-      <Input
-        Label={IdentificationData.Inputs[5].Label}
-        Type={IdentificationData.Inputs[5].Type}
-        Name={IdentificationData.Inputs[5].Name}
-        Id={IdentificationData.Inputs[5].Id}
-        Value={IdentificationData.Inputs[5].Value}
-        OnChange={() => handleInput}
-      />
+          <div className="inputRadioIdentification">
+            <Input
+              Label={IdentificationData.Inputs[6].Label}
+              Type={IdentificationData.Inputs[6].Type}
+              Name={IdentificationData.Inputs[6].Name}
+              Id={IdentificationData.Inputs[6].Id}
+              Value={IdentificationData.Inputs[6].Value}
+              OnChange={() => handleInput}
+            />
+          </div>
+        </fieldset>
 
-      <Input
-        Label={IdentificationData.Inputs[6].Label}
-        Type={IdentificationData.Inputs[6].Type}
-        Name={IdentificationData.Inputs[6].Name}
-        Id={IdentificationData.Inputs[6].Id}
-        Value={IdentificationData.Inputs[6].Value}
-        OnChange={() => handleInput}
-      />
-
-      <Input
-        Label={IdentificationData.Inputs[7].Label}
-        Type={IdentificationData.Inputs[7].Type}
-        Name={IdentificationData.Inputs[7].Name}
-        Id={IdentificationData.Inputs[7].Id}
-        Value={inputBirthday}
-        OnChange={() => handleInput}
-      />
-    </>
+        <Input
+          Label={IdentificationData.Inputs[7].Label}
+          Type={IdentificationData.Inputs[7].Type}
+          Name={IdentificationData.Inputs[7].Name}
+          Id={IdentificationData.Inputs[7].Id}
+          Value={inputBirthday}
+          OnChange={() => handleInput}
+        />
+      </fieldset>
+    </form>
   );
 };
 

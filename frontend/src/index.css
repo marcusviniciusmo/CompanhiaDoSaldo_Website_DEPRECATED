@@ -50,6 +50,29 @@ body {
   padding: 0.5rem 0rem 0.5rem 1rem;
 }
 
+form.ordersFormContainer {
+  width: 50rem;
+  margin: auto;
+}
+
+form.ordersFormContainer fieldset {
+  border-color: var(--auxiliar-color-default);
+  border-radius: 1rem;
+  margin-block: 0rem;
+}
+
+form.ordersFormContainer fieldset legend {
+  padding-inline: 1.0rem;
+  color: var(--second-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+form.ordersFormContainer fieldset input {
+  font-size: 1.5rem;
+  opacity: 0.6;
+}
+
 .alignRight {
   text-align: right;
 }
