@@ -16,9 +16,9 @@ function Identification() {
     const value = event.target.value;
 
     if (id === IdentificationData.Inputs[0].Id)
-      setInputCpf(value);
+      setInputCpf(value.replace(/[^0-9]/, ''));
     else if (id === IdentificationData.Inputs[1].Id)
-      setInputPhone(value);
+      setInputPhone(value.replace(/[^0-9]/, ''));
     else if (id === IdentificationData.Inputs[2].Id)
       setInputName(value);
     else if (id === IdentificationData.Inputs[3].Id)
@@ -55,6 +55,7 @@ function Identification() {
           Type={IdentificationData.Inputs[0].Type}
           Name={IdentificationData.Inputs[0].Name}
           Id={IdentificationData.Inputs[0].Id}
+          MaxLength={IdentificationData.Inputs[0].MaxLength}
           Value={inputCpf}
           OnChange={() => handleInput}
           Clear={() => clearInputCpf}
@@ -65,6 +66,7 @@ function Identification() {
           Type={IdentificationData.Inputs[1].Type}
           Name={IdentificationData.Inputs[1].Name}
           Id={IdentificationData.Inputs[1].Id}
+          MaxLength={IdentificationData.Inputs[1].MaxLength}
           Value={inputPhone}
           OnChange={() => handleInput}
           Clear={() => clearInputPhone}

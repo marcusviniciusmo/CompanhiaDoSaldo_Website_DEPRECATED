@@ -8,13 +8,15 @@ export const IdentificationData: IIdentification = {
       Label: 'CPF',
       Type: 'text',
       Name: 'fieldCpf',
-      Id: 'fieldCpf'
+      Id: 'fieldCpf',
+      MaxLength: 11
     },
     {
       Label: 'Celular',
       Type: 'text',
       Name: 'fieldPhone',
-      Id: 'fieldPhone'
+      Id: 'fieldPhone',
+      MaxLength: 13
     },
     {
       Label: 'Nome',
