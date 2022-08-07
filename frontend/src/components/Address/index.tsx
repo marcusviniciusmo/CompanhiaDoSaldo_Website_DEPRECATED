@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from 'axios';
 import Input from "components/Input";
 import Select from "components/Select";
 import './styles.css';
@@ -9,6 +10,14 @@ function Address() {
   const [inputNumber, setInputNumber] = useState<string | undefined>('');
   const [inputComplement, setInputComplement] = useState<string | undefined>('');
   const [inputDistrict, setInputDistrict] = useState<string | undefined>('');
+
+useEffect(() => {
+  axios.get(`https://viacep.com.br/ws/60020000/json/`)
+  .then((response) => {
+    console.log('response')
+    console.log(response)
+  })
+}, []);
 
   const handleInput = (event: any) => {
     const id = event.target.id;
