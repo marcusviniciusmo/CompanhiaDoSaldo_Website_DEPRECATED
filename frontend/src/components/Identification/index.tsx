@@ -25,9 +25,15 @@ function Identification() {
         setInputBirthday(client.Birthday);
       }
       else {
-        alert('Cliente não encontrado')
-      }
-    }
+        alert('Cliente não encontrado');
+
+        setInputPhone('');
+        setInputName('');
+        setInputEmail('');
+        setInputGender('');
+        setInputBirthday('');
+      };
+    };
   };
 
   const handleInput = (event: any) => {
