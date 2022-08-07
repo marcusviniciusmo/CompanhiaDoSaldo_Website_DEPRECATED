@@ -1,4 +1,13 @@
-import { IIdentification } from 'utils/Types/Identification';
+import { IClient, IIdentification } from 'utils/Types/Identification';
+
+export const ClientDefault: IClient = {
+  Cpf: '11111111111',
+  Phone: '5500912345678',
+  Name: 'José Maria da Silva',
+  Email: 'josemariadasilva@gmail.com',
+  Gender: 'Masculino',
+  Birthday: '1965-08-15'
+};
 
 export const IdentificationData: IIdentification = {
   Legend: 'Identificação do Cliente',

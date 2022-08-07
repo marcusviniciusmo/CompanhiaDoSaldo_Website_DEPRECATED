@@ -1,4 +1,4 @@
-import { IdentificationData } from 'utils/Mocks/Identification';
+import { ClientDefault, IdentificationData } from 'utils/Mocks/Identification';
 import { useState } from "react";
 import Input from "components/Input";
 import './styles.css';
@@ -11,12 +11,34 @@ function Identification() {
   const [, setInputGender] = useState<string | undefined>('');
   const [inputBirthday, setInputBirthday] = useState<string | undefined>('');
 
+  const getClientByCpf = (cpf: string) => {
+    const client = ClientDefault
+
+    if (cpf.length === 11) {
+      if (cpf === client.Cpf) {
+        alert('Cliente encontrado');
+
+        setInputPhone(client.Phone);
+        setInputName(client.Name);
+        setInputEmail(client.Email);
+        setInputGender(client.Gender);
+        setInputBirthday(client.Birthday);
+      }
+      else {
+        alert('Cliente não encontrado')
+      }
+    }
+  };
+
   const handleInput = (event: any) => {
     const id = event.target.id;
     const value = event.target.value;
 
-    if (id === IdentificationData.Inputs[0].Id)
+    if (id === IdentificationData.Inputs[0].Id) {
       setInputCpf(value.replace(/[^0-9]/, ''));
+
+      getClientByCpf(value);
+    }
     else if (id === IdentificationData.Inputs[1].Id)
       setInputPhone(value.replace(/[^0-9]/, ''));
     else if (id === IdentificationData.Inputs[2].Id)
