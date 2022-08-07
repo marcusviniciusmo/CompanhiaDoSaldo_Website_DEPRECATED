@@ -8,7 +8,7 @@ function Identification() {
   const [inputPhone, setInputPhone] = useState<string | undefined>('');
   const [inputName, setInputName] = useState<string | undefined>('');
   const [inputEmail, setInputEmail] = useState<string | undefined>('');
-  const [, setInputGender] = useState<string | undefined>('');
+  const [inputGender, setInputGender] = useState<string | undefined>('');
   const [inputBirthday, setInputBirthday] = useState<string | undefined>('');
 
   const getClientByCpf = (cpf: string) => {
@@ -124,6 +124,7 @@ function Identification() {
               Id={IdentificationData.Inputs[4].Id}
               Value={IdentificationData.Inputs[4].Value}
               OnChange={() => handleInput}
+              Checked={inputGender === IdentificationData.Inputs[4].Value}
             />
           </div>
 
@@ -135,6 +136,7 @@ function Identification() {
               Id={IdentificationData.Inputs[5].Id}
               Value={IdentificationData.Inputs[5].Value}
               OnChange={() => handleInput}
+              Checked={inputGender === IdentificationData.Inputs[5].Value}
             />
           </div>
 
@@ -146,6 +148,7 @@ function Identification() {
               Id={IdentificationData.Inputs[6].Id}
               Value={IdentificationData.Inputs[6].Value}
               OnChange={() => handleInput}
+              Checked={inputGender === IdentificationData.Inputs[6].Value}
             />
           </div>
         </fieldset>

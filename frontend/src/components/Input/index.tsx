@@ -16,6 +16,7 @@ export function Input({
   Placeholder,
   Value,
   OnChange,
+  Checked,
   OnChangeGeneric,
   Clear
 }: IInput) {
@@ -35,6 +36,7 @@ export function Input({
         placeholder={Placeholder}
         value={Value}
         onChange={OnChange ? OnChange() : OnChangeGeneric}
+        checked={Checked}
       />
 
       <label

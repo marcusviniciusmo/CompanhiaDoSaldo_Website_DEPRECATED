@@ -15,6 +15,7 @@ export interface IInput {
   Placeholder?: string;
   Value?: string | undefined;
   OnChange?: Function;
+  Checked?: boolean;
   OnChangeGeneric?: () => '';
   Clear?: Function;
   InputComponent?: IInputComponent;
