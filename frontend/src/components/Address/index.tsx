@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Input from "components/Input";
 import Select from "components/Select";
+import './styles.css';
 
 function Address() {
   const [inputCep, setInputCep] = useState<string | undefined>('');
@@ -36,75 +37,79 @@ function Address() {
   const clearInputDistrict = () => setInputDistrict('');
 
   return (
-    <>
-      ADDRESS Component
+    <form
+      method='post'
+      className='ordersFormContainer'
+      action='mailto:marcus.viniciusmo@hotmail.com'
+    >
+      <fieldset id='address'>
+        <legend>Endereço do Cliente</legend>
 
-      <h3>Endereço do Cliente</h3>
+        <Input
+          Label='CEP'
+          Type='text'
+          Name='fieldCep'
+          Id='fieldCep'
+          Value={inputCep}
+          OnChange={() => handleInput}
+          Clear={() => clearInputCep}
+        />
 
-      <Input
-        Label='CEP'
-        Type='text'
-        Name='fieldCep'
-        Id='fieldCep'
-        Value={inputCep}
-        OnChange={() => handleInput}
-        Clear={() => clearInputCep}
-      />
+        <Input
+          Label='Endereço'
+          Type='text'
+          Name='fieldAddress'
+          Id='fieldAddress'
+          Value={inputAddress}
+          OnChange={() => handleInput}
+          Clear={() => clearInputAddress}
+        />
 
-      <Input
-        Label='Endereço'
-        Type='text'
-        Name='fieldAddress'
-        Id='fieldAddress'
-        Value={inputAddress}
-        OnChange={() => handleInput}
-        Clear={() => clearInputAddress}
-      />
+        <Input
+          Label='Número'
+          Type='text'
+          Name='fieldNumber'
+          Id='fieldNumber'
+          Value={inputNumber}
+          OnChange={() => handleInput}
+          Clear={() => clearInputNumber}
+        />
 
-      <Input
-        Label='Número'
-        Type='text'
-        Name='fieldNumber'
-        Id='fieldNumber'
-        Value={inputNumber}
-        OnChange={() => handleInput}
-        Clear={() => clearInputNumber}
-      />
+        <Input
+          Label='Complemento'
+          Type='text'
+          Name='fieldComplement'
+          Id='fieldComplement'
+          Value={inputComplement}
+          OnChange={() => handleInput}
+          Clear={() => clearInputComplement}
+        />
 
-      <Input
-        Label='Complemento'
-        Type='text'
-        Name='fieldComplement'
-        Id='fieldComplement'
-        Value={inputComplement}
-        OnChange={() => handleInput}
-        Clear={() => clearInputComplement}
-      />
+        <Input
+          Label='Bairro'
+          Type='text'
+          Name='fieldDistrict'
+          Id='fieldDistrict'
+          Value={inputDistrict}
+          OnChange={() => handleInput}
+          Clear={() => clearInputDistrict}
+        />
 
-      <Input
-        Label='Bairro'
-        Type='text'
-        Name='fieldDistrict'
-        Id='fieldDistrict'
-        Value={inputDistrict}
-        OnChange={() => handleInput}
-        Clear={() => clearInputDistrict}
-      />
+        <h4>Estado</h4>
+        <Select
+          name='fieldState'
+          id='fieldState'
+          content={[]}
+        />
 
-      <h4>Estado</h4>
-      <Select
-        name='fieldState'
-        id='fieldState'
-        content={[]}
-      />
-
-      <h4>Cidade</h4>
-      <Select
-        name='fieldCity'
-        id='fieldCity'
-        content={[]}
-      />
-    </>
+        <h4>Cidade</h4>
+        <Select
+          name='fieldCity'
+          id='fieldCity'
+          content={[]}
+        />
+      </fieldset>
+    </form>
   );
 };
 

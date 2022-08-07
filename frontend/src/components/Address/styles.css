@@ -1,0 +1,4 @@
+form.ordersFormContainer fieldset#address {
+  background: url(
+    '../../assets/images/address/iconeEndereco.png') no-repeat 95% 95%;
+}
