@@ -79,6 +79,34 @@ form.ordersFormContainer fieldset input {
   justify-content: space-between;
 }
 
+form.ordersFormContainer div#formButtonsContainer {
+  margin: 1rem 0rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  gap: 2rem;
+}
+
+form.ordersFormContainer button.formButton {
+  font-size: 1.5rem;
+  justify-content: center;
+  width: 10rem;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+form.ordersFormContainer button.formButton:hover {
+  background: var(--second-color);
+  color: var(--third-color);
+}
+
+form.ordersFormContainer button.forwardButton {
+  background: var(--first-color);
+  color: var(--auxiliar-color-default);
+}
+
 .alignRight {
   text-align: right;
 }

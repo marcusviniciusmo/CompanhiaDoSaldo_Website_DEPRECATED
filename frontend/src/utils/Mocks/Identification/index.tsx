@@ -65,6 +65,7 @@ export const IdentificationData: IIdentification = {
       Type: 'date',
       Name: 'fieldBirthday',
       Id: 'fieldBirthday'
-    },
-  ]
+    }
+  ],
+  ButtonText: 'Próximo'
 };

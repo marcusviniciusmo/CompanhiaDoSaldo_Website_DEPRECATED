@@ -1,6 +1,6 @@
 form.ordersFormContainer fieldset#identification {
   background: url(
-    '../../assets/images/identification/iconeContato.png') no-repeat 95% 95%;
+    '../../assets/images/identification/iconeContato.png') no-repeat 95% 75%;
 }
 
 form.ordersFormContainer fieldset#gender {

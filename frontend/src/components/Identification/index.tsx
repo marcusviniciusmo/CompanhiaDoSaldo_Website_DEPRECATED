@@ -1,5 +1,6 @@
 import { ClientDefault, IdentificationData } from 'utils/Mocks/Identification';
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 import Input from "components/Input";
 import './styles.css';
 
@@ -70,11 +71,7 @@ function Identification() {
   const clearInputEmail = () => setInputEmail('');
 
   return (
-    <form
-      method='post'
-      className='ordersFormContainer'
-      action='mailto:marcus.viniciusmo@hotmail.com'
-    >
+    <form className='ordersFormContainer'>
       <fieldset id='identification'>
         <legend>{IdentificationData.Legend}</legend>
 
@@ -171,6 +168,14 @@ function Identification() {
           Value={inputBirthday}
           OnChange={() => handleInput}
         />
+
+        <div id="formButtonsContainer">
+          <Link to='/pedidos/address'>
+            <button className='formButton forwardButton'>
+              {IdentificationData.ButtonText}
+            </button>
+          </Link>
+        </div>
       </fieldset>
     </form>
   );
