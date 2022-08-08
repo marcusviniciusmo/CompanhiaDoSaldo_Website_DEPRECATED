@@ -51,7 +51,7 @@ body {
 }
 
 form.ordersFormContainer {
-  width: 50rem;
+  width: 72rem;
   margin: auto;
 }
 
@@ -71,6 +71,12 @@ form.ordersFormContainer fieldset legend {
 form.ordersFormContainer fieldset input {
   font-size: 1.5rem;
   opacity: 0.6;
+}
+
+.inputRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .alignRight {

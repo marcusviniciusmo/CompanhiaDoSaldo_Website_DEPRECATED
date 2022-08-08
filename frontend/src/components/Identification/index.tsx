@@ -78,47 +78,51 @@ function Identification() {
       <fieldset id='identification'>
         <legend>{IdentificationData.Legend}</legend>
 
-        <Input
-          Label={IdentificationData.Inputs[0].Label}
-          Type={IdentificationData.Inputs[0].Type}
-          Name={IdentificationData.Inputs[0].Name}
-          Id={IdentificationData.Inputs[0].Id}
-          MaxLength={IdentificationData.Inputs[0].MaxLength}
-          Value={inputCpf}
-          OnChange={() => handleInput}
-          Clear={() => clearInputCpf}
-        />
+        <div className="inputRow">
+          <Input
+            Label={IdentificationData.Inputs[0].Label}
+            Type={IdentificationData.Inputs[0].Type}
+            Name={IdentificationData.Inputs[0].Name}
+            Id={IdentificationData.Inputs[0].Id}
+            MaxLength={IdentificationData.Inputs[0].MaxLength}
+            Value={inputCpf}
+            OnChange={() => handleInput}
+            Clear={() => clearInputCpf}
+          />
 
-        <Input
-          Label={IdentificationData.Inputs[1].Label}
-          Type={IdentificationData.Inputs[1].Type}
-          Name={IdentificationData.Inputs[1].Name}
-          Id={IdentificationData.Inputs[1].Id}
-          MaxLength={IdentificationData.Inputs[1].MaxLength}
-          Value={inputPhone}
-          OnChange={() => handleInput}
-          Clear={() => clearInputPhone}
-        />
+          <Input
+            Label={IdentificationData.Inputs[1].Label}
+            Type={IdentificationData.Inputs[1].Type}
+            Name={IdentificationData.Inputs[1].Name}
+            Id={IdentificationData.Inputs[1].Id}
+            MaxLength={IdentificationData.Inputs[1].MaxLength}
+            Value={inputPhone}
+            OnChange={() => handleInput}
+            Clear={() => clearInputPhone}
+          />
+        </div>
 
-        <Input
-          Label={IdentificationData.Inputs[2].Label}
-          Type={IdentificationData.Inputs[2].Type}
-          Name={IdentificationData.Inputs[2].Name}
-          Id={IdentificationData.Inputs[2].Id}
-          Value={inputName}
-          OnChange={() => handleInput}
-          Clear={() => clearInputName}
-        />
+        <div className="inputRow">
+          <Input
+            Label={IdentificationData.Inputs[2].Label}
+            Type={IdentificationData.Inputs[2].Type}
+            Name={IdentificationData.Inputs[2].Name}
+            Id={IdentificationData.Inputs[2].Id}
+            Value={inputName}
+            OnChange={() => handleInput}
+            Clear={() => clearInputName}
+          />
 
-        <Input
-          Label={IdentificationData.Inputs[3].Label}
-          Type={IdentificationData.Inputs[3].Type}
-          Name={IdentificationData.Inputs[3].Name}
-          Id={IdentificationData.Inputs[3].Id}
-          Value={inputEmail}
-          OnChange={() => handleInput}
-          Clear={() => clearInputEmail}
-        />
+          <Input
+            Label={IdentificationData.Inputs[3].Label}
+            Type={IdentificationData.Inputs[3].Type}
+            Name={IdentificationData.Inputs[3].Name}
+            Id={IdentificationData.Inputs[3].Id}
+            Value={inputEmail}
+            OnChange={() => handleInput}
+            Clear={() => clearInputEmail}
+          />
+        </div>
 
         <fieldset id='gender'>
           <legend>{IdentificationData.SubLegend}</legend>
