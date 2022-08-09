@@ -1,3 +1,26 @@
+import {
+  AddressLegend,
+  InputCepLabel,
+  InputCepType,
+  InputCepName,
+  InputCepId,
+  InputAddressLabel,
+  InputAddressType,
+  InputAddressName,
+  InputAddressId,
+  InputNumberlabel,
+  InputNumberType,
+  InputNumberName,
+  InputNumberId,
+  InputComplementLabel,
+  InputComplementType,
+  InputComplementName,
+  InputComplementId,
+  InputDistrictLabel,
+  InputDistrictType,
+  InputDistrictName,
+  InputDistrictId
+} from 'utils/Mocks/Address';
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import Input from "components/Input";
@@ -23,15 +46,15 @@ useEffect(() => {
     const id = event.target.id;
     const value = event.target.value;
 
-    if (id === 'fieldCep')
+    if (id === InputCepId)
       setInputCep(value);
-    else if (id === 'fieldAddress')
+    else if (id === InputAddressId)
       setInputAddress(value);
-    else if (id === 'fieldNumber')
+    else if (id === InputNumberId)
       setInputNumber(value);
-    else if (id === 'fieldComplement')
+    else if (id === InputComplementId)
       setInputComplement(value);
-    else if (id === 'fieldDistrict')
+    else if (id === InputDistrictId)
       setInputDistrict(value);
   };
 
@@ -52,53 +75,53 @@ useEffect(() => {
       action='mailto:marcus.viniciusmo@hotmail.com'
     >
       <fieldset id='address'>
-        <legend>Endereço do Cliente</legend>
+        <legend>{AddressLegend}</legend>
 
         <Input
-          Label='CEP'
-          Type='text'
-          Name='fieldCep'
-          Id='fieldCep'
+          Label={InputCepLabel}
+          Type={InputCepType}
+          Name={InputCepName}
+          Id={InputCepId}
           Value={inputCep}
           OnChange={() => handleInput}
           Clear={() => clearInputCep}
         />
 
         <Input
-          Label='Endereço'
-          Type='text'
-          Name='fieldAddress'
-          Id='fieldAddress'
+          Label={InputAddressLabel}
+          Type={InputAddressType}
+          Name={InputAddressName}
+          Id={InputAddressId}
           Value={inputAddress}
           OnChange={() => handleInput}
           Clear={() => clearInputAddress}
         />
 
         <Input
-          Label='Número'
-          Type='text'
-          Name='fieldNumber'
-          Id='fieldNumber'
+          Label={InputNumberlabel}
+          Type={InputNumberType}
+          Name={InputNumberName}
+          Id={InputNumberId}
           Value={inputNumber}
           OnChange={() => handleInput}
           Clear={() => clearInputNumber}
         />
 
         <Input
-          Label='Complemento'
-          Type='text'
-          Name='fieldComplement'
-          Id='fieldComplement'
+          Label={InputComplementLabel}
+          Type={InputComplementType}
+          Name={InputComplementName}
+          Id={InputComplementId}
           Value={inputComplement}
           OnChange={() => handleInput}
           Clear={() => clearInputComplement}
         />
 
         <Input
-          Label='Bairro'
-          Type='text'
-          Name='fieldDistrict'
-          Id='fieldDistrict'
+          Label={InputDistrictLabel}
+          Type={InputDistrictType}
+          Name={InputDistrictName}
+          Id={InputDistrictId}
           Value={inputDistrict}
           OnChange={() => handleInput}
           Clear={() => clearInputDistrict}
