@@ -21,17 +21,19 @@ function Address() {
       const client = JSON.parse(clientStorage!);
 
       if (client.Cpf === ClientAddress.Identification.Cpf)
-      getAddressByCpf(ClientAddress);
+        getAddressByCpf(ClientAddress);
     };
-  });
+  },[]);
 
   useEffect(() => {
-    axios.get(`https://viacep.com.br/ws/60020000/json/`)
-      .then((response) => {
-        console.log('response')
-        console.log(response)
-      })
-  }, []);
+    if (inputCep?.length === 8) {
+      axios.get(`https://viacep.com.br/ws/${inputCep}/json/`)
+        .then((response) => {
+          console.log('response')
+          console.log(response)
+        });
+    }
+  }, [inputCep]);
 
   const getAddressByCpf = (client: IClientAddress) => {
     setInputCep(client.Cep.replace(/[^0-9]/, ''));
