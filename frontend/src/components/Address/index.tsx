@@ -1,26 +1,4 @@
-import {
-  AddressLegend,
-  InputCepLabel,
-  InputCepType,
-  InputCepName,
-  InputCepId,
-  InputAddressLabel,
-  InputAddressType,
-  InputAddressName,
-  InputAddressId,
-  InputNumberlabel,
-  InputNumberType,
-  InputNumberName,
-  InputNumberId,
-  InputComplementLabel,
-  InputComplementType,
-  InputComplementName,
-  InputComplementId,
-  InputDistrictLabel,
-  InputDistrictType,
-  InputDistrictName,
-  InputDistrictId
-} from 'utils/Mocks/Address';
+import { AddressData } from 'utils/Mocks/Address';
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -47,15 +25,15 @@ function Address() {
     const id = event.target.id;
     const value = event.target.value;
 
-    if (id === InputCepId)
+    if (id === AddressData.Inputs[0].Id)
       setInputCep(value);
-    else if (id === InputAddressId)
+    else if (id === AddressData.Inputs[1].Id)
       setInputAddress(value);
-    else if (id === InputNumberId)
+    else if (id === AddressData.Inputs[2].Id)
       setInputNumber(value);
-    else if (id === InputComplementId)
+    else if (id === AddressData.Inputs[3].Id)
       setInputComplement(value);
-    else if (id === InputDistrictId)
+    else if (id === AddressData.Inputs[4].Id)
       setInputDistrict(value);
   };
 
@@ -76,53 +54,53 @@ function Address() {
       action='mailto:marcus.viniciusmo@hotmail.com'
     >
       <fieldset id='address'>
-        <legend>{AddressLegend}</legend>
+        <legend>{AddressData.Legend}</legend>
 
         <Input
-          Label={InputCepLabel}
-          Type={InputCepType}
-          Name={InputCepName}
-          Id={InputCepId}
+          Label={AddressData.Inputs[0].Label}
+          Type={AddressData.Inputs[0].Type}
+          Name={AddressData.Inputs[0].Name}
+          Id={AddressData.Inputs[0].Id}
           Value={inputCep}
           OnChange={() => handleInput}
           Clear={() => clearInputCep}
         />
 
         <Input
-          Label={InputAddressLabel}
-          Type={InputAddressType}
-          Name={InputAddressName}
-          Id={InputAddressId}
+          Label={AddressData.Inputs[1].Label}
+          Type={AddressData.Inputs[1].Type}
+          Name={AddressData.Inputs[1].Name}
+          Id={AddressData.Inputs[1].Id}
           Value={inputAddress}
           OnChange={() => handleInput}
           Clear={() => clearInputAddress}
         />
 
         <Input
-          Label={InputNumberlabel}
-          Type={InputNumberType}
-          Name={InputNumberName}
-          Id={InputNumberId}
+          Label={AddressData.Inputs[2].Label}
+          Type={AddressData.Inputs[2].Type}
+          Name={AddressData.Inputs[2].Name}
+          Id={AddressData.Inputs[2].Id}
           Value={inputNumber}
           OnChange={() => handleInput}
           Clear={() => clearInputNumber}
         />
 
         <Input
-          Label={InputComplementLabel}
-          Type={InputComplementType}
-          Name={InputComplementName}
-          Id={InputComplementId}
+          Label={AddressData.Inputs[3].Label}
+          Type={AddressData.Inputs[3].Type}
+          Name={AddressData.Inputs[3].Name}
+          Id={AddressData.Inputs[3].Id}
           Value={inputComplement}
           OnChange={() => handleInput}
           Clear={() => clearInputComplement}
         />
 
         <Input
-          Label={InputDistrictLabel}
-          Type={InputDistrictType}
-          Name={InputDistrictName}
-          Id={InputDistrictId}
+          Label={AddressData.Inputs[4].Label}
+          Type={AddressData.Inputs[4].Type}
+          Name={AddressData.Inputs[4].Name}
+          Id={AddressData.Inputs[4].Id}
           Value={inputDistrict}
           OnChange={() => handleInput}
           Clear={() => clearInputDistrict}
@@ -145,13 +123,13 @@ function Address() {
         <div className="formButtonsContainer">
           <Link to='/pedidos/identification'>
             <button className='formButton rewindButton'>
-              Voltar
+              {AddressData.PreviousTextButton}
             </button>
           </Link>
 
           <Link to='/pedidos/message'>
             <button className='formButton forwardButton'>
-              Próximo
+              {AddressData.NextTextButton}
             </button>
           </Link>
         </div>

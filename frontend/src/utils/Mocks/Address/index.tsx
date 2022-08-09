@@ -1,41 +1,39 @@
-export const AddressLegend = 'Endereço do Cliente';
+import { IAddress } from 'utils/Types/Address';
 
-export const InputCepLabel = 'CEP';
-
-export const InputCepType = 'text';
-
-export const InputCepName = 'fieldCep';
-
-export const InputCepId = 'fieldCep';
-
-export const InputAddressLabel = 'Endereço';
-
-export const InputAddressType = 'text';
-
-export const InputAddressName = 'fieldAddress';
-
-export const InputAddressId = 'fieldAddress';
-
-export const InputNumberlabel = 'Número';
-
-export const InputNumberType = 'text';
-
-export const InputNumberName = 'fieldNumber';
-
-export const InputNumberId = 'fieldNumber';
-
-export const InputComplementLabel = 'Complemento';
-
-export const InputComplementType = 'text';
-
-export const InputComplementName = 'fieldComplement';
-
-export const InputComplementId = 'fieldComplement';
-
-export const InputDistrictLabel = 'Bairro';
-
-export const InputDistrictType = 'text';
-
-export const InputDistrictName = 'fieldDistrict';
-
-export const InputDistrictId = 'fieldDistrict';
+export const AddressData: IAddress = {
+  Legend: 'Endereço do Cliente',
+  Inputs: [
+    {
+      Label: 'CEP',
+      Type: 'text',
+      Name: 'fieldCep',
+      Id: 'fieldCep'
+    },
+    {
+      Label: 'Endereço',
+      Type: 'text',
+      Name: 'fieldAddress',
+      Id: 'fieldAddress'
+    },
+    {
+      Label: 'Número',
+      Type: 'text',
+      Name: 'fieldNumber',
+      Id: 'fieldNumber'
+    },
+    {
+      Label: 'Complemento',
+      Type: 'text',
+      Name: 'fieldComplement',
+      Id: 'fieldComplement'
+    },
+    {
+      Label: 'Bairro',
+      Type: 'text',
+      Name: 'fieldDistrict',
+      Id: 'fieldDistrict'
+    },
+  ],
+  PreviousTextButton: 'Voltar',
+  NextTextButton: 'Próximo'
+};
