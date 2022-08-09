@@ -56,45 +56,49 @@ function Address() {
       <fieldset id='address'>
         <legend>{AddressData.Legend}</legend>
 
-        <Input
-          Label={AddressData.Inputs[0].Label}
-          Type={AddressData.Inputs[0].Type}
-          Name={AddressData.Inputs[0].Name}
-          Id={AddressData.Inputs[0].Id}
-          Value={inputCep}
-          OnChange={() => handleInput}
-          Clear={() => clearInputCep}
-        />
+        <div className="inputRow">
+          <Input
+            Label={AddressData.Inputs[0].Label}
+            Type={AddressData.Inputs[0].Type}
+            Name={AddressData.Inputs[0].Name}
+            Id={AddressData.Inputs[0].Id}
+            Value={inputCep}
+            OnChange={() => handleInput}
+            Clear={() => clearInputCep}
+          />
 
-        <Input
-          Label={AddressData.Inputs[1].Label}
-          Type={AddressData.Inputs[1].Type}
-          Name={AddressData.Inputs[1].Name}
-          Id={AddressData.Inputs[1].Id}
-          Value={inputAddress}
-          OnChange={() => handleInput}
-          Clear={() => clearInputAddress}
-        />
+          <Input
+            Label={AddressData.Inputs[1].Label}
+            Type={AddressData.Inputs[1].Type}
+            Name={AddressData.Inputs[1].Name}
+            Id={AddressData.Inputs[1].Id}
+            Value={inputAddress}
+            OnChange={() => handleInput}
+            Clear={() => clearInputAddress}
+          />
+        </div>
 
-        <Input
-          Label={AddressData.Inputs[2].Label}
-          Type={AddressData.Inputs[2].Type}
-          Name={AddressData.Inputs[2].Name}
-          Id={AddressData.Inputs[2].Id}
-          Value={inputNumber}
-          OnChange={() => handleInput}
-          Clear={() => clearInputNumber}
-        />
+        <div className="inputRow">
+          <Input
+            Label={AddressData.Inputs[2].Label}
+            Type={AddressData.Inputs[2].Type}
+            Name={AddressData.Inputs[2].Name}
+            Id={AddressData.Inputs[2].Id}
+            Value={inputNumber}
+            OnChange={() => handleInput}
+            Clear={() => clearInputNumber}
+          />
 
-        <Input
-          Label={AddressData.Inputs[3].Label}
-          Type={AddressData.Inputs[3].Type}
-          Name={AddressData.Inputs[3].Name}
-          Id={AddressData.Inputs[3].Id}
-          Value={inputComplement}
-          OnChange={() => handleInput}
-          Clear={() => clearInputComplement}
-        />
+          <Input
+            Label={AddressData.Inputs[3].Label}
+            Type={AddressData.Inputs[3].Type}
+            Name={AddressData.Inputs[3].Name}
+            Id={AddressData.Inputs[3].Id}
+            Value={inputComplement}
+            OnChange={() => handleInput}
+            Clear={() => clearInputComplement}
+          />
+        </div>
 
         <Input
           Label={AddressData.Inputs[4].Label}
