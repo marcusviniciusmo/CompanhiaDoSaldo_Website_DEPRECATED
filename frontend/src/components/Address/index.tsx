@@ -130,15 +130,15 @@ function Address() {
           Clear={() => clearInputDistrict}
         />
 
-        <h4>Estado</h4>
         <Select
+          label='Estado'
           name='fieldState'
           id='fieldState'
           content={[]}
         />
 
-        <h4>Cidade</h4>
         <Select
+          label='Cidade'
           name='fieldCity'
           id='fieldCity'
           content={[]}

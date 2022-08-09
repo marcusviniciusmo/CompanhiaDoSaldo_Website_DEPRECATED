@@ -1,0 +1,41 @@
+div.selectContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+div.selectContainer label {
+  color: var(--auxiliar-color-neutral);
+  font-size: 1.6rem;
+  line-height: 1;
+  position: absolute;
+  left: 1.4rem;
+  pointer-events: none;
+  transform: translate(0rem, 2.8rem) scale(1);
+  transform-origin: top left;
+  transition: 0.2s cubic-bezier(0, 0, 0.2, 1) 0s;
+}
+
+div.selectContainer:focus-within label {
+  background: var(--background-color-light);
+  color: var(--first-color);
+  padding-inline: 0.5rem;
+  transform: translate(0rem, 1rem) scale(0.8);
+  transition: all 0.3s ease-in-out;
+}
+
+div.selectContainer select.selectForm {
+  background: var(--background-color-input);
+  border: 0.1rem solid var(--border-color);
+  width: 33.2rem;
+  border-radius: 0.5rem;
+  height: 4.2rem;
+  margin-block: 1.5rem;
+  padding: 1rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+select.selectForm:hover {
+  background: var(--background-color-light);
+  box-shadow: 0.1rem 0.1rem 0.5rem var(--first-color);
+}

@@ -1,23 +1,27 @@
+import './styles.css';
+
 type Props = {
+  label: string;
   name: string;
   id: string;
   content: any;
 };
 
-function Select({ name, id, content }: Props) {
+function Select({ label, name, id, content }: Props) {
   return (
-    <>
-      SELECT Component
-
+    <div className='selectContainer'>
       <select
         name={name}
         id={id}
+        className='selectForm'
       >
         <optgroup>
           <option value="">{content}</option>
         </optgroup>
       </select>
-    </>
+
+      <label>{label}</label>
+    </div>
   );
 };
 
