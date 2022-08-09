@@ -79,7 +79,7 @@ form.ordersFormContainer fieldset input {
   justify-content: space-between;
 }
 
-form.ordersFormContainer div#formButtonsContainer {
+form.ordersFormContainer div.formButtonsContainer {
   margin: 1rem 0rem;
   display: flex;
   flex-direction: row;
@@ -105,6 +105,12 @@ form.ordersFormContainer button.formButton:hover {
 form.ordersFormContainer button.forwardButton {
   background: var(--first-color);
   color: var(--auxiliar-color-default);
+}
+
+form.ordersFormContainer button.rewindButton {
+  background: var(--auxiliar-color-default);
+  color: var(--first-color);
+  border: 0.1rem solid var(--first-color);
 }
 
 .alignRight {

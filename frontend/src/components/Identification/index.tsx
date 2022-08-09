@@ -169,7 +169,7 @@ function Identification() {
           OnChange={() => handleInput}
         />
 
-        <div id="formButtonsContainer">
+        <div className="formButtonsContainer">
           <Link to='/pedidos/address'>
             <button className='formButton forwardButton'>
               {IdentificationData.ButtonText}

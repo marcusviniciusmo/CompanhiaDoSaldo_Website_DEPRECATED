@@ -22,6 +22,7 @@ import {
   InputDistrictId
 } from 'utils/Mocks/Address';
 import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Input from "components/Input";
 import Select from "components/Select";
@@ -34,13 +35,13 @@ function Address() {
   const [inputComplement, setInputComplement] = useState<string | undefined>('');
   const [inputDistrict, setInputDistrict] = useState<string | undefined>('');
 
-useEffect(() => {
-  axios.get(`https://viacep.com.br/ws/60020000/json/`)
-  .then((response) => {
-    console.log('response')
-    console.log(response)
-  })
-}, []);
+  useEffect(() => {
+    axios.get(`https://viacep.com.br/ws/60020000/json/`)
+      .then((response) => {
+        console.log('response')
+        console.log(response)
+      })
+  }, []);
 
   const handleInput = (event: any) => {
     const id = event.target.id;
@@ -140,6 +141,20 @@ useEffect(() => {
           id='fieldCity'
           content={[]}
         />
+
+        <div className="formButtonsContainer">
+          <Link to='/pedidos/identification'>
+            <button className='formButton rewindButton'>
+              Voltar
+            </button>
+          </Link>
+
+          <Link to='/pedidos/message'>
+            <button className='formButton forwardButton'>
+              Próximo
+            </button>
+          </Link>
+        </div>
       </fieldset>
     </form>
   );
