@@ -1,4 +1,5 @@
-import { AddressData } from 'utils/Mocks/Address';
+import { ClientAddress, AddressData } from 'utils/Mocks/Address';
+import { IClientAddress } from 'utils/Types/Address';
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -14,12 +15,31 @@ function Address() {
   const [inputDistrict, setInputDistrict] = useState<string | undefined>('');
 
   useEffect(() => {
+    const clientStorage = localStorage.getItem('client');
+
+    if (clientStorage) {
+      const client = JSON.parse(clientStorage!);
+
+      if (client.Cpf === ClientAddress.Identification.Cpf)
+      getAddressByCpf(ClientAddress);
+    };
+  });
+
+  useEffect(() => {
     axios.get(`https://viacep.com.br/ws/60020000/json/`)
       .then((response) => {
         console.log('response')
         console.log(response)
       })
   }, []);
+
+  const getAddressByCpf = (client: IClientAddress) => {
+    setInputCep(client.Cep.replace(/[^0-9]/, ''));
+    setInputAddress(client.Address);
+    setInputNumber(client.Number.replace(/[^0-9]/, ''));
+    setInputComplement(client.Complement);
+    setInputDistrict(client.District);
+  };
 
   const handleInput = (event: any) => {
     const id = event.target.id;

@@ -1,4 +1,14 @@
-import { IAddress } from 'utils/Types/Address';
+import { ClientIdentification } from 'utils/Mocks/Identification';
+import { IClientAddress ,IAddress } from 'utils/Types/Address';
+
+export const ClientAddress: IClientAddress = {
+  Identification: ClientIdentification,
+  Cep: '09015-000',
+  Address: 'Avenida Quinze de Novembro',
+  Number: '100',
+  Complement: 'Casa',
+  District: 'Centro'
+}
 
 export const AddressData: IAddress = {
   Legend: 'Endereço do Cliente',

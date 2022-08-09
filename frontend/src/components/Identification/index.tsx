@@ -1,4 +1,5 @@
-import { ClientDefault, IdentificationData } from 'utils/Mocks/Identification';
+import { ClientIdentification, IdentificationData } from 'utils/Mocks/Identification';
+import { IClientIdentification } from 'utils/Types/Identification';
 import { useState } from "react";
 import { Link } from 'react-router-dom';
 import Input from "components/Input";
@@ -13,7 +14,7 @@ function Identification() {
   const [inputBirthday, setInputBirthday] = useState<string | undefined>('');
 
   const getClientByCpf = (cpf: string) => {
-    const client = ClientDefault
+    const client = ClientIdentification;
 
     if (cpf.length === 11) {
       if (cpf === client.Cpf) {
@@ -69,6 +70,19 @@ function Identification() {
   const clearInputName = () => setInputName('');
 
   const clearInputEmail = () => setInputEmail('');
+
+  const storageDataClient = () => {
+    const client: IClientIdentification = {
+      Cpf: inputCpf!,
+      Phone: inputPhone!,
+      Name: inputName!,
+      Email: inputEmail!,
+      Gender: inputGender!,
+      Birthday: inputBirthday!
+    };
+
+    localStorage.setItem('client', JSON.stringify(client));
+  };
 
   return (
     <form className='ordersFormContainer'>
@@ -170,7 +184,7 @@ function Identification() {
         />
 
         <div className="formButtonsContainer">
-          <Link to='/pedidos/address'>
+          <Link to='/pedidos/address' onClick={storageDataClient}>
             <button className='formButton forwardButton'>
               {IdentificationData.ButtonText}
             </button>

@@ -1,6 +1,9 @@
-import { IClient, IIdentification } from 'utils/Types/Identification';
+import {
+  IClientIdentification,
+  IIdentification
+} from 'utils/Types/Identification';
 
-export const ClientDefault: IClient = {
+export const ClientIdentification: IClientIdentification = {
   Cpf: '11111111111',
   Phone: '5500912345678',
   Name: 'José Maria da Silva',

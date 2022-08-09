@@ -1,6 +1,6 @@
 import { IInput } from 'utils/Types/Input';
 
-export interface IClient {
+export interface IClientIdentification {
   Cpf: string;
   Phone: string;
   Name: string;
