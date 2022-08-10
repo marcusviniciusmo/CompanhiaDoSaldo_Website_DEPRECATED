@@ -2,7 +2,7 @@ import { ClientAddress, AddressData } from 'utils/Mocks/Address';
 import { ICepData, IClientAddress } from 'utils/Types/Address';
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import { ViaCepApi } from 'utils/Api';
 import Input from "components/Input";
 import Select from "components/Select";
 import './styles.css';
@@ -36,7 +36,7 @@ useEffect(() => {
 
   useEffect(() => {
     if (inputCep?.length === 8) {
-      axios.get(`https://viacep.com.br/ws/${inputCep}/json/`)
+      ViaCepApi.get(`${inputCep}/json/`)
         .then((response) => {
           setCepData(response.data);
         });
