@@ -1,5 +1,5 @@
 import { ClientAddress, AddressData } from 'utils/Mocks/Address';
-import { IClientAddress } from 'utils/Types/Address';
+import { ICepData, IClientAddress } from 'utils/Types/Address';
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -9,10 +9,18 @@ import './styles.css';
 
 function Address() {
   const [inputCep, setInputCep] = useState<string | undefined>('');
+  const [cepData, setCepData] = useState<ICepData | undefined>();
   const [inputAddress, setInputAddress] = useState<string | undefined>('');
   const [inputNumber, setInputNumber] = useState<string | undefined>('');
   const [inputComplement, setInputComplement] = useState<string | undefined>('');
   const [inputDistrict, setInputDistrict] = useState<string | undefined>('');
+  const [inputState, setInputState] = useState<string | undefined>('');
+
+useEffect(() => {
+  if (cepData) {
+    getAddressByCep(cepData);
+  }
+}, [cepData]);
 
   useEffect(() => {
     const clientStorage = localStorage.getItem('client');
@@ -29,8 +37,7 @@ function Address() {
     if (inputCep?.length === 8) {
       axios.get(`https://viacep.com.br/ws/${inputCep}/json/`)
         .then((response) => {
-          console.log('response')
-          console.log(response)
+          setCepData(response.data);
         });
     }
   }, [inputCep]);
@@ -41,6 +48,10 @@ function Address() {
     setInputNumber(client.Number.replace(/[^0-9]/, ''));
     setInputComplement(client.Complement);
     setInputDistrict(client.District);
+  };
+
+  const getAddressByCep = (address: ICepData) => {
+    setInputState(address.uf);
   };
 
   const handleInput = (event: any) => {
@@ -136,14 +147,14 @@ function Address() {
           label='Estado'
           name='fieldState'
           id='fieldState'
-          content={[]}
+          content={inputState!}
         />
 
         <Select
           label='Cidade'
           name='fieldCity'
           id='fieldCity'
-          content={[]}
+          content={''}
         />
 
         <div className="formButtonsContainer">

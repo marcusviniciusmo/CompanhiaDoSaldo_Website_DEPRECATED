@@ -4,7 +4,7 @@ type Props = {
   label: string;
   name: string;
   id: string;
-  content: any;
+  content: string;
 };
 
 function Select({ label, name, id, content }: Props) {
