@@ -1,6 +1,13 @@
 import { IClientIdentification} from 'utils/Types/Identification';
 import { IInput } from 'utils/Types/Input';
 
+export interface IAddress {
+  Legend: string;
+  Inputs: IInput[];
+  PreviousTextButton: string;
+  NextTextButton: string;
+};
+
 export interface ICepData {
   cep: string;
   logradouro: string;
@@ -23,9 +30,8 @@ export interface IClientAddress {
   District: string;
 };
 
-export interface IAddress {
-  Legend: string;
-  Inputs: IInput[];
-  PreviousTextButton: string;
-  NextTextButton: string;
+export interface IRegions {
+  id: number;
+  sigla: string;
+  nome: string;
 };

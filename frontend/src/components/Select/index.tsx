@@ -1,3 +1,4 @@
+import { IRegions } from 'utils/Types/Address';
 import './styles.css';
 
 type Props = {
@@ -5,9 +6,10 @@ type Props = {
   name: string;
   id: string;
   content: string;
+  regions?: IRegions[];
 };
 
-function Select({ label, name, id, content }: Props) {
+function Select({ label, name, id, content, regions }: Props) {
   return (
     <div className='selectContainer'>
       <select
@@ -15,9 +17,16 @@ function Select({ label, name, id, content }: Props) {
         id={id}
         className='selectForm'
       >
-        <optgroup>
-          <option value="">{content}</option>
-        </optgroup>
+        {
+          regions &&
+          regions.map((region) => {
+            return (
+              <optgroup key={region.id} label={region.nome}>
+                <option value="">{content}</option>
+              </optgroup>
+            )
+          })
+        }
       </select>
 
       <label

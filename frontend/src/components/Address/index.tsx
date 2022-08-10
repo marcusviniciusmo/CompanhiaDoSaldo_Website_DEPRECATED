@@ -1,8 +1,9 @@
 import { ClientAddress, AddressData } from 'utils/Mocks/Address';
-import { ICepData, IClientAddress } from 'utils/Types/Address';
+import { ICepData, IClientAddress, IRegions } from 'utils/Types/Address';
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { ViaCepApi } from 'utils/Api';
+import axios from 'axios';
 import Input from "components/Input";
 import Select from "components/Select";
 import './styles.css';
@@ -16,12 +17,13 @@ function Address() {
   const [inputDistrict, setInputDistrict] = useState<string | undefined>('');
   const [inputState, setInputState] = useState<string | undefined>('');
   const [inputCity, setInputCity] = useState<string | undefined>('');
+  const [regionsList, setRegionsList] = useState<IRegions[]>([]);
 
-useEffect(() => {
-  if (cepData) {
-    getAddressByCep(cepData);
-  }
-}, [cepData]);
+  useEffect(() => {
+    if (cepData) {
+      getAddressByCep(cepData);
+    }
+  }, [cepData]);
 
   useEffect(() => {
     const clientStorage = localStorage.getItem('client');
@@ -32,7 +34,7 @@ useEffect(() => {
       if (client.Cpf === ClientAddress.Identification.Cpf)
         getAddressByCpf(ClientAddress);
     };
-  },[]);
+  }, []);
 
   useEffect(() => {
     if (inputCep?.length === 8) {
@@ -42,6 +44,14 @@ useEffect(() => {
         });
     }
   }, [inputCep]);
+
+  useEffect(() => {
+    axios.get(
+      'https://servicodados.ibge.gov.br/api/v1/localidades/regioes?orderBy=nome')
+      .then((response) => {
+        setRegionsList(response.data)
+      });
+  }, []);
 
   const getAddressByCpf = (client: IClientAddress) => {
     setInputCep(client.Cep.replace(/[^0-9]/, ''));
@@ -153,6 +163,7 @@ useEffect(() => {
           name='fieldState'
           id='fieldState'
           content={inputState!}
+          regions={regionsList}
         />
 
         <Select
