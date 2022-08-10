@@ -15,6 +15,7 @@ function Address() {
   const [inputComplement, setInputComplement] = useState<string | undefined>('');
   const [inputDistrict, setInputDistrict] = useState<string | undefined>('');
   const [inputState, setInputState] = useState<string | undefined>('');
+  const [inputCity, setInputCity] = useState<string | undefined>('');
 
 useEffect(() => {
   if (cepData) {
@@ -52,6 +53,7 @@ useEffect(() => {
 
   const getAddressByCep = (address: ICepData) => {
     setInputState(address.uf);
+    setInputCity(address.localidade);
   };
 
   const handleInput = (event: any) => {
@@ -154,7 +156,7 @@ useEffect(() => {
           label='Cidade'
           name='fieldCity'
           id='fieldCity'
-          content={''}
+          content={inputCity!}
         />
 
         <div className="formButtonsContainer">
