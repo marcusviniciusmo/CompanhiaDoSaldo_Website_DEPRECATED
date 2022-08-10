@@ -52,6 +52,9 @@ useEffect(() => {
   };
 
   const getAddressByCep = (address: ICepData) => {
+    setInputCep(address.cep.replace(/[^0-9]/, ''));
+    setInputAddress(address.logradouro);
+    setInputDistrict(address.bairro);
     setInputState(address.uf);
     setInputCity(address.localidade);
   };
