@@ -20,7 +20,9 @@ function Select({ label, name, id, content }: Props) {
         </optgroup>
       </select>
 
-      <label>{label}</label>
+      <label
+        className={content && 'filled'}
+      >{label}</label>
     </div>
   );
 };

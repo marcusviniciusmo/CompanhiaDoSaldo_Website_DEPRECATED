@@ -16,7 +16,8 @@ div.selectContainer label {
   transition: 0.2s cubic-bezier(0, 0, 0.2, 1) 0s;
 }
 
-div.selectContainer:focus-within label {
+div.selectContainer:focus-within label,
+div.selectContainer .filled {
   background: var(--background-color-light);
   color: var(--first-color);
   padding-inline: 0.5rem;
