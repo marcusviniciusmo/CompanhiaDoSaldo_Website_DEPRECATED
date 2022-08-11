@@ -35,3 +35,10 @@ export interface IRegions {
   sigla: string;
   nome: string;
 };
+
+export interface IStates {
+  id: number;
+  sigla: string;
+  nome: string;
+  regiao: IRegions;
+};

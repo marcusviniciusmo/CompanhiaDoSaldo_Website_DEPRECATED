@@ -1,5 +1,5 @@
 import { ClientAddress, AddressData } from 'utils/Mocks/Address';
-import { ICepData, IClientAddress, IRegions } from 'utils/Types/Address';
+import { ICepData, IClientAddress, IRegions, IStates } from 'utils/Types/Address';
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { ViaCepApi } from 'utils/Api';
@@ -18,6 +18,7 @@ function Address() {
   const [inputState, setInputState] = useState<string | undefined>('');
   const [inputCity, setInputCity] = useState<string | undefined>('');
   const [regionsList, setRegionsList] = useState<IRegions[]>([]);
+  const [statesList, setStatesList] = useState<IStates[]>([]);
 
   useEffect(() => {
     if (cepData) {
@@ -50,6 +51,14 @@ function Address() {
       'https://servicodados.ibge.gov.br/api/v1/localidades/regioes?orderBy=nome')
       .then((response) => {
         setRegionsList(response.data)
+      });
+  }, []);
+
+  useEffect(() => {
+    axios.get(
+      'https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome')
+      .then((response) => {
+        setStatesList(response.data);
       });
   }, []);
 
@@ -164,6 +173,7 @@ function Address() {
           id='fieldState'
           content={inputState!}
           regions={regionsList}
+          states={statesList}
         />
 
         <Select

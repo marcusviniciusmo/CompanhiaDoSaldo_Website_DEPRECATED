@@ -1,4 +1,4 @@
-import { IRegions } from 'utils/Types/Address';
+import { IRegions, IStates } from 'utils/Types/Address';
 import './styles.css';
 
 type Props = {
@@ -7,9 +7,10 @@ type Props = {
   id: string;
   content: string;
   regions?: IRegions[];
+  states?: IStates[];
 };
 
-function Select({ label, name, id, content, regions }: Props) {
+function Select({ label, name, id, content, regions, states }: Props) {
   return (
     <div className='selectContainer'>
       <select
@@ -22,7 +23,19 @@ function Select({ label, name, id, content, regions }: Props) {
           regions.map((region) => {
             return (
               <optgroup key={region.id} label={region.nome}>
-                <option value="">{content}</option>
+                {
+                  states &&
+                  states.filter(s => s.regiao.nome === region.nome)
+                    .map((state) => {
+                      return (
+                        <option
+                          key={state.id}
+                          value={state.sigla}
+                        >{state.nome}
+                        </option>
+                      )
+                    })
+                }
               </optgroup>
             )
           })
@@ -30,7 +43,7 @@ function Select({ label, name, id, content, regions }: Props) {
       </select>
 
       <label
-        className={content && 'filled'}
+        className={(content || states) && 'filled'}
       >{label}</label>
     </div>
   );
