@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useState } from 'react';
 import { IRegions, IStates } from 'utils/Types/Address';
 import './styles.css';
 
@@ -11,12 +13,20 @@ type Props = {
 };
 
 function Select({ label, name, id, content, regions, states }: Props) {
+  const [selectedState, setSelectedState] = useState();
+
+  const handleState = (event: any) => {
+    setSelectedState(event.target.value)
+  };
+
   return (
     <div className='selectContainer'>
       <select
         name={name}
         id={id}
         className='selectForm'
+        value={selectedState ? selectedState : content}
+        onChange={handleState}
       >
         {
           regions &&
