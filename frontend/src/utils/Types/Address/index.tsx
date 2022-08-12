@@ -21,6 +21,29 @@ export interface ICepData {
   siafi: string;
 };
 
+export interface ICities {
+  id: number;
+  nome: string;
+  microrregiao: {
+      id: number;
+      nome: string;
+      mesorregiao: {
+          id: number;
+          nome: string;
+          UF: IStates;
+      };
+  };
+  'regiao-imediata': {
+      id: number;
+      nome: string;
+      'regiao-intermediaria': {
+          id: number;
+          nome: string;
+          UF: IStates;
+      };
+  };
+};
+
 export interface IClientAddress {
   Identification: IClientIdentification;
   Cep: string;
