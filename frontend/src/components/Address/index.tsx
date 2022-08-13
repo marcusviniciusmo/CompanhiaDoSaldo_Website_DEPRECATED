@@ -8,8 +8,7 @@ import {
 import { ClientAddress, AddressData } from 'utils/Mocks/Address';
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
-import { ViaCepApi } from 'utils/Api';
-import axios from 'axios';
+import { BuscaCepApi, ViaCepApi } from 'utils/Api';
 import Input from "components/Input";
 import Select from "components/Select";
 import './styles.css';
@@ -54,24 +53,21 @@ function Address() {
   }, [inputCep]);
 
   useEffect(() => {
-    axios.get(
-      'https://servicodados.ibge.gov.br/api/v1/localidades/regioes?orderBy=nome')
+    BuscaCepApi.get('regioes?orderBy=nome')
       .then((response) => {
         setRegionsList(response.data)
       });
   }, []);
 
   useEffect(() => {
-    axios.get(
-      'https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome')
+    BuscaCepApi.get('estados?orderBy=nome')
       .then((response) => {
         setStatesList(response.data);
       });
   }, []);
 
   useEffect(() => {
-    axios.get(
-      `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${inputState}/municipios`)
+    BuscaCepApi.get(`estados/${inputState}/municipios`)
       .then((response) => {
         setCitiesList(response.data);
       });
