@@ -1,3 +1,4 @@
+import { SelectLabel } from 'utils/Mocks/Select';
 import './styles.css';
 
 type Props = {
@@ -51,7 +52,7 @@ function Select({
                 </optgroup>
               )
             })
-            : <optgroup label={`${mainList.length} resultados`}>
+            : <optgroup label={`${mainList.length} ${SelectLabel}`}>
               {
                 mainList &&
                 mainList.map((item) => {
