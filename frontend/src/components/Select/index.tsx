@@ -29,7 +29,7 @@ function Select({
         id={Id}
         className='selectForm'
         value={InputValue}
-        onChange={handleInputComponent()}
+        onChange={handleInputComponent!()}
       >
         {
           CategoriesList
@@ -53,7 +53,7 @@ function Select({
                 </optgroup>
               )
             })
-            : <optgroup label={`${MainList.length} ${SelectData.Label}`}>
+            : <optgroup label={`${MainList!.length} ${SelectData.Label}`}>
               {
                 MainList &&
                 MainList.map((item) => {

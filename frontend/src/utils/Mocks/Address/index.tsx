@@ -44,6 +44,18 @@ export const AddressData: IAddress = {
       Id: 'fieldDistrict'
     },
   ],
+  Selects: [
+    {
+      Label: 'Estado',
+      Name: 'fieldState',
+      Id: 'fieldState',
+    },
+    {
+      Label: 'Cidade',
+      Name: 'fieldCity',
+      Id: 'fieldCity',
+    }
+  ],
   PreviousTextButton: 'Voltar',
   NextTextButton: 'Próximo'
 };

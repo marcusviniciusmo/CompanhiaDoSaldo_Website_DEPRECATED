@@ -196,9 +196,9 @@ function Address() {
         />
 
         <Select
-          Label='Estado'
-          Name='fieldState'
-          Id='fieldState'
+          Label={AddressData.Selects[0].Label}
+          Name={AddressData.Selects[0].Name}
+          Id={AddressData.Selects[0].Id}
           InputValue={inputState!}
           CategoriesList={regionsList}
           MainList={statesList}
@@ -206,9 +206,9 @@ function Address() {
         />
 
         <Select
-          Label='Cidade'
-          Name='fieldCity'
-          Id='fieldCity'
+          Label={AddressData.Selects[1].Label}
+          Name={AddressData.Selects[1].Name}
+          Id={AddressData.Selects[1].Id}
           InputValue={inputCity!}
           MainList={citiesList}
           HandleInput={() => handleInputCity}

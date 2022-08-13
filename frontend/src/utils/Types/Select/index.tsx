@@ -2,10 +2,10 @@ export interface ISelect {
   Label: string;
   Name: string;
   Id: string;
-  InputValue: string;
+  InputValue?: string;
   CategoriesList?: any[];
-  MainList: any[];
-  HandleInput: Function;
+  MainList?: any[];
+  HandleInput?: Function;
   Search?: ISelectComponent;
 };
 

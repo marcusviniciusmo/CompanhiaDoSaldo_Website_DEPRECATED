@@ -1,9 +1,11 @@
 import { IClientIdentification} from 'utils/Types/Identification';
 import { IInput } from 'utils/Types/Input';
+import { ISelect } from 'utils/Types/Select';
 
 export interface IAddress {
   Legend: string;
   Inputs: IInput[];
+  Selects: ISelect[];
   PreviousTextButton: string;
   NextTextButton: string;
 };
