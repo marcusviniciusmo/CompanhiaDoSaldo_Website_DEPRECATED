@@ -1,5 +1,11 @@
+import {
+  ICepData,
+  ICities,
+  IClientAddress,
+  IRegions,
+  IStates
+} from 'utils/Types/Address';
 import { ClientAddress, AddressData } from 'utils/Mocks/Address';
-import { ICepData, IClientAddress, IRegions, IStates } from 'utils/Types/Address';
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { ViaCepApi } from 'utils/Api';
@@ -19,6 +25,7 @@ function Address() {
   const [inputCity, setInputCity] = useState<string | undefined>('');
   const [regionsList, setRegionsList] = useState<IRegions[]>([]);
   const [statesList, setStatesList] = useState<IStates[]>([]);
+  const [citiesList, setCitiesList] = useState<ICities[]>([]);
 
   useEffect(() => {
     if (cepData) {
@@ -62,6 +69,14 @@ function Address() {
       });
   }, []);
 
+  useEffect(() => {
+    axios.get(
+      `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${inputState}/municipios`)
+      .then((response) => {
+        setCitiesList(response.data);
+      });
+  }, [inputState]);
+
   const getAddressByCpf = (client: IClientAddress) => {
     setInputCep(client.Cep.replace(/[^0-9]/, ''));
     setInputAddress(client.Address);
@@ -92,6 +107,19 @@ function Address() {
       setInputComplement(value);
     else if (id === AddressData.Inputs[4].Id)
       setInputDistrict(value);
+  };
+
+  const handleInputState = (event: any) => {
+    const value = event.target.value;
+
+    setInputState(value);
+    setInputCity('');
+  };
+
+  const handleInputCity = (event: any) => {
+    const value = event.target.value;
+
+    setInputCity(value);
   };
 
   const clearInputCep = () => setInputCep('');
@@ -171,16 +199,19 @@ function Address() {
           label='Estado'
           name='fieldState'
           id='fieldState'
-          content={inputState!}
-          regions={regionsList}
-          states={statesList}
+          inputValue={inputState!}
+          categoriesList={regionsList}
+          mainList={statesList}
+          handleInput={() => handleInputState}
         />
 
         <Select
           label='Cidade'
           name='fieldCity'
           id='fieldCity'
-          content={inputCity!}
+          inputValue={inputCity!}
+          mainList={citiesList}
+          handleInput={() => handleInputCity}
         />
 
         <div className="formButtonsContainer">

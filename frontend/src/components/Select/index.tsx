@@ -1,60 +1,79 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import { useState } from 'react';
-import { IRegions, IStates } from 'utils/Types/Address';
 import './styles.css';
 
 type Props = {
   label: string;
   name: string;
   id: string;
-  content: string;
-  regions?: IRegions[];
-  states?: IStates[];
+  inputValue: string;
+  categoriesList?: any[];
+  mainList: any[];
+  handleInput: Function;
 };
 
-function Select({ label, name, id, content, regions, states }: Props) {
-  const [selectedState, setSelectedState] = useState();
-
-  const handleState = (event: any) => {
-    setSelectedState(event.target.value)
-  };
-
+function Select({
+  label,
+  name,
+  id,
+  inputValue,
+  categoriesList,
+  mainList,
+  handleInput
+}: Props) {
+  const handleInputComponent = handleInput;
   return (
     <div className='selectContainer'>
       <select
         name={name}
         id={id}
         className='selectForm'
-        value={selectedState ? selectedState : content}
-        onChange={handleState}
+        value={inputValue}
+        onChange={handleInputComponent()}
       >
         {
-          regions &&
-          regions.map((region) => {
-            return (
-              <optgroup key={region.id} label={region.nome}>
-                {
-                  states &&
-                  states.filter(s => s.regiao.nome === region.nome)
-                    .map((state) => {
-                      return (
-                        <option
-                          key={state.id}
-                          value={state.sigla}
-                        >{state.nome}
-                        </option>
-                      )
-                    })
-                }
-              </optgroup>
-            )
-          })
+          categoriesList
+            ? categoriesList.map((category) => {
+              return (
+                <optgroup key={category.id} label={category.nome}>
+                  {
+                    mainList &&
+                    mainList.filter(s => s.regiao.nome === category.nome)
+                      .map((item) => {
+                        return (
+                          <option
+                            key={item.id}
+                            value={item.sigla}
+                          >
+                            {item.nome}
+                          </option>
+                        )
+                      })
+                  }
+                </optgroup>
+              )
+            })
+            : <optgroup label={`${mainList.length} resultados`}>
+              {
+                mainList &&
+                mainList.map((item) => {
+                  return (
+                    <option
+                      key={item.id}
+                      value={item.nome}
+                    >
+                      {item.nome}
+                    </option>
+                  )
+                })
+              }
+            </optgroup>
         }
       </select>
 
       <label
-        className={(content || states) && 'filled'}
-      >{label}</label>
+        className={(inputValue || mainList) && 'filled'}
+      >
+        {label}
+      </label>
     </div>
   );
 };
