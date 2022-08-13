@@ -1,6 +1,6 @@
 import { ClientIdentification, IdentificationData } from 'utils/Mocks/Identification';
 import { IClientIdentification } from 'utils/Types/Identification';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import Input from "components/Input";
 import './styles.css';
@@ -12,6 +12,21 @@ function Identification() {
   const [inputEmail, setInputEmail] = useState<string | undefined>('');
   const [inputGender, setInputGender] = useState<string | undefined>('');
   const [inputBirthday, setInputBirthday] = useState<string | undefined>('');
+
+  useEffect(() => {
+    const clientStorage = localStorage.getItem('client');
+    
+    if (clientStorage) {
+      const client = JSON.parse(clientStorage)
+
+      setInputCpf(client.Cpf);
+      setInputPhone(client.Phone);
+      setInputName(client.Name);
+      setInputEmail(client.Email);
+      setInputGender(client.Gender);
+      setInputBirthday(client.Birthday);
+    }
+  }, []);
 
   const getClientByCpf = (cpf: string) => {
     const client = ClientIdentification;
