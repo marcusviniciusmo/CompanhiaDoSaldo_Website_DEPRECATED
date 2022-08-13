@@ -7,8 +7,10 @@ export const ClientAddress: IClientAddress = {
   Address: 'Avenida Quinze de Novembro',
   Number: '100',
   Complement: 'Casa',
-  District: 'Centro'
-}
+  District: 'Centro',
+  State: 'São Paulo',
+  City: 'Santo André'
+};
 
 export const AddressData: IAddress = {
   Legend: 'Endereço do Cliente',

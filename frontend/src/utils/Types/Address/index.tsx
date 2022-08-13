@@ -53,6 +53,8 @@ export interface IClientAddress {
   Number: string;
   Complement: string;
   District: string;
+  State: string;
+  City: string;
 };
 
 export interface IRegions {

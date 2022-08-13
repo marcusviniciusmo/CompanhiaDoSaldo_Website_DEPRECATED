@@ -128,6 +128,35 @@ function Address() {
 
   const clearInputDistrict = () => setInputDistrict('');
 
+  const storageDataClient = () => {
+    const clientStorage = localStorage.getItem('client');
+
+    if (clientStorage) {
+      const client = JSON.parse(clientStorage);
+
+      const clientAddress: IClientAddress = {
+        Identification: {
+          Cpf: client.Cpf,
+          Phone: client.Phone,
+          Name: client.Name,
+          Email: client.Email,
+          Gender: client.Gender,
+          Birthday: client.Birthday
+        },
+        Cep: inputCep!,
+        Address: inputAddress!,
+        Number: inputNumber!,
+        Complement: inputComplement!,
+        District: inputDistrict!,
+        State: inputState!,
+        City: inputCity!
+      };
+
+      localStorage.removeItem('client');
+      localStorage.setItem('client', JSON.stringify(clientAddress));
+    };
+  };
+
   return (
     <form
       method='post'
@@ -217,7 +246,7 @@ function Address() {
             </button>
           </Link>
 
-          <Link to='/pedidos/message'>
+          <Link to='/pedidos/message' onClick={storageDataClient}>
             <button className='formButton forwardButton'>
               {AddressData.NextTextButton}
             </button>
