@@ -196,22 +196,22 @@ function Address() {
         />
 
         <Select
-          label='Estado'
-          name='fieldState'
-          id='fieldState'
-          inputValue={inputState!}
-          categoriesList={regionsList}
-          mainList={statesList}
-          handleInput={() => handleInputState}
+          Label='Estado'
+          Name='fieldState'
+          Id='fieldState'
+          InputValue={inputState!}
+          CategoriesList={regionsList}
+          MainList={statesList}
+          HandleInput={() => handleInputState}
         />
 
         <Select
-          label='Cidade'
-          name='fieldCity'
-          id='fieldCity'
-          inputValue={inputCity!}
-          mainList={citiesList}
-          handleInput={() => handleInputCity}
+          Label='Cidade'
+          Name='fieldCity'
+          Id='fieldCity'
+          InputValue={inputCity!}
+          MainList={citiesList}
+          HandleInput={() => handleInputCity}
         />
 
         <div className="formButtonsContainer">

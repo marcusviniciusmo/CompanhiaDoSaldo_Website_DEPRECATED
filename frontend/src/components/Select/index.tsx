@@ -1,43 +1,44 @@
-import { SelectLabel } from 'utils/Mocks/Select';
+import { ISelect } from 'utils/Types/Select';
+import { SelectData } from 'utils/Mocks/Select';
 import './styles.css';
 
-type Props = {
-  label: string;
-  name: string;
-  id: string;
-  inputValue: string;
-  categoriesList?: any[];
-  mainList: any[];
-  handleInput: Function;
-};
+// type Props = {
+//   label: string;
+//   name: string;
+//   id: string;
+//   inputValue: string;
+//   categoriesList?: any[];
+//   mainList: any[];
+//   handleInput: Function;
+// };
 
 function Select({
-  label,
-  name,
-  id,
-  inputValue,
-  categoriesList,
-  mainList,
-  handleInput
-}: Props) {
-  const handleInputComponent = handleInput;
+  Label,
+  Name,
+  Id,
+  InputValue,
+  CategoriesList,
+  MainList,
+  HandleInput
+}: ISelect) {
+  const handleInputComponent = HandleInput;
   return (
     <div className='selectContainer'>
       <select
-        name={name}
-        id={id}
+        name={Name}
+        id={Id}
         className='selectForm'
-        value={inputValue}
+        value={InputValue}
         onChange={handleInputComponent()}
       >
         {
-          categoriesList
-            ? categoriesList.map((category) => {
+          CategoriesList
+            ? CategoriesList.map((category) => {
               return (
                 <optgroup key={category.id} label={category.nome}>
                   {
-                    mainList &&
-                    mainList.filter(s => s.regiao.nome === category.nome)
+                    MainList &&
+                    MainList.filter(s => s.regiao.nome === category.nome)
                       .map((item) => {
                         return (
                           <option
@@ -52,10 +53,10 @@ function Select({
                 </optgroup>
               )
             })
-            : <optgroup label={`${mainList.length} ${SelectLabel}`}>
+            : <optgroup label={`${MainList.length} ${SelectData.Label}`}>
               {
-                mainList &&
-                mainList.map((item) => {
+                MainList &&
+                MainList.map((item) => {
                   return (
                     <option
                       key={item.id}
@@ -71,9 +72,9 @@ function Select({
       </select>
 
       <label
-        className={(inputValue || mainList) && 'filled'}
+        className={(InputValue || MainList) && 'filled'}
       >
-        {label}
+        {Label}
       </label>
     </div>
   );
