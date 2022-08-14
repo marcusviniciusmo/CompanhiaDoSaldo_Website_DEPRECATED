@@ -1,0 +1,23 @@
+form.ordersFormContainer fieldset#message {
+  background: url(
+    '../../assets/images/message/iconeMensagem.png') no-repeat 95% 60%;
+}
+
+form.ordersFormContainer div#messageFields {
+  margin-inline: 2rem;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+form.ordersFormContainer div#messageFieldUrgency {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+form.ordersFormContainer div#messageFieldUrgency span {
+  color: var(--second-color);
+  font-size: 1.4rem;
+  font-weight: bold;
+}

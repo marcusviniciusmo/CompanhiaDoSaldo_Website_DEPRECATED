@@ -14,6 +14,20 @@ div.radioInputContainer {
   gap: 1rem;
 }
 
+div.rangeInputContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: left;
+  margin-top: 3rem;
+  padding-inline: 1rem;
+  gap: 1.5rem;
+}
+
+div.rangeInputContainer:hover label {
+  color: var(--first-color);
+  opacity: 0.3;
+}
+
 div.textInputContainer:focus-within div.textClearIcon,
 div.emailInputContainer:focus-within div.emailClearIcon {
   opacity: 1;
@@ -41,6 +55,14 @@ div.dateInputContainer label {
 
 div.dateInputContainer label {
   display: none;
+}
+
+div.rangeInputContainer input {
+  width: 25rem;
+}
+
+div.rangeInputContainer label {
+  margin-inline: 0.3rem;
 }
 
 div.textInputContainer:focus-within label,

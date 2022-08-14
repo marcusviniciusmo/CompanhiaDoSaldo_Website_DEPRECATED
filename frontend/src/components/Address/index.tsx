@@ -158,11 +158,7 @@ function Address() {
   };
 
   return (
-    <form
-      method='post'
-      className='ordersFormContainer'
-      action='mailto:marcus.viniciusmo@hotmail.com'
-    >
+    <form className='ordersFormContainer'>
       <fieldset id='address'>
         <legend>{AddressData.Legend}</legend>
 
