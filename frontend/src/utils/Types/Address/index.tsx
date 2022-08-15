@@ -1,4 +1,3 @@
-import { IClientIdentification} from 'utils/Types/Identification';
 import { IInput } from 'utils/Types/Input';
 import { ISelect } from 'utils/Types/Select';
 
@@ -47,7 +46,6 @@ export interface ICities {
 };
 
 export interface IClientAddress {
-  Identification: IClientIdentification;
   Cep: string;
   Address: string;
   Number: string;

@@ -100,7 +100,7 @@ function Identification() {
       Birthday: inputBirthday!
     };
 
-    localStorage.setItem('client', JSON.stringify(client));
+    localStorage.setItem('client.Identification', JSON.stringify(client));
   };
 
   return (

@@ -5,6 +5,7 @@ import {
   IRegions,
   IStates
 } from 'utils/Types/Address';
+import { ClientIdentification } from 'utils/Mocks/Identification';
 import { ClientAddress, AddressData } from 'utils/Mocks/Address';
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
@@ -33,12 +34,12 @@ function Address() {
   }, [cepData]);
 
   useEffect(() => {
-    const clientStorage = localStorage.getItem('client');
+    const clientStorage = localStorage.getItem('client.Identification');
 
     if (clientStorage) {
       const client = JSON.parse(clientStorage!);
 
-      if (client.Cpf === ClientAddress.Identification.Cpf)
+      if (client.Cpf === ClientIdentification.Cpf)
         getAddressByCpf(ClientAddress);
     };
   }, []);
@@ -129,20 +130,10 @@ function Address() {
   const clearInputDistrict = () => setInputDistrict('');
 
   const storageDataClient = () => {
-    const clientStorage = localStorage.getItem('client');
+    const clientStorage = localStorage.getItem('client.Identification');
 
     if (clientStorage) {
-      const client = JSON.parse(clientStorage);
-
       const clientAddress: IClientAddress = {
-        Identification: {
-          Cpf: client.Cpf,
-          Phone: client.Phone,
-          Name: client.Name,
-          Email: client.Email,
-          Gender: client.Gender,
-          Birthday: client.Birthday
-        },
         Cep: inputCep!,
         Address: inputAddress!,
         Number: inputNumber!,
@@ -152,8 +143,7 @@ function Address() {
         City: inputCity!
       };
 
-      localStorage.removeItem('client');
-      localStorage.setItem('client', JSON.stringify(clientAddress));
+      localStorage.setItem('client.Address', JSON.stringify(clientAddress));
     };
   };
 
