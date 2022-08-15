@@ -14,7 +14,7 @@ function Identification() {
   const [inputBirthday, setInputBirthday] = useState<string | undefined>('');
 
   useEffect(() => {
-    const clientStorage = localStorage.getItem('client');
+    const clientStorage = localStorage.getItem('client.Identification');
     
     if (clientStorage) {
       const client = JSON.parse(clientStorage)
@@ -78,7 +78,15 @@ function Identification() {
       setInputBirthday(value);
   };
 
-  const clearInputCpf = () => setInputCpf('');
+  const clearInputCpf = () => {
+    setInputCpf('');
+
+    clearInputPhone();
+    clearInputName();
+    clearInputEmail();
+    clearInputGender();
+    clearInputBirthday();
+  };
 
   const clearInputPhone = () => setInputPhone('');
 
