@@ -44,11 +44,11 @@ function Identification() {
       else {
         alert('Cliente não encontrado');
 
-        setInputPhone('');
-        setInputName('');
-        setInputEmail('');
-        setInputGender('');
-        setInputBirthday('');
+        clearInputPhone();
+        clearInputName();
+        clearInputEmail();
+        clearInputGender();
+        clearInputBirthday();
       };
     };
   };
@@ -85,6 +85,10 @@ function Identification() {
   const clearInputName = () => setInputName('');
 
   const clearInputEmail = () => setInputEmail('');
+
+  const clearInputGender = () => setInputGender('');
+
+  const clearInputBirthday = () => setInputBirthday('');
 
   const storageDataClient = () => {
     const client: IClientIdentification = {
