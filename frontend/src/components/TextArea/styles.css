@@ -1,0 +1,66 @@
+div.textAreaContainer {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+div.textAreaContainer label {
+  color: var(--auxiliar-color-neutral);
+  font-size: 1.6rem;
+  line-height: 1;
+  position: absolute;
+  left: 1.4rem;
+  pointer-events: none;
+  transform: translate(0rem, 1rem) scale(1);
+  transform-origin: top left;
+  transition: 0.2s cubic-bezier(0, 0, 0.2, 1);
+}
+
+div.textAreaContainer:focus-within label,
+div.textAreaContainer .filled {
+  background: var(--background-color-light);
+  color: var(--first-color);
+  margin-bottom: 0.5rem;
+  padding-inline: 0.5rem;
+  transform: translate(0rem, -0.5rem) scale(0.8);
+  transition: all 0.3s ease-in-out;
+}
+
+div.textAreaContainer textarea.textAreaForm {
+  border: 0.1rem solid var(--border-color);
+  width: 35.5rem;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  height: 15rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+div.textAreaContainer textarea.textAreaForm:hover {
+  background: var(--background-color-light);
+  box-shadow: 0.1rem 0.1rem 0.5rem var(--first-color);
+}
+
+div.textAreaContainer div.clearIcon {
+  box-sizing: border-box;
+  position: absolute;
+  top: 6%;
+  left: 33.5rem;
+  opacity: 0;
+  transform: translate(-50%);
+  transition: all 0.2s ease-in-out;
+}
+
+div.textAreaContainer:focus-within div.clearIcon {
+  opacity: 1;
+}
+
+div.textAreaContainer:focus-within div.clearIcon {
+  color: var(--first-color);
+  cursor: pointer;
+}
+
+div.hideClearIcon {
+  display: none;
+}

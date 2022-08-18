@@ -8,6 +8,7 @@ import './styles.css';
 function Message() {
   const urgency = ['Não urgente', 'Pouco urgente', 'Urgente', 'Emergência'];
   const [inputUrgency, setInputUrgency] = useState<string | undefined>('');
+  const [inputMessage, setInputMessage] = useState<string | undefined>('');
   const [levelUrgency, setLevelUrgency] = useState<string>('');
 
   useEffect(() => {
@@ -33,7 +34,11 @@ function Message() {
 
     if (id === 'fieldUrgency')
       setInputUrgency(value);
+    else if (id === 'fieldMessage')
+      setInputMessage(value);
   };
+
+  const clearMessage = () => setInputMessage('');
 
   return (
     <form className='ordersFormContainer'>
@@ -58,12 +63,15 @@ function Message() {
             <span>Máx</span>
           </div>
 
-          <h4>Mensagem</h4>
           <TextArea
+            label='Mensagem'
             name='fieldMessage'
             id='fieldMessage'
             cols={30}
             rows={5}
+            value={inputMessage!}
+            onChange={() => handleInput}
+            clear={() => clearMessage}
           />
         </div>
 
