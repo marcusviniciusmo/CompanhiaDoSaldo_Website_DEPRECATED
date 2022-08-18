@@ -32,9 +32,9 @@ export function Input({
         min={Min}
         max={Max}
         step={Step}
-        defaultValue={DefaultValue}
+        defaultValue={Type === 'range' ? DefaultValue : undefined}
         placeholder={Placeholder}
-        value={Value}
+        value={Type === 'range' ? undefined : Value}
         onChange={OnChange ? OnChange() : OnChangeGeneric}
         checked={Checked}
       />
