@@ -7,9 +7,9 @@ export interface ITextArea {
   Id: string;
   Cols: number;
   Rows: number;
-  Value: string;
-  OnChange: Function;
-  Clear: Function | undefined
+  Value?: string;
+  OnChange?: Function;
+  Clear?: Function | undefined
   TextAreaComponent?: ITextAreaComponent;
 };
 

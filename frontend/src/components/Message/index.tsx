@@ -1,4 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import { MessageData } from 'utils/Mocks/Message';
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Input from "components/Input";
@@ -43,32 +44,33 @@ function Message() {
   return (
     <form className='ordersFormContainer'>
       <fieldset id='message'>
-        <legend>Mensagem do Cliente</legend>
+        <legend>{MessageData.Legend}</legend>
 
         <div id="messageFields">
           <div id="messageFieldUrgency">
-            <span>Min</span>
+            <span>{MessageData.Inputs.Span1}</span>
             <Input
-              Label={`Grau de Urgência${inputUrgency ? `: ${levelUrgency}` : ''}`}
-              Type='range'
-              Name='fieldUrgency'
-              Id='fieldUrgency'
-              Min={0}
-              Max={10}
-              Step={2}
-              DefaultValue={0}
+              Label={`${MessageData.Inputs.Inputs[0].Label}
+                ${inputUrgency && `: ${levelUrgency}`}`}
+              Type={MessageData.Inputs.Inputs[0].Type}
+              Name={MessageData.Inputs.Inputs[0].Name}
+              Id={MessageData.Inputs.Inputs[0].Id}
+              Min={MessageData.Inputs.Inputs[0].Min}
+              Max={MessageData.Inputs.Inputs[0].Max}
+              Step={MessageData.Inputs.Inputs[0].Step}
+              DefaultValue={MessageData.Inputs.Inputs[0].DefaultValue}
               Value={inputUrgency}
               OnChange={() => handleInput}
             />
-            <span>Máx</span>
+            <span>{MessageData.Inputs.Span2}</span>
           </div>
 
           <TextArea
-            Label='Mensagem'
-            Name='fieldMessage'
-            Id='fieldMessage'
-            Cols={30}
-            Rows={5}
+            Label={MessageData.TextAreas[0].Label}
+            Name={MessageData.TextAreas[0].Name}
+            Id={MessageData.TextAreas[0].Id}
+            Cols={MessageData.TextAreas[0].Cols}
+            Rows={MessageData.TextAreas[0].Rows}
             Value={inputMessage!}
             OnChange={() => handleInput}
             Clear={() => clearMessage}
@@ -78,13 +80,13 @@ function Message() {
         <div className="formButtonsContainer">
           <Link to='/pedidos/address'>
             <button className='formButton rewindButton'>
-              Voltar
+              {MessageData.PreviousTextButton}
             </button>
           </Link>
 
           <Link to='/pedidos/product'>
             <button className='formButton forwardButton'>
-              Próximo
+              {MessageData.NextTextButton}
             </button>
           </Link>
         </div>
