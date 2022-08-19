@@ -1,3 +1,4 @@
+import { ProductData } from 'utils/Mocks/Product';
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Input from "components/Input";
@@ -27,33 +28,33 @@ function Product() {
   return (
     <form className='ordersFormContainer'>
       <fieldset id='product'>
-        <legend>Quero comprar</legend>
+        <legend>{ProductData.Legend}</legend>
 
         <Input
-          Label='Produto'
-          Type='text'
-          Name='fieldProduct'
-          Id='fieldProduct'
+          Label={ProductData.Inputs[0].Label}
+          Type={ProductData.Inputs[0].Type}
+          Name={ProductData.Inputs[0].Name}
+          Id={ProductData.Inputs[0].Id}
           Value={inputProduct}
           OnChange={() => handleInput}
           Clear={() => clearInputProduct}
         />
 
         <Input
-          Label='Quantidade'
-          Type='text'
-          Name='fieldQuantity'
-          Id='fieldQuantity'
+          Label={ProductData.Inputs[1].Label}
+          Type={ProductData.Inputs[1].Type}
+          Name={ProductData.Inputs[1].Name}
+          Id={ProductData.Inputs[1].Id}
           Value={inputQuantity}
           OnChange={() => handleInput}
           Clear={() => clearInputQuantity}
         />
 
         <Input
-          Label='Cor'
-          Type='color'
-          Name='fieldColor'
-          Id='fieldColor'
+          Label={ProductData.Inputs[2].Label}
+          Type={ProductData.Inputs[2].Type}
+          Name={ProductData.Inputs[2].Name}
+          Id={ProductData.Inputs[2].Id}
           Value={inputColor}
           OnChange={() => handleInput}
         />
@@ -61,13 +62,13 @@ function Product() {
         <div className="formButtonsContainer">
           <Link to='/pedidos/message'>
             <button className='formButton rewindButton'>
-              Voltar
+              {ProductData.PreviousTextButton}
             </button>
           </Link>
 
           <Link to='#'>
             <button className='formButton forwardButton'>
-              Pedir
+              {ProductData.SubmitTextButton}
             </button>
           </Link>
         </div>
