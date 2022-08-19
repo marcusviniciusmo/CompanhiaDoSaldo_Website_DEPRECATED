@@ -76,6 +76,19 @@ function Message() {
 
   const clearMessage = () => setInputMessage('');
 
+  const storageDataClient = () => {
+    const clientStorage = localStorage.getItem('client.Identification');
+
+    if (clientStorage) {
+      const clientMessage: IClientMessage = {
+        Urgency: inputUrgency!,
+        Message: inputMessage!
+      };
+
+      localStorage.setItem('client.Message', JSON.stringify(clientMessage));
+    };
+  };
+
   return (
     <form className='ordersFormContainer'>
       <fieldset id='message'>
@@ -118,7 +131,7 @@ function Message() {
             </button>
           </Link>
 
-          <Link to='/pedidos/product'>
+          <Link to='/pedidos/product' onClick={storageDataClient}>
             <button className='formButton forwardButton'>
               {MessageData.NextTextButton}
             </button>
