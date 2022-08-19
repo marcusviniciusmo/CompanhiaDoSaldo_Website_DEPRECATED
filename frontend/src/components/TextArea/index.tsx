@@ -1,43 +1,41 @@
-import CloseIcon from '@mui/icons-material/Close';
+import { ITextArea } from 'utils/Types/TextArea';
+import { TextAreaData } from 'utils/Mocks/TextArea';
 import './styles.css';
 
-type Props = {
-  label: string;
-  name: string;
-  id: string;
-  cols: number;
-  rows: number;
-  value: string;
-  onChange: Function;
-  clear: Function | undefined;
-}
-
-function TextArea({ label, name, id, cols, rows, value, onChange, clear }: Props) {
+function TextArea({
+  Label,
+  Name,
+  Id,
+  Cols,
+  Rows,
+  Value,
+  OnChange,
+  Clear }: ITextArea) {
   return (
     <div className='textAreaContainer'>
       <textarea
         className='textAreaForm'
-        name={name}
-        id={id}
-        cols={cols}
-        rows={rows}
-        value={value}
-        onChange={onChange ? onChange() : () => ''}
+        name={Name}
+        id={Id}
+        cols={Cols}
+        rows={Rows}
+        value={Value}
+        onChange={OnChange ? OnChange() : () => ''}
       />
 
       <label
-        className={value && 'filled'}
-        htmlFor={id}
+        className={Value && 'filled'}
+        htmlFor={Id}
       >
-        {label}
+        {Label}
       </label>
 
       <div
-        title='Limpar'
-        className={value ? 'clearIcon' : 'hideClearIcon'}
-        onClick={clear ? clear() : () => ''}
+        title={TextAreaData.IconTitle}
+        className={Value ? 'clearIcon' : 'hideClearIcon'}
+        onClick={Clear ? Clear() : TextAreaData.ClearGenericInput}
       >
-        <CloseIcon fontSize='large' />
+        <TextAreaData.Icon fontSize={TextAreaData.IconFontSize} />
       </div>
     </div>
   );

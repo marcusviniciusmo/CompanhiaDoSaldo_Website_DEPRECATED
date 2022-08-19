@@ -64,14 +64,14 @@ function Message() {
           </div>
 
           <TextArea
-            label='Mensagem'
-            name='fieldMessage'
-            id='fieldMessage'
-            cols={30}
-            rows={5}
-            value={inputMessage!}
-            onChange={() => handleInput}
-            clear={() => clearMessage}
+            Label='Mensagem'
+            Name='fieldMessage'
+            Id='fieldMessage'
+            Cols={30}
+            Rows={5}
+            Value={inputMessage!}
+            OnChange={() => handleInput}
+            Clear={() => clearMessage}
           />
         </div>
 
