@@ -44,6 +44,29 @@ function Product() {
 
   const clearInputQuantity = () => setInputQuantity('');
 
+  const storageDataClient = () => {
+    const clientStorage = localStorage.getItem('client.Identification');
+
+    if (clientStorage) {
+      const clientProduct: IClientProduct = {
+        Product: inputProduct!,
+        Quantity: inputQuantity!,
+        Color: inputColor!
+      };
+
+      localStorage.setItem('client.Product', JSON.stringify(clientProduct));
+    };
+  };
+
+  const checkoutOrder = () => {
+    storageDataClient();
+
+    localStorage.removeItem('client.Identification');
+    localStorage.removeItem('client.Address');
+    localStorage.removeItem('client.Message');
+    localStorage.removeItem('client.Product');
+  };
+
   return (
     <form className='ordersFormContainer'>
       <fieldset id='product'>
@@ -79,13 +102,13 @@ function Product() {
         />
 
         <div className="formButtonsContainer">
-          <Link to='/pedidos/message'>
+          <Link to='/pedidos/message' onClick={storageDataClient}>
             <button className='formButton rewindButton'>
               {ProductData.PreviousTextButton}
             </button>
           </Link>
 
-          <Link to='#'>
+          <Link to='#' onClick={checkoutOrder}>
             <button className='formButton forwardButton'>
               {ProductData.SubmitTextButton}
             </button>
