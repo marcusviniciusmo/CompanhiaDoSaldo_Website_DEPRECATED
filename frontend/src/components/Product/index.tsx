@@ -1,5 +1,7 @@
-import { ProductData } from 'utils/Mocks/Product';
-import { useState } from "react";
+import { IClientProduct } from 'utils/Types/Product';
+import { ClientIdentification } from 'utils/Mocks/Identification';
+import { ClientProduct, ProductData } from 'utils/Mocks/Product';
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Input from "components/Input";
 import './styles.css';
@@ -8,6 +10,23 @@ function Product() {
   const [inputProduct, setInputProduct] = useState<string | undefined>('');
   const [inputQuantity, setInputQuantity] = useState<string | undefined>('');
   const [inputColor, setInputColor] = useState<string | undefined>('#0033FF');
+
+  useEffect(() => {
+    const clientStorage = localStorage.getItem('client.Identification');
+
+    if (clientStorage) {
+      const client = JSON.parse(clientStorage);
+
+      if (client.Cpf === ClientIdentification.Cpf)
+      getProductByCpf(ClientProduct);
+    }
+  }, []);
+
+  const getProductByCpf = (client: IClientProduct) => {
+    setInputProduct(client.Product);
+    setInputQuantity(client.Quantity);
+    setInputColor(client.Color);
+  };
 
   const handleInput = (event: any) => {
     const id = event.target.id;

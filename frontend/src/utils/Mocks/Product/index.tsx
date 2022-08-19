@@ -1,4 +1,10 @@
-import { IProduct } from 'utils/Types/Product';
+import { IClientProduct, IProduct } from 'utils/Types/Product';
+
+export const ClientProduct: IClientProduct = {
+  Product: 'PP Lisa',
+  Quantity: '5 peças',
+  Color: '#FFFFFF'
+};
 
 export const ProductData: IProduct = {
   Legend: 'Quero comprar',
