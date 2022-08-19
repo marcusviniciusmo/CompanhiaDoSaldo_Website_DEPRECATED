@@ -1,0 +1,4 @@
+form.ordersFormContainer fieldset#product {
+  background: url(
+    '../../assets/images/product/iconePagamento.png') no-repeat 95% 40%;
+}

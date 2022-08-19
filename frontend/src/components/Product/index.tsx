@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Input from "components/Input";
+import './styles.css';
 
 function Product() {
   const [inputProduct, setInputProduct] = useState<string | undefined>('');
@@ -23,40 +25,54 @@ function Product() {
   const clearInputQuantity = () => setInputQuantity('');
 
   return (
-    <>
-      PRODUCT Component
+    <form className='ordersFormContainer'>
+      <fieldset id='product'>
+        <legend>Quero comprar</legend>
 
-      <h3>Quero comprar</h3>
+        <Input
+          Label='Produto'
+          Type='text'
+          Name='fieldProduct'
+          Id='fieldProduct'
+          Value={inputProduct}
+          OnChange={() => handleInput}
+          Clear={() => clearInputProduct}
+        />
 
-      <Input
-        Label='Produto'
-        Type='text'
-        Name='fieldProduct'
-        Id='fieldProduct'
-        Value={inputProduct}
-        OnChange={() => handleInput}
-        Clear={() => clearInputProduct}
-      />
+        <Input
+          Label='Quantidade'
+          Type='text'
+          Name='fieldQuantity'
+          Id='fieldQuantity'
+          Value={inputQuantity}
+          OnChange={() => handleInput}
+          Clear={() => clearInputQuantity}
+        />
 
-      <Input
-        Label='Quantidade'
-        Type='text'
-        Name='fieldQuantity'
-        Id='fieldQuantity'
-        Value={inputQuantity}
-        OnChange={() => handleInput}
-        Clear={() => clearInputQuantity}
-      />
+        <Input
+          Label='Cor'
+          Type='color'
+          Name='fieldColor'
+          Id='fieldColor'
+          Value={inputColor}
+          OnChange={() => handleInput}
+        />
 
-      <Input
-        Label='Cor'
-        Type='color'
-        Name='fieldColor'
-        Id='fieldColor'
-        Value={inputColor}
-        OnChange={() => handleInput}
-      />
-    </>
+        <div className="formButtonsContainer">
+          <Link to='/pedidos/message'>
+            <button className='formButton rewindButton'>
+              Voltar
+            </button>
+          </Link>
+
+          <Link to='#'>
+            <button className='formButton forwardButton'>
+              Pedir
+            </button>
+          </Link>
+        </div>
+      </fieldset>
+    </form>
   );
 };
 

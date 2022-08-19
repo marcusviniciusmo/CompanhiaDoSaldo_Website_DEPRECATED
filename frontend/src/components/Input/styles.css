@@ -23,6 +23,15 @@ div.rangeInputContainer {
   gap: 1.5rem;
 }
 
+div.colorInputContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: left;
+  padding-inline: 0.3rem;
+  gap: 1rem;
+}
+
 div.rangeInputContainer:hover label {
   color: var(--first-color);
   opacity: 0.3;
@@ -104,9 +113,19 @@ input.rangeInputForm {
   cursor: pointer;
 }
 
+input.colorInputForm {
+  border: 0.1rem solid var(--border-color);
+  width: 10rem;
+  height: 3.5rem;
+  margin-block: 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
 input.textInputForm:hover,
 input.emailInputForm:hover,
-input.dateInputForm:hover {
+input.dateInputForm:hover,
+input.colorInputForm:hover {
   background: var(--background-color-light);
   box-shadow: 0.1rem 0.1rem 0.5rem var(--first-color);
 }
