@@ -1,5 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { MessageData } from 'utils/Mocks/Message';
+import { IClientMessage } from 'utils/Types/Message';
+import { ClientIdentification } from 'utils/Mocks/Identification';
+import { ClientMessage, MessageData } from 'utils/Mocks/Message';
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Input from "components/Input";
@@ -16,18 +18,51 @@ function Message() {
     getLevelUrgency();
   }, [levelUrgency]);
 
-  const getLevelUrgency = () => levelUrgency;
+  useEffect(() => {
+    getInputUrgency();
+  }, [inputUrgency]);
 
   useEffect(() => {
-    if (inputUrgency! === '0' || inputUrgency! === '2')
-      setLevelUrgency(urgency[0]);
-    else if (inputUrgency! === '4' || inputUrgency! === '6')
-      setLevelUrgency(urgency[1]);
-    else if (inputUrgency! === '8')
-      setLevelUrgency(urgency[2]);
-    else
-      setLevelUrgency(urgency[3]);
+    const clientStorage = localStorage.getItem('client.Identification');
+
+    if (clientStorage) {
+      const client = JSON.parse(clientStorage);
+
+      if (client.Cpf === ClientIdentification.Cpf)
+        getMessageByCpf(ClientMessage);
+    };
+  }, []);
+
+  useEffect(() => {
+    switch (inputUrgency!) {
+      case '0':
+      case '2':
+        setLevelUrgency(urgency[0]);
+        break;
+      case '4':
+      case '6':
+        setLevelUrgency(urgency[1]);
+        break;
+      case '8':
+        setLevelUrgency(urgency[2]);
+        break;
+      case '10':
+        setLevelUrgency(urgency[3]);
+        break;
+      default:
+        setLevelUrgency(urgency[0]);
+        break;
+    };
   }, [inputUrgency]);
+
+  const getInputUrgency = () => inputUrgency?.toString();
+
+  const getLevelUrgency = () => levelUrgency;
+
+  const getMessageByCpf = (client: IClientMessage) => {
+    setInputUrgency(client.Urgency);
+    setInputMessage(client.Message);
+  };
 
   const handleInput = (event: any) => {
     const id = event.target.id;
@@ -51,15 +86,14 @@ function Message() {
             <span>{MessageData.Inputs.Span1}</span>
             <Input
               Label={`${MessageData.Inputs.Inputs[0].Label}
-                ${inputUrgency && `: ${levelUrgency}`}`}
+                ${inputUrgency ? `: ${levelUrgency}` : ''}`}
               Type={MessageData.Inputs.Inputs[0].Type}
               Name={MessageData.Inputs.Inputs[0].Name}
               Id={MessageData.Inputs.Inputs[0].Id}
               Min={MessageData.Inputs.Inputs[0].Min}
               Max={MessageData.Inputs.Inputs[0].Max}
               Step={MessageData.Inputs.Inputs[0].Step}
-              DefaultValue={MessageData.Inputs.Inputs[0].DefaultValue}
-              Value={inputUrgency}
+              Value={inputUrgency!}
               OnChange={() => handleInput}
             />
             <span>{MessageData.Inputs.Span2}</span>

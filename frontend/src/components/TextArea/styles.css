@@ -29,11 +29,11 @@ div.textAreaContainer .filled {
 
 div.textAreaContainer textarea.textAreaForm {
   border: 0.1rem solid var(--border-color);
-  width: 35.5rem;
+  width: 36.5rem;
   border-radius: 0.5rem;
   box-sizing: border-box;
   height: 15rem;
-  padding: 1.5rem;
+  padding: 2rem 1rem;
   transition: all 0.3s ease;
 }
 
@@ -45,8 +45,8 @@ div.textAreaContainer textarea.textAreaForm:hover {
 div.textAreaContainer div.clearIcon {
   box-sizing: border-box;
   position: absolute;
-  top: 6%;
-  left: 33.5rem;
+  top: 2%;
+  left: 35rem;
   opacity: 0;
   transform: translate(-50%);
   transition: all 0.2s ease-in-out;

@@ -16,8 +16,7 @@ export const MessageData: IMessage = {
         Id: 'fieldUrgency',
         Min: 0,
         Max: 10,
-        Step: 2,
-        DefaultValue: 0
+        Step: 2
       }
     ],
     Span1: 'Min',

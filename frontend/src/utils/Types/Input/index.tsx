@@ -11,7 +11,6 @@ export interface IInput {
   Min?: number;
   Max?: number;
   Step?: number;
-  DefaultValue?: number;
   Placeholder?: string;
   Value?: string | undefined;
   OnChange?: Function;
