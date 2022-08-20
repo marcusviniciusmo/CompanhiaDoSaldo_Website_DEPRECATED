@@ -89,6 +89,10 @@ function Message() {
     };
   };
 
+  const goToNextForm = () => {
+    storageDataClient();
+  };
+
   return (
     <form className='ordersFormContainer'>
       <fieldset id='message'>
@@ -125,13 +129,13 @@ function Message() {
         </div>
 
         <div className="formButtonsContainer">
-          <Link to='/pedidos/address'>
+          <Link to='/pedidos/address' onClick={storageDataClient}>
             <button className='formButton rewindButton'>
               {MessageData.PreviousTextButton}
             </button>
           </Link>
 
-          <Link to='/pedidos/product' onClick={storageDataClient}>
+          <Link to='/pedidos/product' onClick={goToNextForm}>
             <button className='formButton forwardButton'>
               {MessageData.NextTextButton}
             </button>
