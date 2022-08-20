@@ -13,3 +13,6 @@ yarn add @mui/material @emotion/react @emotion/styled
 
 // Axios
 yarn add axios@0.24.0
+
+// Sweet Alert 2
+yarn add sweetalert2
