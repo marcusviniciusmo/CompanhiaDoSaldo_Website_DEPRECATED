@@ -10,6 +10,7 @@ import { ClientAddress, AddressData } from 'utils/Mocks/Address';
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { BuscaCepApi, ViaCepApi } from 'utils/Api';
+import { Toast } from 'components/Notification';
 import Input from "components/Input";
 import Select from "components/Select";
 import './styles.css';
@@ -49,14 +50,26 @@ function Address() {
       ViaCepApi.get(`${inputCep}/json/`)
         .then((response) => {
           setCepData(response.data);
+        })
+        .catch(() => {
+          Toast.fire({
+            icon: 'error',
+            title: 'Não foi possível obter o endereço através do CEP.'
+          });
         });
-    }
+    };
   }, [inputCep]);
 
   useEffect(() => {
     BuscaCepApi.get('regioes?orderBy=nome')
       .then((response) => {
         setRegionsList(response.data)
+      })
+      .catch(() => {
+        Toast.fire({
+          icon: 'error',
+          title: ' Não foi possível obter as regiōes.'
+        });
       });
   }, []);
 
@@ -64,6 +77,12 @@ function Address() {
     BuscaCepApi.get('estados?orderBy=nome')
       .then((response) => {
         setStatesList(response.data);
+      })
+      .catch(() => {
+        Toast.fire({
+          icon: 'error',
+          title: 'Não foi possível obter os estados.'
+        });
       });
   }, []);
 
@@ -71,6 +90,12 @@ function Address() {
     BuscaCepApi.get(`estados/${inputState}/municipios`)
       .then((response) => {
         setCitiesList(response.data);
+      })
+      .catch(() => {
+        Toast.fire({
+          icon: 'error',
+          title: 'Não foi possível obter os municípios.'
+        });
       });
   }, [inputState]);
 

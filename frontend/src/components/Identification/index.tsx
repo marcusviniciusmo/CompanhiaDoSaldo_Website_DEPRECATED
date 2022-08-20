@@ -2,6 +2,7 @@ import { ClientIdentification, IdentificationData } from 'utils/Mocks/Identifica
 import { IClientIdentification } from 'utils/Types/Identification';
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
+import { Toast } from 'components/Notification';
 import Input from "components/Input";
 import './styles.css';
 
@@ -33,7 +34,10 @@ function Identification() {
 
     if (cpf.length === 11) {
       if (cpf === client.Cpf) {
-        alert('Cliente encontrado');
+        Toast.fire({
+          icon: 'success',
+          title: 'Cliente encontrado'
+        });
 
         setInputPhone(client.Phone);
         setInputName(client.Name);
@@ -42,7 +46,10 @@ function Identification() {
         setInputBirthday(client.Birthday);
       }
       else {
-        alert('Cliente não encontrado');
+        Toast.fire({
+          icon: 'warning',
+          title: 'Cliente não encontrado'
+        });
 
         clearInputPhone();
         clearInputName();

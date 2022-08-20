@@ -3,6 +3,7 @@ import { ClientIdentification } from 'utils/Mocks/Identification';
 import { ClientProduct, ProductData } from 'utils/Mocks/Product';
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Toast } from 'components/Notification';
 import Input from "components/Input";
 import './styles.css';
 
@@ -65,6 +66,11 @@ function Product() {
     localStorage.removeItem('client.Address');
     localStorage.removeItem('client.Message');
     localStorage.removeItem('client.Product');
+
+    Toast.fire({
+      icon: 'success',
+      title: 'Pedido enviado com sucesso.'
+    });
   };
 
   return (
